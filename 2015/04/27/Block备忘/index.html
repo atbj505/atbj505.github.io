@@ -1,0 +1,752 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="OC," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="Block平常编程中经常用，对于Block语法感觉很怪异，有一些细节总是想不起来，今天正好看到了别人写点Block用法很巧妙，特意来总结一下。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Block备忘">
+<meta property="og:url" content="http://atbj505.github.io/2015/04/27/Block备忘/index.html">
+<meta property="og:site_name" content="杨">
+<meta property="og:description" content="Block平常编程中经常用，对于Block语法感觉很怪异，有一些细节总是想不起来，今天正好看到了别人写点Block用法很巧妙，特意来总结一下。">
+<meta property="og:updated_time" content="2015-04-28T01:54:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Block备忘">
+<meta name="twitter:description" content="Block平常编程中经常用，对于Block语法感觉很怪异，有一些细节总是想不起来，今天正好看到了别人写点Block用法很巧妙，特意来总结一下。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> Block备忘 | 杨 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">杨</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Stay weird. Stay different.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+        <li class="menu-item menu-item-search">
+          <a href="#" class="st-search-show-outputs">
+            
+              <i class="menu-item-icon fa fa-search icon-next-search"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'vtZhFgeA9CmMz_8eTKM9','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Block备忘
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-04-27T15:53:33+08:00" content="2015-04-27">
+              2015-04-27
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/04/27/Block备忘/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/27/Block备忘/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><code>Block</code>平常编程中经常用，对于Block语法感觉很怪异，有一些细节总是想不起来，今天正好看到了别人写点Block用法很巧妙，特意来总结一下。</p>
+<a id="more"></a>
+<ol>
+<li><p><a href="/#Block语法基础"><strong>Block语法基础</strong></a></p>
+</li>
+<li><p><a href="/#Block的三种类型"><strong>Block的三种类型</strong></a></p>
+</li>
+<li><p><a href="/#Block使用技巧"><strong>Block使用技巧</strong></a></p>
+</li>
+</ol>
+<p>##Block语法基础</p>
+<ol>
+<li><p>Block单独使用：</p>
+<ul>
+<li><p>Block的声明：</p>
+  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSString</span> *(^intToString)(<span class="built_in">NSUInteger</span> para);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Block的定义：</p>
+  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">intToString = ^<span class="built_in">NSString</span> *(<span class="built_in">NSUInteger</span> para)&#123;</span><br><span class="line">       <span class="keyword">return</span> [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%d"</span>,para];</span><br><span class="line">   &#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Block的调用：</p>
+  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">intToString(<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Block作为参数：</p>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string = [<span class="keyword">self</span> convertIntToString:<span class="number">2</span> usingBlockObject:intToString];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Block内联：</p>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string = [<span class="keyword">self</span> convertIntToString:<span class="number">3</span> usingBlockObject:^<span class="built_in">NSString</span> *(<span class="built_in">NSUInteger</span> para) &#123;</span><br><span class="line">       <span class="keyword">return</span> [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%d"</span>,para];</span><br><span class="line">       <span class="keyword">return</span> result;</span><br><span class="line">   &#125;];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改Block之外的变量<br> Block中调用外部变量是对变量的<strong>拷贝</strong>，修改的并不是变量本身，而是他的<code>替身</code>。基本类型的Block变量等效于<strong>全局变量</strong>、或<strong>静态变量</strong>,要想修改变量本身需要使用__block修饰。</p>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">__block <span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">void</span> (^foo)(<span class="keyword">void</span>) = ^&#123;</span><br><span class="line">	a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">__block <span class="keyword">int</span> base = <span class="number">100</span>;</span><br><span class="line"> base += <span class="number">100</span>;</span><br><span class="line"> BlkSum sum = ^ <span class="keyword">long</span> (<span class="keyword">int</span> a, <span class="keyword">int</span> b) &#123;</span><br><span class="line">  	base += <span class="number">10</span>;</span><br><span class="line">  	<span class="keyword">return</span> base + a + b;</span><br><span class="line"> &#125;;</span><br><span class="line"> base++;</span><br><span class="line"> printf(<span class="string">"%ld\n"</span>,sum(<span class="number">1</span>,<span class="number">2</span>));<span class="comment">//输出214，计算顺序是先base++,再进入Block体中base+=10,base+a+b</span></span><br><span class="line"> printf(<span class="string">"%d\n"</span>,base);/／输出<span class="number">211</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Block的copy：<br> Block被另一个Block使用时，另一个Block被copy到堆上时，被使用的Block也会被copy。但作为参数的Block是不会发生copy的。</p>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> (^BlkSum)(<span class="keyword">int</span>, <span class="keyword">int</span>);</span><br></pre></td></tr></table></figure>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> foo() &#123;</span><br><span class="line">   <span class="keyword">int</span> base = <span class="number">100</span>;</span><br><span class="line">   BlkSum blk = ^ <span class="keyword">long</span> (<span class="keyword">int</span> a, <span class="keyword">int</span> b) &#123;</span><br><span class="line">       <span class="keyword">return</span>  base + a + b;</span><br><span class="line">   &#125;;</span><br><span class="line">   <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, blk); <span class="comment">// &lt;__NSStackBlock__: 	 0xbff34da0&gt;</span></span><br><span class="line">   bar(blk);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> bar(BlkSum sum_blk) &#123;</span><br><span class="line">   <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,sum_blk); <span class="comment">// &lt;__NSStackBlock__: 	0xbff34da0&gt;，并不会发生copy</span></span><br><span class="line">   </span><br><span class="line">   <span class="keyword">void</span> (^blk) (BlkSum) = ^ (BlkSum sum) &#123;</span><br><span class="line">       <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,sum);     <span class="comment">// &lt;__NSStackBlock__: 0xbff34da0&gt;，无论blk在堆上还是栈上，作为参数的Block不会发生copy。</span></span><br><span class="line">       <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,sum_blk); <span class="comment">// &lt;__NSStackBlock__: 0xbff34da0&gt;，当blk在堆上时，sum_blk也会被copy到堆上</span></span><br><span class="line">   &#125;;</span><br><span class="line">   blk(sum_blk); <span class="comment">// blk在栈上 &lt;__NSStackBlock__: 0xbff34d60&gt;</span></span><br><span class="line">   </span><br><span class="line">   blk = [[blk <span class="keyword">copy</span>] autorelease]; <span class="comment">// &lt;__NSMallocBlock__: 0x7880fa50&gt; 被copy到了堆上</span></span><br><span class="line">   blk(sum_blk); <span class="comment">// blk在堆上 blk:&lt;__NSMallocBlock__: 0x7880fa50&gt; sum_blk:&lt;__NSStackBlock__: 0xbff34da0&gt;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Block作为属性：<br> Block作为属性要用<code>copy</code>属性，将Block从<strong>栈内存</strong>复制到<strong>堆内存</strong>。<br> 同时要注意循环引用的情况，如下面代码就会产生循环引用</p>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span><span class="variable">.myblock</span> = ^&#123;</span><br><span class="line">       [<span class="keyword">self</span> doSomething];</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+<p> 解决方法是对<code>self</code>做<code>weak</code>处理</p>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__<span class="keyword">weak</span> <span class="keyword">typeof</span>(<span class="keyword">self</span>) weakSelf = <span class="keyword">self</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>##Block的三种类型</p>
+<ol>
+<li>NSGlobalBlock：类似函数，位于text段</li>
+<li>NSStackBlock：位于栈内存，函数返回后Block将无效</li>
+<li><p>NSMallocBlock：位于堆内存。</p>
+<p> <code>NSGlobalBlock</code>，我们只要实现一个没有对周围变量没有引用的Block，就会显示为是它。而如果其中加入了对定义环境变量的引用，就是<code>NSStackBlock</code>。那么<code>NSMallocBlock</code>又是哪来的呢？malloc一词其实大家都熟悉，就是在堆上分配动态内存时。如果你对一个<code>NSStackBlock</code>对象使用了Block_copy()或者发送了copy消息，就会得到<code>NSMallocBlock</code>。这一段中的几项结论可从代码实验得出。</p>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//NSGlobalBlock:</span></span><br><span class="line">    <span class="keyword">float</span> (^sum)(<span class="keyword">float</span>, <span class="keyword">float</span>) = ^(<span class="keyword">float</span> a, <span class="keyword">float</span> b)&#123;</span><br><span class="line">       <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//NSStackBlock:</span></span><br><span class="line">    <span class="built_in">NSArray</span> *testArr = @[<span class="string">@"1"</span>, <span class="string">@"2"</span>];</span><br><span class="line">    <span class="keyword">void</span> (^TestBlock)(<span class="keyword">void</span>) = ^&#123;</span><br><span class="line">       <span class="built_in">NSLog</span>(<span class="string">@"testArr :%@"</span>, testArr);</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//NSMallocBlock:</span></span><br><span class="line">    <span class="comment">//NSStackBlock做copy操作,这合Block属性的copy属性是吻合的</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>##Block使用技巧</p>
+<ol>
+<li><p>tableView中加载数据后的界面刷新：</p>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">self</span> buildTestDataThen:^&#123;</span><br><span class="line">       [<span class="keyword">self</span><span class="variable">.tableView</span> reloadData];</span><br><span class="line">   &#125;];</span><br></pre></td></tr></table></figure>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)buildTestDataThen:(<span class="keyword">void</span> (^)(<span class="keyword">void</span>))then &#123;</span><br><span class="line">    <span class="built_in">dispatch_async</span>(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, <span class="number">0</span>), ^&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 获取数组</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 获取完成后回调</span></span><br><span class="line">        <span class="built_in">dispatch_async</span>(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">            !then ?: then();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>线程锁：</p>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">void</span> aspect_performLocked(dispatch_block_t block) &#123;</span><br><span class="line">   	<span class="keyword">static</span> OSSpinLock aspect_lock = OS_SPINLOCK_INIT;</span><br><span class="line">   	OSSpinLockLock(&amp;aspect_lock);</span><br><span class="line">   	block();</span><br><span class="line">   	OSSpinLockUnlock(&amp;aspect_lock);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用</span></span><br><span class="line">aspect_performLocked(^&#123;</span><br><span class="line">  		<span class="comment">//异步操作	</span></span><br><span class="line"> 	&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>未完待续</strong></p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/OC/" rel="tag">#OC</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/04/25/Effective-Objective-c-2-0读书笔记（二）/" rel="next" title="Effective-Objective-c-2-0读书笔记（二）">
+                <i class="fa fa-chevron-left"></i> Effective-Objective-c-2-0读书笔记（二）
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/05/02/Effective-Objective-c-2-0读书笔记（三）/" rel="prev" title="Effective-Objective-c-2-0读书笔记（三）">
+                Effective-Objective-c-2-0读书笔记（三） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/04/27/Block备忘/"
+           data-title="Block备忘" data-url="http://atbj505.github.io/2015/04/27/Block备忘/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="https://avatars1.githubusercontent.com/u/8262619?v=3&u=7f17e79a0e69a3c6b317972eab7372d07bc2cfd8&s=140" alt="Robert Yang" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Robert Yang</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">Stay weird. Stay different.</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/atbj505" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Robert Yang</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"atbj505"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>
