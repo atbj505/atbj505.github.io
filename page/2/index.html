@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -72,7 +72,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -89,6 +89,8 @@
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
+
+
 
 
 
@@ -215,6 +217,112 @@
 
     
     
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/04/25/Effective-Objective-c-2-0读书笔记（二）/" itemprop="url">
+                  Effective-Objective-c-2-0读书笔记（二）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-04-25T10:43:25+08:00" content="2015-04-25">
+              2015-04-25
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/04/25/Effective-Objective-c-2-0读书笔记（二）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/25/Effective-Objective-c-2-0读书笔记（二）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <ul>
+<li><p><strong>第五条：用枚举表示状态，选项，状态码</strong></p>
+<ol>
+<li>应该用枚举来表示状态机的状态，传递给方法的选项以及状态码等值，给这些值起个易懂的名字。</li>
+<li>如果把传递给某个方法的选项表示为枚举类型，而多个选项又可以同时使用，那么就将各选项定义为2的幂，以便通过按位操作将其组合起来。</li>
+<li><p>用<code>NS_ENUM</code>与<code>NS_OPTIONS</code>宏来定义枚举类型，并指明其底层数据类型。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="built_in">NS_ENUM</span>(<span class="built_in">NSUInteger</span>, EOCConnectionState) &#123;</span><br><span class="line">	EOCConnectionStateDisconnected,</span><br><span class="line">	EOCConnectionStateConnecting,</span><br><span class="line">	EOCConnectionStateConnected</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="built_in">NS_OPTIONS</span>(<span class="built_in">NSUInteger</span>, EOCPermittedDirection) &#123;</span><br><span class="line">	EOCPermittedDirectionUP     = <span class="number">1</span>&lt;&lt;<span class="number">0</span>,</span><br><span class="line">	EOCPermittedDirectionDown   = <span class="number">1</span>&lt;&lt;<span class="number">1</span>,</span><br><span class="line">	EOCPermittedDirectionLeft   = <span class="number">1</span>&lt;&lt;<span class="number">2</span>,</span><br><span class="line">	EOCPermittedDirectionRight  = <span class="number">1</span>&lt;&lt;<span class="number">3</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在处理枚举类型的switch语句中不要实现default分支。</p>
+</li>
+</ol>
+</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/04/25/Effective-Objective-c-2-0读书笔记（二）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -751,7 +859,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -765,7 +873,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -826,7 +934,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -869,6 +977,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+
+
 
   
 
