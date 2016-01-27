@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="OC," />
+  <meta name="keywords" content="vim," />
 
 
 
@@ -57,52 +57,16 @@
 
 
 
-<meta name="description" content="第一条：了解OC语言的起源
-  信息与函数调用的区别
-
-OC消息
-12Object *obj = [object new];[obj performWith:parameter1 and:parameter2];
-
-C++函数调用
-12Object *obj = new object;obj-&amp;gt;perform(parameter1, parameter2);
-关键区别在于：
-
-
-
-消息结构其">
+<meta name="description" content="vim备忘">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Effective Objective-c 2.0读书笔记（一）">
-<meta property="og:url" content="http://atbj505.github.io/2015/04/19/Effective-Objective-c-2-0读书笔记（一）/index.html">
+<meta property="og:title" content="vim备忘">
+<meta property="og:url" content="http://atbj505.github.io/2016/01/27/vim备忘/index.html">
 <meta property="og:site_name" content="杨">
-<meta property="og:description" content="第一条：了解OC语言的起源
-  信息与函数调用的区别
-
-OC消息
-12Object *obj = [object new];[obj performWith:parameter1 and:parameter2];
-
-C++函数调用
-12Object *obj = new object;obj-&amp;gt;perform(parameter1, parameter2);
-关键区别在于：
-
-
-
-消息结构其">
-<meta property="og:updated_time" content="2015-04-19T09:13:33.000Z">
+<meta property="og:description" content="vim备忘">
+<meta property="og:updated_time" content="2016-01-27T07:24:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Effective Objective-c 2.0读书笔记（一）">
-<meta name="twitter:description" content="第一条：了解OC语言的起源
-  信息与函数调用的区别
-
-OC消息
-12Object *obj = [object new];[obj performWith:parameter1 and:parameter2];
-
-C++函数调用
-12Object *obj = new object;obj-&amp;gt;perform(parameter1, parameter2);
-关键区别在于：
-
-
-
-消息结构其">
+<meta name="twitter:title" content="vim备忘">
+<meta name="twitter:description" content="vim备忘">
 
 
 
@@ -120,7 +84,7 @@ C++函数调用
   };
 </script>
 
-  <title> Effective Objective-c 2.0读书笔记（一） | 杨 </title>
+  <title> vim备忘 | 杨 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -268,7 +232,7 @@ C++函数调用
             
             
               
-                Effective Objective-c 2.0读书笔记（一）
+                vim备忘
               
             
           </h1>
@@ -280,8 +244,8 @@ C++函数调用
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-04-19T15:03:38+08:00" content="2015-04-19">
-              2015-04-19
+            <time itemprop="dateCreated" datetime="2016-01-27T10:49:29+08:00" content="2016-01-27">
+              2016-01-27
             </time>
           </span>
 
@@ -291,8 +255,8 @@ C++函数调用
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/04/19/Effective-Objective-c-2-0读书笔记（一）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/19/Effective-Objective-c-2-0读书笔记（一）/" itemprop="commentsCount"></span>
+                <a href="/2016/01/27/vim备忘/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/27/vim备忘/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -313,66 +277,66 @@ C++函数调用
       
 
       
-        <ul>
-<li><p><strong>第一条：了解OC语言的起源</strong></p>
-<p>  信息与函数调用的区别</p>
-<ul>
-<li><p>OC消息</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Object *obj = [object new];</span><br><span class="line">[obj performWith:parameter1 and:parameter2];</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>C++函数调用</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Object *obj = <span class="keyword">new</span> object;</span><br><span class="line">obj-&gt;perform(parameter1, parameter2);</span><br></pre></td></tr></table></figure>
-<p>关键区别在于：</p>
-</li>
-</ul>
-<ol>
-<li>消息结构其运行时所应执行的代码由<strong>运行环境</strong>决定，而使用函数调用的语言，则是由<strong>编译器</strong>决定</li>
-<li>如果代码调用的函数的多态的，那么就要查找<strong>虚函数表</strong>，而如果是消息传递式则不论是否多态，总是在<strong>运行时</strong>才去查找所要执行的方法，也就是所谓的动态绑定。</li>
-</ol>
-</li>
-</ul>
-<a id="more"></a>
-<ul>
-<li><p><strong>第二条：类的头文件尽量少引用其他头文件</strong></p>
-<p>  将引用头文件的时机尽量延后，只在缺有需要时才引用。</p>
-<p>  例如EOCPerson中有一属性是EOCEmployer类型</p>
-<p>  .h文件可以使用向前声明的方式：</p>
-  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@class</span> <span class="title">EOCEmployer</span></span></span><br></pre></td></tr></table></figure>
-<p>  .m文件中在正式引用：</p>
-  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">"EOCEmployer.h"</span></span></span><br></pre></td></tr></table></figure>
-<p>  这样当别的类引用EOCPerson时就不会引用EOCEmployer减少了编译时间</p>
-</li>
-<li><p><strong>第三条：多用字面值</strong></p>
-<ol>
-<li>通过字面值创建的字符串，数值，数组，字典简明扼要。</li>
-<li>可以通过下标访问或修改可变数组／字典。</li>
-<li>用字面值创建数组或者字典，若值中有nil，则会抛出异常，在编译时就避免了可能的潜在bug。</li>
-</ol>
-</li>
-<li><p><strong>第四条：少用＃define预处理指令</strong></p>
-<p>  习惯上预处理指令会这样写：</p>
-  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#define ANIMATION_DURATION 0.3</span></span><br></pre></td></tr></table></figure>
-<p>  这种写法有两方面的风险：</p>
-<ol>
-<li><p>这种写法定义出来的常量没有类型信息。</p>
-</li>
-<li><p>如果写在.h所有引用这个类的类中编译器都会把所有遇到的<strong>ANIMATION_DURATION</strong>都替换成0.3</p>
-</li>
-</ol>
-<ul>
-<li><p>为了解决第一个问题应使用下面这种写法：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">const</span> <span class="built_in">NSTimeInterval</span> kAnimationDuration = <span class="number">0.3</span>;</span><br></pre></td></tr></table></figure>
-<p>实际上这两种写法是等效的，只是第二种写法包含了类型信息</p>
-</li>
-<li><p>解决第二个问题的方法是除非必须，否则要把常量定义写在.m中<br>如必须写在.h中（如NSNotification）则可以使用这种方法：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//.h</span></span><br><span class="line"><span class="keyword">extern</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> EOCStringConstant;</span><br></pre></td></tr></table></figure>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//.m</span></span><br><span class="line"><span class="built_in">NSString</span> *<span class="keyword">const</span> EOCStringConstant = <span class="string">@"xxx"</span>;</span><br></pre></td></tr></table></figure>
-<p>当编译器看到.h中的<strong>extern</strong>关键字的时候，编译器无需查看他的定义，就允许代码使用这个变量了，但要注意命名规范，一般会采用<strong>类名＋变量名</strong>的方法命名</p>
-<p>使用NSString *const的方式还有一个好处，就是不会担心在其他类中全局区的变量被修改。</p>
-</li>
-</ul>
-</li>
-</ul>
+        <h1 id="vim_u5907_u5FD8"><a href="#vim_u5907_u5FD8" class="headerlink" title="vim备忘"></a>vim备忘</h1><a id="more"></a>
+<h2 id="u7B2C_u4E00_u8BB2"><a href="#u7B2C_u4E00_u8BB2" class="headerlink" title="第一讲"></a>第一讲</h2><p><code>hjkl</code>:移动 <code>h</code>左 <code>j</code>下 <code>k</code>上 <code>l</code>右</p>
+<p><code>vim 文件名</code>:打开文件，如果此文件不存在则会新建文件</p>
+<p><code>:q!</code>:退出编辑不保存</p>
+<p><code>:wq</code>:保存并退出</p>
+<p><code>x</code>:删除当前光标下的字</p>
+<p><code>i</code>:光标前插入</p>
+<p><code>A</code>:行尾插入</p>
+<h2 id="u7B2C_u4E8C_u8BB2"><a href="#u7B2C_u4E8C_u8BB2" class="headerlink" title="第二讲"></a>第二讲</h2><p><code>dw</code>:从光标处删除至下个单词的开头 例入光标在<code>is</code>的<code>i</code>上 <code>it is my life</code>-&gt;<code>it my life</code></p>
+<p><code>de</code>:从光标处删除至本单词的末尾 例入光标在<code>is</code>的<code>i</code>上 <code>it is my life</code>-&gt;<code>it  my life</code>,<code>my</code>前有两个空格</p>
+<p><code>d$</code>:从光标处删除至行尾 例入光标在<code>is</code>的<code>i</code>上 <code>it is my life</code>-&gt;<code>it</code></p>
+<p>其中<code>d</code>是操作符<code>w``e``$</code>是动作</p>
+<p><code>d</code>:删除操作</p>
+<p><code>w</code>:从光标到下个单词的开头</p>
+<p><code>e</code>：从光标到本单词的末尾</p>
+<p><code>$</code>:从光标到行尾</p>
+<p>可以在动作前加入数组表示重复次数</p>
+<p><code>d2w</code>:从光标处删除至第三个单词的开头 例入光标在<code>is</code>的<code>i</code>上 <code>it is my life</code>-&gt;<code>it life</code></p>
+<p><code>dd</code>:删除当前行</p>
+<p><code>2dd</code>:删除当前行和下一行</p>
+<p><code>u</code>:撤销</p>
+<p><code>U</code>:整行操作撤销</p>
+<p><code>CTRL-R</code>:撤销撤销，还原之前的操作</p>
+<h2 id="u7B2C_u4E09_u8BB2"><a href="#u7B2C_u4E09_u8BB2" class="headerlink" title="第三讲"></a>第三讲</h2><p><code>p</code>:将删除的内容置入光标之后，如果是行的话置入下一行</p>
+<p><code>r</code>:替换光标当前字符，先输入<code>r</code>然后输入替换内容</p>
+<p><code>ce</code>:修改知道单词末尾并进入编辑状态 例入光标在<code>is</code>的<code>i</code>上 <code>it is my life</code>-&gt;<code>it  my life</code>,<code>my</code>前有两个空格</p>
+<p>更改类命令<code>c</code>和删除类命令<code>d</code>的区别是<code>c</code>会在更改完之后进入编辑模式</p>
+<h2 id="u7B2C_u56DB_u8BB2"><a href="#u7B2C_u56DB_u8BB2" class="headerlink" title="第四讲"></a>第四讲</h2><p><code>CTRL-G</code>:显示当前文件信息，及当前所在行的位置</p>
+<p><code>G</code>:跳转到文件的最后一行</p>
+<p><code>gg</code>:跳转的文件的第一行</p>
+<p>输入停留的行号，然后输入<code>G</code>，可以跳转到按<code>CTRL-G</code>时所在行</p>
+<p><code>/</code>:查找</p>
+<p><code>?</code>:逆向查找</p>
+<p><code>n</code>:下一项查找匹配结果</p>
+<p><code>N</code>:上一项查找匹配结果</p>
+<p><code>CTRL-o</code>:回到之前的位置</p>
+<p><code>CTRL-i</code>:跳转到较新的位置</p>
+<p><code>%</code>:查找配对的<code>(``[``{</code></p>
+<p><code>:s/old/new</code>:替换<code>old</code>为<code>new</code>，只会替换第一个匹配的结果</p>
+<p><code>:s/old/new/g</code>:替换<code>old</code>为<code>new</code>，圈行匹配替换</p>
+<p><code>:#,#s/old/new/g</code>:指定行匹配替换，其中<code>#,#</code>为起始行号和结束行号</p>
+<p><code>%s/old/new/g</code>:全文匹配替换</p>
+<p><code>%s/old/new/gc</code>:全文匹配替换，并且提示是否替换</p>
+<h2 id="u7B2C_u4E94_u8BB2"><a href="#u7B2C_u4E94_u8BB2" class="headerlink" title="第五讲"></a>第五讲</h2><p><code>:!</code>:可以在<code>:!</code>后面接外部命令，例如<code>:!ls</code>与在<code>shell</code>中<code>ls</code>的效果一致</p>
+<p><code>:w</code>:可以在<code>:w</code>后面接文件名，对当前文件进行另存为操作</p>
+<p><code>v</code>:进入可视化模式进行选取，可以在可是模式下移动光标进行选取，然后按<code>:</code>对选取的区域进行操作，例如<code>:&#39;&lt;,&#39;&gt;w test.txt</code>可以对选中的区域进行另存为操作</p>
+<p><code>:r</code>:当前行插入其他文件内容或外部指令结果，例如<code>:r text.txt</code>,<code>:r !ls</code></p>
+<h2 id="u7B2C_u516D_u8BB2"><a href="#u7B2C_u516D_u8BB2" class="headerlink" title="第六讲"></a>第六讲</h2><p><code>o</code>:在当前光标行下方插入一行并进入编辑模式</p>
+<p><code>O</code>:在当前光标行上方插入一行并进入编辑模式</p>
+<p><code>a</code>:在光标之后插入文字</p>
+<p><code>R</code>:替换，是在原有文字的基础上进行的替换</p>
+<p><code>y</code>:复制命令，可以结合<code>v</code>使用，复制指定范围，也可以通过其他的动作，如<code>w</code>使用，复制一个单词</p>
+<p><code>p</code>:粘贴</p>
+<p><code>:set ic</code>:查找是忽略大小写</p>
+<p><code>:set noic</code>:禁用忽略大小写</p>
+<p><code>:set is</code>:查找短语时显示部分匹配</p>
+<p><code>:set hls</code>:高亮显示所有的匹配项</p>
+<h2 id="u7B2C_u4E03_u8BB2"><a href="#u7B2C_u4E03_u8BB2" class="headerlink" title="第七讲"></a>第七讲</h2><p><code>:help</code>:帮助，可以获取指定命令的帮助,如<code>:help w</code></p>
+<p><code>CTRL-W</code>:<code>vim</code>窗口切换</p>
+<p><code>CTRL-D</code>:查看补全</p>
 
       
     </div>
@@ -381,7 +345,7 @@ C++函数调用
       
         <div class="post-tags">
           
-            <a href="/tags/OC/" rel="tag">#OC</a>
+            <a href="/tags/vim/" rel="tag">#vim</a>
           
         </div>
       
@@ -390,17 +354,13 @@ C++函数调用
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/04/18/Hexo-我来了！/" rel="next" title="Hexo 我来了！">
-                <i class="fa fa-chevron-left"></i> Hexo 我来了！
+              <a href="/2016/01/18/Github-Star/" rel="next" title="Github Star">
+                <i class="fa fa-chevron-left"></i> Github Star
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/04/20/cocoapods-更新/" rel="prev" title="cocoapods 更新">
-                cocoapods 更新 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -426,8 +386,8 @@ C++函数调用
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/04/19/Effective-Objective-c-2-0读书笔记（一）/"
-           data-title="Effective Objective-c 2.0读书笔记（一）" data-url="http://atbj505.github.io/2015/04/19/Effective-Objective-c-2-0读书笔记（一）/">
+      <div class="ds-thread" data-thread-key="2016/01/27/vim备忘/"
+           data-title="vim备忘" data-url="http://atbj505.github.io/2016/01/27/vim备忘/">
       </div>
     
   </div>
@@ -528,7 +488,7 @@ C++函数调用
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vim_u5907_u5FD8"><span class="nav-number">1.</span> <span class="nav-text">vim备忘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u7B2C_u4E00_u8BB2"><span class="nav-number">1.1.</span> <span class="nav-text">第一讲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u7B2C_u4E8C_u8BB2"><span class="nav-number">1.2.</span> <span class="nav-text">第二讲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u7B2C_u4E09_u8BB2"><span class="nav-number">1.3.</span> <span class="nav-text">第三讲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u7B2C_u56DB_u8BB2"><span class="nav-number">1.4.</span> <span class="nav-text">第四讲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u7B2C_u4E94_u8BB2"><span class="nav-number">1.5.</span> <span class="nav-text">第五讲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u7B2C_u516D_u8BB2"><span class="nav-number">1.6.</span> <span class="nav-text">第六讲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u7B2C_u4E03_u8BB2"><span class="nav-number">1.7.</span> <span class="nav-text">第七讲</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
