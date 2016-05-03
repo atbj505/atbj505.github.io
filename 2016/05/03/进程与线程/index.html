@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="OC," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -57,20 +57,19 @@
 
 
 
-<meta name="description" content="第十三条：用“方法调配”技术调试“黑盒方法”
-  类的方法列表会把选择子的名称映射到相关的方法实现上，使得动态消息能够根据此找到对应的方法，这些方法均以函数指针的形式来表示，其原型如下：">
+<meta name="description" content="对于操作系统来说，一个任务就是一个进程（Process），比如打开一个浏览器就是启动一个浏览器进程，打开一个记事本就启动了一个记事本进程，打开两个记事本就启动了两个记事本进程，打开一个Word就启动了一个Word进程。
+有些进程还不止同时干一件事，比如Word，它可以同时进行打字、拼写检查、打印等事情。在一个进程内部，要同时干多件事，就需要同时运行多个“子任务”，我们把进程内的这些“子任务”称为线">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Effective Objective-c 2.0读书笔记（四）">
-<meta property="og:url" content="http://atbj505.github.io/2015/06/21/Effective-Objective-c-2-0读书笔记（四）/index.html">
+<meta property="og:title" content="进程与线程">
+<meta property="og:url" content="http://atbj505.github.io/2016/05/03/进程与线程/index.html">
 <meta property="og:site_name" content="杨">
-<meta property="og:description" content="第十三条：用“方法调配”技术调试“黑盒方法”
-  类的方法列表会把选择子的名称映射到相关的方法实现上，使得动态消息能够根据此找到对应的方法，这些方法均以函数指针的形式来表示，其原型如下：">
-<meta property="og:image" content="http://pic002.cnblogs.com/images/2012/81194/2012020509595258.gif">
-<meta property="og:updated_time" content="2015-10-22T05:41:58.000Z">
+<meta property="og:description" content="对于操作系统来说，一个任务就是一个进程（Process），比如打开一个浏览器就是启动一个浏览器进程，打开一个记事本就启动了一个记事本进程，打开两个记事本就启动了两个记事本进程，打开一个Word就启动了一个Word进程。
+有些进程还不止同时干一件事，比如Word，它可以同时进行打字、拼写检查、打印等事情。在一个进程内部，要同时干多件事，就需要同时运行多个“子任务”，我们把进程内的这些“子任务”称为线">
+<meta property="og:updated_time" content="2016-05-03T03:33:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Effective Objective-c 2.0读书笔记（四）">
-<meta name="twitter:description" content="第十三条：用“方法调配”技术调试“黑盒方法”
-  类的方法列表会把选择子的名称映射到相关的方法实现上，使得动态消息能够根据此找到对应的方法，这些方法均以函数指针的形式来表示，其原型如下：">
+<meta name="twitter:title" content="进程与线程">
+<meta name="twitter:description" content="对于操作系统来说，一个任务就是一个进程（Process），比如打开一个浏览器就是启动一个浏览器进程，打开一个记事本就启动了一个记事本进程，打开两个记事本就启动了两个记事本进程，打开一个Word就启动了一个Word进程。
+有些进程还不止同时干一件事，比如Word，它可以同时进行打字、拼写检查、打印等事情。在一个进程内部，要同时干多件事，就需要同时运行多个“子任务”，我们把进程内的这些“子任务”称为线">
 
 
 
@@ -88,7 +87,7 @@
   };
 </script>
 
-  <title> Effective Objective-c 2.0读书笔记（四） | 杨 </title>
+  <title> 进程与线程 | 杨 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -236,7 +235,7 @@
             
             
               
-                Effective Objective-c 2.0读书笔记（四）
+                进程与线程
               
             
           </h1>
@@ -248,8 +247,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-06-21T10:47:28+08:00" content="2015-06-21">
-              2015-06-21
+            <time itemprop="dateCreated" datetime="2016-05-03T11:24:42+08:00" content="2016-05-03">
+              2016-05-03
             </time>
           </span>
 
@@ -259,8 +258,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/06/21/Effective-Objective-c-2-0读书笔记（四）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/21/Effective-Objective-c-2-0读书笔记（四）/" itemprop="commentsCount"></span>
+                <a href="/2016/05/03/进程与线程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/03/进程与线程/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -281,69 +280,30 @@
       
 
       
-        <ul>
-<li><p><strong>第十三条：用“方法调配”技术调试“黑盒方法”</strong></p>
-<p>  类的方法列表会把选择子的名称映射到相关的方法实现上，使得<strong>动态消息</strong>能够根据此找到对应的方法，这些方法均以函数指针的形式来表示，其原型如下：</p>
-  <a id="more"></a>
-  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">id</span> (*IMP)(<span class="keyword">id</span>, SEL, ...)</span><br></pre></td></tr></table></figure>
-<p>  例如NSString类中的方法<code>lowercaseString</code>, <code>uppercaseString</code>, <code>capitalizedString</code> 等，这些选择子都映射到不同的IMP上面：</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lowercaseString    ---&#62; IMP1&#9;&#10;uppercaseString    ---&#62; IMP2&#9;&#10;capitalizedString  ---&#62; IMP3</span><br></pre></td></tr></table></figure>
-<p>  <code>objective-c</code>中可以通过修改以上的映射关系实现消息实现的改变，这种方法叫做<code>method swizzing</code>（方法掉配）。</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lowercaseString    ---&#62; IMP2&#9;&#10;uppercaseString    ---&#62; IMP3&#9;&#10;capitalizedString  ---&#62; IMP1</span><br></pre></td></tr></table></figure>
-<p>  具体的实现方法是调用下列方法</p>
-  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> method_exchangeImplementations ( Method m1, Method m2 );</span><br></pre></td></tr></table></figure>
-<p>  其中<code>m1</code>,<code>m2</code>可通过下列方法获得</p>
-  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Method class_getInstanceMethod ( Class cls, SEL name );</span><br></pre></td></tr></table></figure>
-<p>  具体到上面提到的例子可以这样使用：</p>
-  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Method lowercaseMethod = class_getInstanceMethod ( [<span class="built_in">NSString</span> class], <span class="keyword">@selector</span>(lowercaseString) );</span><br><span class="line">Method uppercaseMethod = class_getInstanceMethod ( [<span class="built_in">NSString</span> class], <span class="keyword">@selector</span>(uppercaseString) );</span><br><span class="line"><span class="keyword">void</span> method_exchangeImplementations ( lowercaseMethod, uppercaseMethod );</span><br></pre></td></tr></table></figure>
-<p>  这样NSString中的文字大小写转换方法就进行了互换。但这样对我们实际的编程中并不会有任何实际的帮助。<br>  前一阵看了一篇文章<a href="http://casatwy.com/iosying-yong-jia-gou-tan-viewceng-de-zu-zhi-he-diao-yong-fang-an.html" target="_blank" rel="external">iOS应用架构谈 view层的组织和调用方案</a>,其中提到的<code>是否有必要让业务方统一派生ViewController</code>一节中使用到的就是<code>Method Swizzling</code>技术,具体使用他使用了一个开源库<a href="https://github.com/steipete/Aspects" target="_blank" rel="external">Aspects</a>。具体使用如下</p>
-<p>   创建一个父类为<code>NSObject</code>的类<code>NQViewControllerIntercepter</code>,在类的实现中写下如下代码：</p>
-  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">+ (<span class="keyword">void</span>)load</span><br><span class="line">&#123;</span><br><span class="line">   	[<span class="keyword">super</span> load];</span><br><span class="line">   	[NQViewControllerIntercepter sharedInstance];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ (instancetype)sharedInstance</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken;</span><br><span class="line">    <span class="keyword">static</span> NQViewControllerIntercepter *sharedInstance;</span><br><span class="line">    <span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123;</span><br><span class="line">        sharedInstance = [[NQViewControllerIntercepter alloc] init];</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> sharedInstance;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (instancetype)init</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>) &#123;</span><br><span class="line">        </span><br><span class="line">        [<span class="built_in">UIViewController</span> aspect_hookSelector:<span class="keyword">@selector</span>(loadView) withOptions:AspectPositionAfter usingBlock:^(<span class="keyword">id</span>&lt;AspectInfo&gt;aspectInfo)&#123;</span><br><span class="line">            [<span class="keyword">self</span> loadView:[aspectInfo instance]];</span><br><span class="line">        &#125; error:<span class="literal">NULL</span>];</span><br><span class="line">        </span><br><span class="line">        [<span class="built_in">UIViewController</span> aspect_hookSelector:<span class="keyword">@selector</span>(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(<span class="keyword">id</span>&lt;AspectInfo&gt; aspectInfo, <span class="built_in">BOOL</span> animated)&#123;</span><br><span class="line">            [<span class="keyword">self</span> viewWillAppear:animated viewController:[aspectInfo instance]];</span><br><span class="line">        &#125; error:<span class="literal">NULL</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">self</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)loadView:(<span class="built_in">UIViewController</span> *)viewController</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"[%@ loadView]"</span>, [viewController class]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)viewWillAppear:(<span class="built_in">BOOL</span>)animated viewController:(<span class="built_in">UIViewController</span> *)viewController</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"[%@ viewWillAppear:%@]"</span>, [viewController class], animated ? <span class="string">@"YES"</span> : <span class="string">@"NO"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>  其中<code>load</code>方法会在运行时提前调用，(load与另一个类方法initialize的区别在于，load是类在被引用的时候调用，而initialize是在类的成员方法调用的时候调用，并且这两个方法只会被调用一次）。</p>
-<p>  33行到42行就是我们通过<code>Aspect</code>hook到的方法。这样可以在不使用继承的情况下重写父类的方法。</p>
-</li>
-<li><p><strong>第十四条：理解类对象的用意</strong></p>
-<p>  这条主要围绕这张图进行讲解：<br>  <img src="http://pic002.cnblogs.com/images/2012/81194/2012020509595258.gif" alt="ios class"></p>
-<ul>
-<li>SuperClass指针确定了继承关系，isa指针描述所属的类。</li>
-<li>尽量使用类型信息查询方法来确定对象类型（isKindOfClass,isMemberOfClass），而不要直接比较没对象</li>
-</ul>
-</li>
-<li><p><strong>第十五条：用前缀避免命名空间冲突</strong></p>
-<ul>
-<li>每个类要选用固定的前缀</li>
-<li>如果自己开发的程序中用到了第三方库，最好也在前面加上前缀</li>
-</ul>
-</li>
-</ul>
+        <ol>
+<li>对于操作系统来说，一个任务就是一个进程（Process），比如打开一个浏览器就是启动一个浏览器进程，打开一个记事本就启动了一个记事本进程，打开两个记事本就启动了两个记事本进程，打开一个Word就启动了一个Word进程。</li>
+<li>有些进程还不止同时干一件事，比如Word，它可以同时进行打字、拼写检查、打印等事情。在一个进程内部，要同时干多件事，就需要同时运行多个“子任务”，我们把进程内的这些“子任务”称为线程（Thread）。</li>
+<li>由于每个进程至少要干一件事，所以，一个进程至少有一个线程。当然，像Word这种复杂的进程可以有多个线程，多个线程可以同时执行，多线程的执行方式和多进程是一样的，也是由操作系统在多个线程之间快速切换，让每个线程都短暂地交替运行，看起来就像同时执行一样。当然，真正地同时执行多线程需要多核CPU才可能实现。</li>
+<li>进程之间使用的是不同内存，进程之间使用的相同内存</li>
+</ol>
 
       
     </div>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/OC/" rel="tag">#OC</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/05/18/IOS常用宏定义-工具方法/" rel="next" title="IOS常用宏定义&工具方法">
-                <i class="fa fa-chevron-left"></i> IOS常用宏定义&工具方法
+              <a href="/2016/01/27/vim备忘/" rel="next" title="vim备忘">
+                <i class="fa fa-chevron-left"></i> vim备忘
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/07/21/Effective-Objective-c-2-0读书笔记（五）/" rel="prev" title="Effective Objective-c 2.0读书笔记（五）">
-                Effective Objective-c 2.0读书笔记（五） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -369,8 +329,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/06/21/Effective-Objective-c-2-0读书笔记（四）/"
-           data-title="Effective Objective-c 2.0读书笔记（四）" data-url="http://atbj505.github.io/2015/06/21/Effective-Objective-c-2-0读书笔记（四）/">
+      <div class="ds-thread" data-thread-key="2016/05/03/进程与线程/"
+           data-title="进程与线程" data-url="http://atbj505.github.io/2016/05/03/进程与线程/">
       </div>
     
   </div>
