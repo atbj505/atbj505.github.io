@@ -47,6 +47,8 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="杨" type="application/atom+xml" />
+
 
 
 
@@ -280,12 +282,12 @@
         <p>一直对于这几个属性掌握的不是很好，也算是上学时候不好好学校的后遗症，今天抓紧时间总结下。</p>
 <a id="more"></a>
 <ol>
-<li><a href="/#const&amp;define"><strong>const与宏的区别</strong></a></li>
-<li><a href="/#const的作用"><strong>const的作用</strong></a></li>
-<li><a href="/#const使用场景"><strong>const使用场景</strong></a></li>
-<li><a href="/#static&amp;extern"><strong>static与extern的使用</strong></a></li>
-<li><a href="/#static&amp;const"><strong>static与const的使用</strong></a></li>
-<li><a href="/#extern&amp;const"><strong>extern与const的使用</strong></a></li>
+<li><a href="#const&amp;define"><strong>const与宏的区别</strong></a></li>
+<li><a href="#const的作用"><strong>const的作用</strong></a></li>
+<li><a href="#const使用场景"><strong>const使用场景</strong></a></li>
+<li><a href="#static&amp;extern"><strong>static与extern的使用</strong></a></li>
+<li><a href="#static&amp;const"><strong>static与const的使用</strong></a></li>
+<li><a href="#extern&amp;const"><strong>extern与const的使用</strong></a></li>
 </ol>
 <p><a name="const&define"></a><strong>const与宏的区别</strong></p>
 <p> <code>const</code>与<code>宏</code>最大的区别在于，宏是不做类型检查的。苹果官方也推荐使用<code>const</code>，但<code>宏</code>可以定义一些函数，<code>const</code>不能。</p>
@@ -313,7 +315,7 @@
 <ul>
 <li>只是获取全局变量的值，不能用于定义变量</li>
 <li><p>现在当前文件查找全局变量，如果没有再去其他文件查找</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//static修饰全局变量，修改了作用域，生命周期不变,是为了避免重复定义全局变量</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> age = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//static修饰局部变量，修改了作用域，延长了生命周期，并确保了age只在内存保持一份</span></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> age = <span class="number">0</span>;</span><br><span class="line">	age++;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"test local age = %d\n"</span>, age);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%p\n"</span>,&amp;age);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	test();</span><br><span class="line">	test();</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"main global age = %d\n"</span>,age);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%p\n"</span>,&amp;age);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//获取全局变量的值</span></span><br><span class="line">	<span class="keyword">extern</span> <span class="keyword">int</span> age;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"global age = %d\n"</span>,age);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%p\n"</span>,&amp;age);</span><br><span class="line"></span><br><span class="line">	age ++;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"global age = %d\n"</span>,age);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%p\n"</span>,&amp;age);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出结果</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line">test local age = 1</span><br><span class="line">0x10d11701c</span><br><span class="line">test local age = 2</span><br><span class="line">0x10d11701c</span><br><span class="line">main global age = 20</span><br><span class="line">0x10d117018</span><br><span class="line">global age = 20</span><br><span class="line">0x10d117018</span><br><span class="line">global age = 21</span><br><span class="line">0x10d117018</span><br><span class="line">*/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//static修饰全局变量，修改了作用域，生命周期不变,是为了避免重复定义全局变量</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> age = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">//static修饰局部变量，修改了作用域，延长了生命周期，并确保了age只在内存保持一份</span></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> age = <span class="number">0</span>;</span><br><span class="line">	age++;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"test local age = %d\n"</span>, age);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%p\n"</span>,&amp;age);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span> </span>&#123;</span><br><span class="line">	test();</span><br><span class="line">	test();</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"main global age = %d\n"</span>,age);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%p\n"</span>,&amp;age);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//获取全局变量的值</span></span><br><span class="line">	<span class="keyword">extern</span> <span class="keyword">int</span> age;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"global age = %d\n"</span>,age);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%p\n"</span>,&amp;age);</span><br><span class="line"></span><br><span class="line">	age ++;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"global age = %d\n"</span>,age);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%p\n"</span>,&amp;age);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出结果</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line">test local age = 1</span><br><span class="line">0x10d11701c</span><br><span class="line">test local age = 2</span><br><span class="line">0x10d11701c</span><br><span class="line">main global age = 20</span><br><span class="line">0x10d117018</span><br><span class="line">global age = 20</span><br><span class="line">0x10d117018</span><br><span class="line">global age = 21</span><br><span class="line">0x10d117018</span><br><span class="line">*/</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p><a name="static&const"></a><strong>static与const的使用</strong></p>
@@ -431,7 +433,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -452,6 +454,13 @@
 
         </nav>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">
