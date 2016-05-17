@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="IOS," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -59,19 +59,16 @@
 
 
 
-<meta name="description" content="cocoapods是IOS上经常是使用的包依赖管理软件，可是每次的系统的更新或者cocoapods自身的更新都会产生一些问题。
-今天在使用cocoapods时就遇到了更新失败的情况，在网上找了很多的解决方案，索性最后终于解决了。">
+<meta name="description" content="之前总结的笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cocoapods 更新">
-<meta property="og:url" content="http://atbj505.github.io/2015/04/20/cocoapods-更新/index.html">
+<meta property="og:title" content="笔记( - 20160517)">
+<meta property="og:url" content="http://atbj505.github.io/2016/05/17/笔记-20160517/index.html">
 <meta property="og:site_name" content="杨">
-<meta property="og:description" content="cocoapods是IOS上经常是使用的包依赖管理软件，可是每次的系统的更新或者cocoapods自身的更新都会产生一些问题。
-今天在使用cocoapods时就遇到了更新失败的情况，在网上找了很多的解决方案，索性最后终于解决了。">
-<meta property="og:updated_time" content="2015-04-21T05:46:07.000Z">
+<meta property="og:description" content="之前总结的笔记">
+<meta property="og:updated_time" content="2016-05-17T08:12:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cocoapods 更新">
-<meta name="twitter:description" content="cocoapods是IOS上经常是使用的包依赖管理软件，可是每次的系统的更新或者cocoapods自身的更新都会产生一些问题。
-今天在使用cocoapods时就遇到了更新失败的情况，在网上找了很多的解决方案，索性最后终于解决了。">
+<meta name="twitter:title" content="笔记( - 20160517)">
+<meta name="twitter:description" content="之前总结的笔记">
 
 
 
@@ -89,7 +86,7 @@
   };
 </script>
 
-  <title> cocoapods 更新 | 杨 </title>
+  <title> 笔记( - 20160517) | 杨 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -237,7 +234,7 @@
             
             
               
-                cocoapods 更新
+                笔记( - 20160517)
               
             
           </h1>
@@ -249,8 +246,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-04-20T13:26:33+08:00" content="2015-04-20">
-              2015-04-20
+            <time itemprop="dateCreated" datetime="2016-05-17T16:00:29+08:00" content="2016-05-17">
+              2016-05-17
             </time>
           </span>
 
@@ -260,8 +257,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/04/20/cocoapods-更新/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/20/cocoapods-更新/" itemprop="commentsCount"></span>
+                <a href="/2016/05/17/笔记-20160517/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/17/笔记-20160517/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -282,88 +279,37 @@
       
 
       
-        <p><strong>cocoapods</strong>是<strong>IOS</strong>上经常是使用的包依赖管理软件，可是每次的系统的更新或者<strong>cocoapods</strong>自身的更新都会产生一些问题。</p>
-<p>今天在使用<strong>cocoapods</strong>时就遇到了更新失败的情况，在网上找了很多的解决方案，索性最后终于解决了。</p>
+        <p>之前总结的笔记</p>
 <a id="more"></a>
-<p>下面来总结下更新失败的具体情况，以备不时之需：</p>
 <ol>
-<li><p>在终端使用</p>
-<pre><code class="shell">pod install
-</code></pre>
-<p> 的时候出现了错误<strong>Parsing unable to continue due to parsing error:</strong>,网上说首次执行<strong>pod install OK</strong>，当出现<strong>Podfile.lock</strong>后执行<strong>pod install</strong>  以及<strong>pod update</strong>，出现错误，错误指向<strong>Podfile.lock</strong>。解决方法是安装 <strong>RVM</strong>，然后安装<strong>Ruby Gems</strong>，再安装<strong>Cocoapods</strong>（<a href="http://blog.csdn.net/xinxing260/article/details/41476723" target="_blank" rel="external">附上博客地址</a>）</p>
-</li>
-<li><p>通过上面的方法重新安装<strong>cocoapods</strong>，流程是这样的：</p>
-<pre><code class="shell">sudo gem install cocoapods
-pod setup
-</code></pre>
-<p> 在进行到<strong>pod setup</strong>的时候出现了错误<strong>There was an error reading /Users/yangqihui/.cocoapods/repos/master/CocoaPods-version.yml </strong>，随后下面给了个官方的解决方法（<a href="http://blog.cocoapods.org/Repairing-Our-Broken-Specs-Repository/" target="_blank" rel="external">附上地址</a>）</p>
-<p> 按照官方的做法：</p>
-<pre><code class="shell">sudo rm -fr ~/.cocoapods/repos/master
-pod setup
-</code></pre>
-<p> 官方采用了最简单粗暴的方式，直接将cocoapods下面的repos全部删除。。。</p>
-<p> 可即便是这样问题还依然存在，只好再去看看别的办法。</p>
-</li>
-<li><p>俗话说的好<strong>世界上有两种搜索引擎，一种是Google另一种是其他</strong>，这话对于程序员来说就更深有体会了。Google一下找到了<strong>GitHub</strong>上cocoapods源码中别人提的Issues（<a href="https://github.com/CocoaPods/CocoaPods/issues/2908" target="_blank" rel="external">Issues＃2908</a>）其中有一个回答是这样的</p>
-<pre><code class="shell">sudo gem uninstall psych
-sudo gem install psych -v 2.0.0
-</code></pre>
-<p> 虽然不太清楚<strong>psych</strong>是干嘛的，不过应该是版本不兼容产生的问题。</p>
-</li>
-<li><p>将psych重新安装成2.0.0的版本，果然安装成功了👍🏻，果断<strong>pod intall</strong>,结果是悲剧的，安装的问题解决了，可一开始<strong>Parsing unable to continue due to parsing error:</strong>的问题依然存在,折腾了半天又回到了最初的起点。简单的分析了一下，现在情况是这样的：</p>
-<ul>
-<li>可以肯定现在的<strong>cocoapods</strong>的版本是最新的。</li>
-<li>电脑上存在冲突的<strong>psych</strong>也被重新安装了2.0.0版本。</li>
-</ul>
-</li>
-<li><p>又是一顿Google最后找到了一个十分坑爹的错误可能。<strong>gem update</strong>的时候旧的版本可能会被保存下来，而执行<strong>pod intall</strong>的时候可能会使用旧版的<strong>cocoapods</strong>添加版本依赖，随意导致了这个错误。</p>
-<p> 具体的解决方法其实十分简单：</p>
-<pre><code class="shell">gem cleanup
-</code></pre>
-<p> 这条指令会把旧版本的<strong>cocoapods</strong>移除，问题就解决了。</p>
-</li>
+<li>tableView手势冲突</li>
 </ol>
-<ul>
-<li><p><strong>总结</strong></p>
-<ul>
-<li>这次出现的问题是在GitHub上合作开发的前提下，别人在<strong>cocoapods</strong>中添加了库，在把别人的代码合并到自己的分支的时候出现了这个问题。</li>
-<li>按照网上的说法，以上这种错误不会出现在第一次<strong>pod install</strong>的时候</li>
-<li>解决方法是先看自己是不是安装了其他版本的<strong>cocoapods</strong>，以免造成混淆，如果排除了版本的问题则需要重新安装<strong>cocoapods</strong>（<a href="http://www.devtang.com/blog/2014/05/25/use-cocoapod-to-manage-ios-lib-dependency/" target="_blank" rel="external">巧神博客中的安装教程</a>）</li>
-<li><strong>cocoapods</strong>使用起来十分方便，不过前期的配置还是十分蛋疼的，但愿不会每次<strong>pod install</strong>都会遇到这种问题。</li>
-</ul>
-</li>
-<li><p><strong>福利</strong></p>
-<p>  <strong>Google</strong>在我国使用起来还是有很多限制的，可以采用VPN，镜像网站或者修改HOST文件的方式登录。但还是不太方便。之前发现了一个神级网站可以轻松上<strong>Google</strong>（<a href="http://www.baigoogledu.com/" target="_blank" rel="external">BaiGoogledu</a>）,名字中就凸显了一种王霸之气！！！，不仅能上<strong>Google</strong>,还能和<strong>Baidu</strong>同时检索。一比较高下立判。</p>
-</li>
-</ul>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#pragma mark UIGestureRecognizerDelegate methods</span><br><span class="line">- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch*)touch&#123;</span><br><span class="line">	if ([touch.view isDescendantOfView:autocompleteTableView]) &#123;</span><br><span class="line">		return NO;</span><br><span class="line">	&#125;</span><br><span class="line">	return Yes;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>XCTOOL</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">XCTOOL 编译（工程名PhotoAlbum）</span><br><span class="line">1. cd到项目目录</span><br><span class="line">2. xctool -scheme PhotoAlbum build -sdk iphonesimulator（-sdk iphonesimulator表示模拟器编译，不添加此参数表示真机编译）</span><br><span class="line">    xctool -workspace BeTalk.xcworkspace -scheme BeTalk archive</span><br><span class="line">3. archive－打包  build－编译  test－测试</span><br></pre></td></tr></table></figure>
+<ol>
+<li>httpie &amp;&amp; jq</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http 192.168.1.252:8888/appServer/common/main.do ver_num=&apos;1.0&apos; | jq &apos;. | &#123;url: .interface_list.askInsert&#125;&apos;</span><br></pre></td></tr></table></figure>
       
     </div>
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/IOS/" rel="tag">#IOS</a>
-          
-        </div>
       
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/04/19/Effective-Objective-c-2-0读书笔记（一）/" rel="next" title="Effective Objective-c 2.0读书笔记（一）">
-                <i class="fa fa-chevron-left"></i> Effective Objective-c 2.0读书笔记（一）
+              <a href="/2016/05/10/《逆转》读书笔记/" rel="next" title="《逆转》读书笔记">
+                <i class="fa fa-chevron-left"></i> 《逆转》读书笔记
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/04/21/Git-flow使用介绍/" rel="prev" title="Git-flow使用介绍">
-                Git-flow使用介绍 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -389,8 +335,8 @@ sudo gem install psych -v 2.0.0
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/04/20/cocoapods-更新/"
-           data-title="cocoapods 更新" data-url="http://atbj505.github.io/2015/04/20/cocoapods-更新/">
+      <div class="ds-thread" data-thread-key="2016/05/17/笔记-20160517/"
+           data-title="笔记( - 20160517)" data-url="http://atbj505.github.io/2016/05/17/笔记-20160517/">
       </div>
     
   </div>
