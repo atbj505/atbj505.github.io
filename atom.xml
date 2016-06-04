@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://atbj505.github.io/"/>
-  <updated>2016-05-17T08:12:57.000Z</updated>
+  <updated>2016-05-19T07:27:10.000Z</updated>
   <id>http://atbj505.github.io/</id>
   
   <author>
@@ -16,11 +16,27 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>跨越边界 笔记</title>
+    <link href="http://atbj505.github.io/2016/05/19/%E8%B7%A8%E8%B6%8A%E8%BE%B9%E7%95%8C-%E7%AC%94%E8%AE%B0/"/>
+    <id>http://atbj505.github.io/2016/05/19/跨越边界-笔记/</id>
+    <published>2016-05-19T07:27:10.000Z</published>
+    <updated>2016-05-19T07:27:10.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>笔记( - 20160517)</title>
     <link href="http://atbj505.github.io/2016/05/17/%E7%AC%94%E8%AE%B0-20160517/"/>
     <id>http://atbj505.github.io/2016/05/17/笔记-20160517/</id>
     <published>2016-05-17T08:00:29.000Z</published>
-    <updated>2016-05-17T08:12:57.000Z</updated>
+    <updated>2016-06-04T03:56:11.000Z</updated>
     
     <content type="html">&lt;p&gt;之前总结的笔记&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -35,7 +51,11 @@
 &lt;ol&gt;
 &lt;li&gt;httpie &amp;amp;&amp;amp; jq&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;http 192.168.1.252:8888/appServer/common/main.do ver_num=&amp;apos;1.0&amp;apos; | jq &amp;apos;. | &amp;#123;url: .interface_list.askInsert&amp;#125;&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;http 192.168.1.252:8888/appServer/common/main.do ver_num=&amp;apos;1.0&amp;apos; | jq &amp;apos;. | &amp;#123;url: .interface_list.askInsert&amp;#125;&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;LLDB&lt;br&gt;image lookup -a 地址可以查看bug位置&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2194986-eb4a60740d3161bd.png?imageMogr2/auto-orient/strip&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2194986-fac178e00d96316f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;&quot;&gt;&lt;br&gt;断点添加条件&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2194986-c0719f3d14207379.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
     
     <summary type="html">
     
@@ -3193,37 +3213,6 @@ sudo gem install psych -v 2.0.0
     
     
       <category term="OC" scheme="http://atbj505.github.io/tags/OC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo 我来了！</title>
-    <link href="http://atbj505.github.io/2015/04/18/Hexo-%E6%88%91%E6%9D%A5%E4%BA%86%EF%BC%81/"/>
-    <id>http://atbj505.github.io/2015/04/18/Hexo-我来了！/</id>
-    <published>2015-04-18T05:26:12.000Z</published>
-    <updated>2015-04-18T05:35:47.000Z</updated>
-    
-    <content type="html">&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;折腾了半天终于搞定了&lt;strong&gt;Hexo&lt;/strong&gt;，对于&lt;strong&gt;MAC&lt;/strong&gt;来说还是挺顺利的。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;都说写作对于程序员来说很重要，今天算是迈出了第一步，以后会在这多写一些IOS的东西，谈不上经验分享，算是给自己的备忘吧。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;右边有我的GitHub账号，代码基本都会放上去，大家别忘了给个&lt;strong&gt;Star&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;折腾了半天终于搞定了&lt;strong&gt;Hexo&lt;/strong&gt;，对于&lt;strong&gt;MAC&lt;/strong&gt;来说还是挺顺利的。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;都说写作对于程序员来说很重要，今天算是迈出了第一步，以后会在这多写一些IOS的东西，谈不上经验
-    
-    </summary>
-    
-    
-      <category term="Hexo" scheme="http://atbj505.github.io/tags/Hexo/"/>
     
   </entry>
   

@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="vim," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -59,16 +59,16 @@
 
 
 
-<meta name="description" content="vim备忘">
+<meta name="description" content="Stay weird. Stay different.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim备忘">
-<meta property="og:url" content="http://atbj505.github.io/2016/01/27/vim备忘/index.html">
+<meta property="og:title" content="跨越边界 笔记">
+<meta property="og:url" content="http://atbj505.github.io/2016/05/19/跨越边界-笔记/index.html">
 <meta property="og:site_name" content="杨">
-<meta property="og:description" content="vim备忘">
-<meta property="og:updated_time" content="2016-01-29T07:01:32.000Z">
+<meta property="og:description" content="Stay weird. Stay different.">
+<meta property="og:updated_time" content="2016-05-19T07:27:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vim备忘">
-<meta name="twitter:description" content="vim备忘">
+<meta name="twitter:title" content="跨越边界 笔记">
+<meta name="twitter:description" content="Stay weird. Stay different.">
 
 
 
@@ -86,7 +86,7 @@
   };
 </script>
 
-  <title> vim备忘 | 杨 </title>
+  <title> 跨越边界 笔记 | 杨 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -234,7 +234,7 @@
             
             
               
-                vim备忘
+                跨越边界 笔记
               
             
           </h1>
@@ -246,8 +246,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-27T10:49:29+08:00" content="2016-01-27">
-              2016-01-27
+            <time itemprop="dateCreated" datetime="2016-05-19T15:27:10+08:00" content="2016-05-19">
+              2016-05-19
             </time>
           </span>
 
@@ -257,8 +257,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/27/vim备忘/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/27/vim备忘/" itemprop="commentsCount"></span>
+                <a href="/2016/05/19/跨越边界-笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/19/跨越边界-笔记/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -279,152 +279,24 @@
       
 
       
-        <h1 id="vim备忘"><a href="#vim备忘" class="headerlink" title="vim备忘"></a>vim备忘</h1><a id="more"></a>
-<h2 id="第一讲"><a href="#第一讲" class="headerlink" title="第一讲"></a>第一讲</h2><p><code>hjkl</code>:移动 <code>h</code>左 <code>j</code>下 <code>k</code>上 <code>l</code>右</p>
-<p><code>vim 文件名</code>:打开文件，如果此文件不存在则会新建文件</p>
-<p><code>:q!</code>:退出编辑不保存</p>
-<p><code>:wq</code>:保存并退出</p>
-<p><code>x</code>:删除当前光标下的字</p>
-<p><code>X</code>:删除当前光标前的字</p>
-<p><code>i</code>:光标前插入</p>
-<p><code>I</code>:行首插入</p>
-<p><code>a</code>:光标后插入</p>
-<p><code>A</code>:行尾插入</p>
-<h2 id="第二讲"><a href="#第二讲" class="headerlink" title="第二讲"></a>第二讲</h2><p><code>dw</code>:从光标处删除至下个单词的开头 例入光标在<code>is</code>的<code>i</code>上 <code>it is my life</code>-&gt;<code>it my life</code></p>
-<p><code>de</code>:从光标处删除至本单词的末尾 例入光标在<code>is</code>的<code>i</code>上 <code>it is my life</code>-&gt;<code>it  my life</code>,<code>my</code>前有两个空格</p>
-<p><code>d$</code>:从光标处删除至行尾 例入光标在<code>is</code>的<code>i</code>上 <code>it is my life</code>-&gt;<code>it</code></p>
-<p>其中<code>d</code>是操作符<code>w,e,$</code>是动作</p>
-<p><code>d</code>:删除操作</p>
-<p><code>w</code>:从光标到下个单词的开头</p>
-<p><code>e</code>:从光标到本单词的末尾</p>
-<p><code>$</code>:从光标到行尾</p>
-<p>可以在动作前加入数组表示重复次数</p>
-<p><code>d2w</code>:从光标处删除至第三个单词的开头 例入光标在<code>is</code>的<code>i</code>上 <code>it is my life</code>-&gt;<code>it life</code></p>
-<p><code>dd</code>:删除当前行</p>
-<p><code>2dd</code>:删除当前行和下一行</p>
-<p><code>u</code>:撤销</p>
-<p><code>U</code>:整行操作撤销</p>
-<p><code>CTRL-R</code>:撤销撤销，还原之前的操作</p>
-<h2 id="第三讲"><a href="#第三讲" class="headerlink" title="第三讲"></a>第三讲</h2><p><code>p</code>:将删除的内容置入光标之后，如果是行的话置入下一行</p>
-<p><code>r</code>:替换光标当前字符，先输入<code>r</code>然后输入替换内容</p>
-<p><code>ce</code>:修改知道单词末尾并进入编辑状态 例入光标在<code>is</code>的<code>i</code>上 <code>it is my life</code>-&gt;<code>it  my life</code>,<code>my</code>前有两个空格</p>
-<p>更改类命令<code>c</code>和删除类命令<code>d</code>的区别是<code>c</code>会在更改完之后进入编辑模式</p>
-<h2 id="第四讲"><a href="#第四讲" class="headerlink" title="第四讲"></a>第四讲</h2><p><code>CTRL-G</code>:显示当前文件信息，及当前所在行的位置</p>
-<p><code>G</code>:跳转到文件的最后一行</p>
-<p><code>gg</code>:跳转的文件的第一行</p>
-<p>输入停留的行号，然后输入<code>G</code>，可以跳转到按<code>CTRL-G</code>时所在行</p>
-<p><code>/</code>:查找</p>
-<p><code>?</code>:逆向查找</p>
-<p><code>n</code>:下一项查找匹配结果</p>
-<p><code>N</code>:上一项查找匹配结果</p>
-<p><code>CTRL-o</code>:回到之前的位置</p>
-<p><code>CTRL-i</code>:跳转到较新的位置</p>
-<p><code>%</code>:查找配对的<code>(,[,{</code></p>
-<p><code>:s/old/new</code>:替换<code>old</code>为<code>new</code>，只会替换第一个匹配的结果</p>
-<p><code>:s/old/new/g</code>:替换<code>old</code>为<code>new</code>，圈行匹配替换</p>
-<p><code>:#,#s/old/new/g</code>:指定行匹配替换，其中<code>#,#</code>为起始行号和结束行号</p>
-<p><code>%s/old/new/g</code>:全文匹配替换</p>
-<p><code>%s/old/new/gc</code>:全文匹配替换，并且提示是否替换</p>
-<h2 id="第五讲"><a href="#第五讲" class="headerlink" title="第五讲"></a>第五讲</h2><p><code>:!</code>:可以在<code>:!</code>后面接外部命令，例如<code>:!ls</code>与在<code>shell</code>中<code>ls</code>的效果一致</p>
-<p><code>:w</code>:可以在<code>:w</code>后面接文件名，对当前文件进行另存为操作</p>
-<p><code>wa</code>:保存所有文件</p>
-<p><code>v</code>:进入可视化模式进行选取，可以在可是模式下移动光标进行选取，然后按<code>:</code>对选取的区域进行操作，例如<code>:&#39;&lt;,&#39;&gt;w test.txt</code>可以对选中的区域进行另存为操作</p>
-<p><code>:r</code>:当前行插入其他文件内容或外部指令结果，例如<code>:r text.txt</code>,<code>:r !ls</code></p>
-<h2 id="第六讲"><a href="#第六讲" class="headerlink" title="第六讲"></a>第六讲</h2><p><code>o</code>:在当前光标行下方插入一行并进入编辑模式</p>
-<p><code>O</code>:在当前光标行上方插入一行并进入编辑模式</p>
-<p><code>R</code>:替换，是在原有文字的基础上进行的替换</p>
-<p><code>y</code>:复制命令，可以结合<code>v</code>使用，复制指定范围，也可以通过其他的动作，如<code>w</code>使用，复制一个单词</p>
-<p><code>p</code>:粘贴</p>
-<p><code>:set ic</code>:查找是忽略大小写</p>
-<p><code>:set noic</code>:禁用忽略大小写</p>
-<p><code>:set is</code>:查找短语时显示部分匹配</p>
-<p><code>:set hls</code>:高亮显示所有的匹配项</p>
-<h2 id="第七讲"><a href="#第七讲" class="headerlink" title="第七讲"></a>第七讲</h2><p><code>:help</code>:帮助，可以获取指定命令的帮助,如<code>:help w</code></p>
-<p><code>CTRL-W</code>:<code>vim</code>窗口切换</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><code>b</code>:向左移动直到单词开头</p>
-<p><code>CTRL-d</code>:向下滚动半页</p>
-<p><code>CTRL-u</code>:向上滚动半页</p>
-<p><code>CTRL-f</code>:向下滚动一页</p>
-<p><code>CTRL-b</code>:向上滚动一页</p>
-<p><code>zz</code>:当前位置为屏幕中央</p>
-<p><code>zt</code>:当前位置为屏幕顶端</p>
-<p><code>zb</code>:当前位子为屏幕底端</p>
-<p><code>gf</code>:打开光标所在文件</p>
-<p><code>:e &lt;filename&gt;</code>:打开指定文件，如果没有则新建文件</p>
-<p><code>:Ex</code>:打开目录数，回车打开对应文件<code>-</code>返回上一级</p>
-<p><code>*</code>:向后查找光标当前所在单词</p>
-<p><code>#</code>:向前查找光标当前所在单词</p>
-<p><code>fa</code>:查找下一个为<code>a</code>的单词处,<code>F</code>方向相反</p>
-<p><code>ta</code>:查找下一个为<code>a</code>的单词前,<code>T</code>方向相反</p>
-<p><code>;</code>:继续查找</p>
-<p><code>dta</code>:删除所有内容直到遇到<code>a</code></p>
-<p><code>yy</code>:拷贝当前行，与<code>0y$</code>效果一样</p>
-<p><code>P</code>:粘贴到当前位置之前</p>
-<p><code>100iabc</code>:插入<code>abc</code>100次</p>
-<p><code>.</code>:重复上次命令</p>
-<p><code>3.</code>:重复三次上次命令</p>
-<p><code>:ls</code>:打开缓存区，<code>:buffers</code>也有同样的效果</p>
-<p><code>:b&lt;N&gt;</code>:打开缓存的第n个文件</p>
-<p><code>:bd&lt;N&gt;</code>:删除要关闭的缓存区</p>
-<p><code>J</code>:将当前行与下一行合并</p>
-<p><code>&gt;&gt;</code>:向右缩进</p>
-<p><code>&lt;&lt;</code>:向左缩进</p>
-<p><code>==</code>:自动排版当前行</p>
-<p><code>gg=G</code>:当前文档全文自动排版</p>
-<p><code>sp</code>,<code>CTRL-w s</code>:上下分屏</p>
-<p><code>vs</code>,<code>CTRL-w v</code>:左右分屏</p>
-<p><code>:diffs filename&lt;&gt;</code>:<code>diff</code>模式打开一个分屏</p>
-<p><code>CTRL-w w</code>:激活下个窗口</p>
-<p><code>CTRL-w j</code>:激活下方窗口</p>
-<p><code>CTRL-w k</code>:激活上方窗口</p>
-<p><code>CTRL-w h</code>:激活左侧窗口</p>
-<p><code>CTRL-w l</code>:激活右侧窗口</p>
-<p><code>CTRL-w =</code>:平均窗口尺寸</p>
-<p><code>CTRL-w +</code>:增加高度</p>
-<p><code>CTRL-w -</code>:缩减高度</p>
-<p><code>CTRL-w _</code>:最大高度</p>
-<p><code>CTRL-w &gt;</code>:增加宽度</p>
-<p><code>CTRL-w &lt;</code>:缩减宽度</p>
-<p><code>CTRL-w |</code>:最大宽度</p>
-<p><code>:tabe</code>:打开新标签页,后面可以跟<code>&lt;空格&gt;&lt;文件名&gt;</code>打开指定文件</p>
-<p><code>CTRL-w gf</code>:在新标签中打开当前光标所在位置的文件名</p>
-<p><code>gt</code>,<code>:tabn</code>:下一个标签页</p>
-<p><code>gT</code>,<code>:tabp</code>:上一个标签页</p>
-<p><code>:tabr</code>:到第一个标签页</p>
-<p><code>:tabl</code>:到最后一个标签页</p>
-<p><code>:tabc</code>:关闭当前标签栏</p>
-<p><code>:-tabc</code>:关闭上一个标签页</p>
-<p><code>:+tabc</code>:关闭下一个标签页</p>
-<p><code>:tabo</code>:关闭其他标签页</p>
-<p><code>CTRL-v</code>:块操作，例如注释n行,可以进入块模式选取n行，<code>shift+i</code>，输入<code>#</code>，<code>ESC</code></p>
-
+        
       
     </div>
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/vim/" rel="tag">#vim</a>
-          
-        </div>
       
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/18/Github-Star/" rel="next" title="Github Star">
-                <i class="fa fa-chevron-left"></i> Github Star
+              <a href="/2016/05/17/笔记-20160517/" rel="next" title="笔记( - 20160517)">
+                <i class="fa fa-chevron-left"></i> 笔记( - 20160517)
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/03/进程与线程/" rel="prev" title="进程与线程">
-                进程与线程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -450,8 +322,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/27/vim备忘/"
-           data-title="vim备忘" data-url="http://atbj505.github.io/2016/01/27/vim备忘/">
+      <div class="ds-thread" data-thread-key="2016/05/19/跨越边界-笔记/"
+           data-title="跨越边界 笔记" data-url="http://atbj505.github.io/2016/05/19/跨越边界-笔记/">
       </div>
     
   </div>
@@ -559,7 +431,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vim备忘"><span class="nav-number">1.</span> <span class="nav-text">vim备忘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一讲"><span class="nav-number">1.1.</span> <span class="nav-text">第一讲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二讲"><span class="nav-number">1.2.</span> <span class="nav-text">第二讲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三讲"><span class="nav-number">1.3.</span> <span class="nav-text">第三讲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四讲"><span class="nav-number">1.4.</span> <span class="nav-text">第四讲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五讲"><span class="nav-number">1.5.</span> <span class="nav-text">第五讲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六讲"><span class="nav-number">1.6.</span> <span class="nav-text">第六讲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七讲"><span class="nav-number">1.7.</span> <span class="nav-text">第七讲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">1.8.</span> <span class="nav-text">其他</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
