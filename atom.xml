@@ -309,7 +309,7 @@
     <link href="http://atbj505.github.io/2016/01/27/vim%E5%A4%87%E5%BF%98/"/>
     <id>http://atbj505.github.io/2016/01/27/vim备忘/</id>
     <published>2016-01-27T02:49:29.000Z</published>
-    <updated>2016-11-01T02:01:35.000Z</updated>
+    <updated>2016-11-01T07:55:57.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;vim备忘&quot;&gt;&lt;a href=&quot;#vim备忘&quot; class=&quot;headerlink&quot; title=&quot;vim备忘&quot;&gt;&lt;/a&gt;vim备忘&lt;/h1&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;第一讲&quot;&gt;&lt;a href=&quot;#第一讲&quot; class=&quot;headerlink&quot; title=&quot;第一讲&quot;&gt;&lt;/a&gt;第一讲&lt;/h2&gt;&lt;p&gt;&lt;code&gt;hjkl&lt;/code&gt;:移动 &lt;code&gt;h&lt;/code&gt;左 &lt;code&gt;j&lt;/code&gt;下 &lt;code&gt;k&lt;/code&gt;上 &lt;code&gt;l&lt;/code&gt;右&lt;/p&gt;
@@ -429,6 +429,8 @@
 &lt;p&gt;&lt;code&gt;:+tabc&lt;/code&gt;:关闭下一个标签页&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;:tabo&lt;/code&gt;:关闭其他标签页&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;CTRL-v&lt;/code&gt;:块操作，例如注释n行,可以进入块模式选取n行，&lt;code&gt;shift+i&lt;/code&gt;，输入&lt;code&gt;#&lt;/code&gt;，&lt;code&gt;ESC&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;,cc&lt;/code&gt;:注释&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;,cu&lt;/code&gt;:取消注释&lt;/p&gt;
 </content>
     
     <summary type="html">
