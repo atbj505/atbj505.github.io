@@ -309,7 +309,7 @@
     <link href="http://atbj505.github.io/2016/01/27/vim%E5%A4%87%E5%BF%98/"/>
     <id>http://atbj505.github.io/2016/01/27/vim备忘/</id>
     <published>2016-01-27T02:49:29.000Z</published>
-    <updated>2016-01-29T07:01:32.000Z</updated>
+    <updated>2016-11-01T02:01:35.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;vim备忘&quot;&gt;&lt;a href=&quot;#vim备忘&quot; class=&quot;headerlink&quot; title=&quot;vim备忘&quot;&gt;&lt;/a&gt;vim备忘&lt;/h1&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;第一讲&quot;&gt;&lt;a href=&quot;#第一讲&quot; class=&quot;headerlink&quot; title=&quot;第一讲&quot;&gt;&lt;/a&gt;第一讲&lt;/h2&gt;&lt;p&gt;&lt;code&gt;hjkl&lt;/code&gt;:移动 &lt;code&gt;h&lt;/code&gt;左 &lt;code&gt;j&lt;/code&gt;下 &lt;code&gt;k&lt;/code&gt;上 &lt;code&gt;l&lt;/code&gt;右&lt;/p&gt;
@@ -339,7 +339,7 @@
 &lt;p&gt;&lt;code&gt;CTRL-R&lt;/code&gt;:撤销撤销，还原之前的操作&lt;/p&gt;
 &lt;h2 id=&quot;第三讲&quot;&gt;&lt;a href=&quot;#第三讲&quot; class=&quot;headerlink&quot; title=&quot;第三讲&quot;&gt;&lt;/a&gt;第三讲&lt;/h2&gt;&lt;p&gt;&lt;code&gt;p&lt;/code&gt;:将删除的内容置入光标之后，如果是行的话置入下一行&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;r&lt;/code&gt;:替换光标当前字符，先输入&lt;code&gt;r&lt;/code&gt;然后输入替换内容&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ce&lt;/code&gt;:修改知道单词末尾并进入编辑状态 例入光标在&lt;code&gt;is&lt;/code&gt;的&lt;code&gt;i&lt;/code&gt;上 &lt;code&gt;it is my life&lt;/code&gt;-&amp;gt;&lt;code&gt;it  my life&lt;/code&gt;,&lt;code&gt;my&lt;/code&gt;前有两个空格&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ce&lt;/code&gt;:修改直到单词末尾并进入编辑状态 例入光标在&lt;code&gt;is&lt;/code&gt;的&lt;code&gt;i&lt;/code&gt;上 &lt;code&gt;it is my life&lt;/code&gt;-&amp;gt;&lt;code&gt;it  my life&lt;/code&gt;,&lt;code&gt;my&lt;/code&gt;前有两个空格&lt;/p&gt;
 &lt;p&gt;更改类命令&lt;code&gt;c&lt;/code&gt;和删除类命令&lt;code&gt;d&lt;/code&gt;的区别是&lt;code&gt;c&lt;/code&gt;会在更改完之后进入编辑模式&lt;/p&gt;
 &lt;h2 id=&quot;第四讲&quot;&gt;&lt;a href=&quot;#第四讲&quot; class=&quot;headerlink&quot; title=&quot;第四讲&quot;&gt;&lt;/a&gt;第四讲&lt;/h2&gt;&lt;p&gt;&lt;code&gt;CTRL-G&lt;/code&gt;:显示当前文件信息，及当前所在行的位置&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;G&lt;/code&gt;:跳转到文件的最后一行&lt;/p&gt;
