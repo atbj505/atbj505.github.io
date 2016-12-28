@@ -68,7 +68,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2194986-eb4a60740d3161bd.png?imageMogr2/auto-orient/strip">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2194986-fac178e00d96316f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2194986-c0719f3d14207379.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-06-04T03:56:11.000Z">
+<meta property="og:updated_time" content="2016-12-28T01:53:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记( - 20160517)">
 <meta name="twitter:description" content="之前总结的笔记">
@@ -318,9 +318,12 @@
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http 192.168.1.252:8888/appServer/common/main.do ver_num=&apos;1.0&apos; | jq &apos;. | &#123;url: .interface_list.askInsert&#125;&apos;</span><br></pre></td></tr></table></figure>
 <ol>
-<li>LLDB<br>image lookup -a 地址可以查看bug位置<br><img src="http://upload-images.jianshu.io/upload_images/2194986-eb4a60740d3161bd.png?imageMogr2/auto-orient/strip" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/2194986-fac178e00d96316f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>断点添加条件<br><img src="http://upload-images.jianshu.io/upload_images/2194986-c0719f3d14207379.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><p>LLDB<br>image lookup -a 地址可以查看bug位置<br><img src="http://upload-images.jianshu.io/upload_images/2194986-eb4a60740d3161bd.png?imageMogr2/auto-orient/strip" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/2194986-fac178e00d96316f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>断点添加条件<br><img src="http://upload-images.jianshu.io/upload_images/2194986-c0719f3d14207379.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</li>
+<li><p>三元运算符简化</p>
+</li>
 </ol>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">推荐 result = object ? : [self createObject];</span><br><span class="line">不推荐 result = object ? object : [self createObject];</span><br></pre></td></tr></table></figure>
       
     </div>
 

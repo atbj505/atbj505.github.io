@@ -325,7 +325,7 @@
     <link href="http://atbj505.github.io/2016/05/17/%E7%AC%94%E8%AE%B0-20160517/"/>
     <id>http://atbj505.github.io/2016/05/17/笔记-20160517/</id>
     <published>2016-05-17T08:00:29.000Z</published>
-    <updated>2016-06-04T03:56:11.000Z</updated>
+    <updated>2016-12-28T01:53:01.000Z</updated>
     
     <content type="html">&lt;p&gt;之前总结的笔记&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -342,9 +342,12 @@
 &lt;/ol&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;http 192.168.1.252:8888/appServer/common/main.do ver_num=&amp;apos;1.0&amp;apos; | jq &amp;apos;. | &amp;#123;url: .interface_list.askInsert&amp;#125;&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ol&gt;
-&lt;li&gt;LLDB&lt;br&gt;image lookup -a 地址可以查看bug位置&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2194986-eb4a60740d3161bd.png?imageMogr2/auto-orient/strip&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2194986-fac178e00d96316f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;&quot;&gt;&lt;br&gt;断点添加条件&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2194986-c0719f3d14207379.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;LLDB&lt;br&gt;image lookup -a 地址可以查看bug位置&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2194986-eb4a60740d3161bd.png?imageMogr2/auto-orient/strip&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2194986-fac178e00d96316f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;&quot;&gt;&lt;br&gt;断点添加条件&lt;br&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2194986-c0719f3d14207379.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;三元运算符简化&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-</content>
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;推荐 result = object ? : [self createObject];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;不推荐 result = object ? object : [self createObject];&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
     
     <summary type="html">
     
