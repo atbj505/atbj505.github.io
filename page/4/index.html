@@ -262,6 +262,117 @@
             
               
                 
+                <a class="post-title-link" href="/2015/05/02/Effective-Objective-c-2-0读书笔记（三）/" itemprop="url">
+                  Effective-Objective-c-2-0读书笔记（三）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-05-02T10:50:24+08:00" content="2015-05-02">
+              2015-05-02
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/05/02/Effective-Objective-c-2-0读书笔记（三）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/02/Effective-Objective-c-2-0读书笔记（三）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <ul>
+<li><p><strong>第九条：以类族模式隐藏实现细节</strong></p>
+<p>  类族可以隐藏抽象基类的实现细节，其中IOS中常用的UIButton就是使用的这种模式。</p>
+  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ (<span class="built_in">UIButton</span> *)buttonWithType:(<span class="built_in">UIButtonType</span>)type;</span><br></pre></td></tr></table></figure>
+<p>  在具体实现中，会根据<code>type</code>的不同，调用不同子类的初始化方法。</p>
+<p>  在具体的应用中，也可以使用这种模式，通过一个通用的基类创建不同的子类对象。</p>
+<ol>
+<li><p>声明枚举类型</p>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">typdef <span class="built_in">NS_ENUM</span>(<span class="built_in">NSUInteger</span>, EOCEmployeeType) &#123;</span><br><span class="line">	EOCEmployeeTypeDeveloper,</span><br><span class="line">	EOCEmployeeTypeDesigner,</span><br><span class="line">	EOCEmployeeTypeFinance</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>声明工厂方法</p>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ (EOCEmployee *)employeeWithType:(EOCEmployeeType)type;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>实现工厂方法</p>
+ <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">+ (EOCEmployee *)employeeWithType:(EOCEmployeeType)type &#123;</span><br><span class="line">	<span class="keyword">switch</span> (type) &#123;</span><br><span class="line">		<span class="keyword">case</span> EOCEmployeeTypeDeveloper:</span><br><span class="line">			<span class="keyword">return</span> [EOCEmployeeTypeDeveloper new];</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> EOCEmployeeTypeDesigner:</span><br><span class="line">			<span class="keyword">return</span> [EOCEmployeeTypeDesigner new];</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> EOCEmployeeTypeFinance:</span><br><span class="line">			<span class="keyword">return</span> [EOCEmployeeTypeFinance new];</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/05/02/Effective-Objective-c-2-0读书笔记（三）/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/04/27/Block备忘/" itemprop="url">
                   Block备忘
                 </a>
@@ -720,116 +831,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/04/19/Effective-Objective-c-2-0读书笔记（一）/" itemprop="url">
-                  Effective Objective-c 2.0读书笔记（一）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-04-19T15:03:38+08:00" content="2015-04-19">
-              2015-04-19
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/04/19/Effective-Objective-c-2-0读书笔记（一）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/19/Effective-Objective-c-2-0读书笔记（一）/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <ul>
-<li><p><strong>第一条：了解OC语言的起源</strong></p>
-<p>  信息与函数调用的区别</p>
-<ul>
-<li><p>OC消息</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Object *obj = [object new];</span><br><span class="line">[obj performWith:parameter1 and:parameter2];</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>C++函数调用</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Object *obj = <span class="keyword">new</span> object;</span><br><span class="line">obj-&gt;perform(parameter1, parameter2);</span><br></pre></td></tr></table></figure>
-<p>关键区别在于：</p>
-</li>
-</ul>
-<ol>
-<li>消息结构其运行时所应执行的代码由<strong>运行环境</strong>决定，而使用函数调用的语言，则是由<strong>编译器</strong>决定</li>
-<li>如果代码调用的函数的多态的，那么就要查找<strong>虚函数表</strong>，而如果是消息传递式则不论是否多态，总是在<strong>运行时</strong>才去查找所要执行的方法，也就是所谓的动态绑定。</li>
-</ol>
-</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/04/19/Effective-Objective-c-2-0读书笔记（一）/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -876,7 +877,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

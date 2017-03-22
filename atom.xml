@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://atbj505.github.io/"/>
-  <updated>2017-02-05T09:05:04.000Z</updated>
+  <updated>2017-03-22T09:32:48.000Z</updated>
   <id>http://atbj505.github.io/</id>
   
   <author>
@@ -16,13 +16,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>过度设计</title>
+    <link href="http://atbj505.github.io/2017/03/22/%E8%BF%87%E5%BA%A6%E8%AE%BE%E8%AE%A1/"/>
+    <id>http://atbj505.github.io/2017/03/22/过度设计/</id>
+    <published>2017-03-22T09:32:48.000Z</published>
+    <updated>2017-03-22T09:32:48.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>2016互联网行业洞察及趋势</title>
     <link href="http://atbj505.github.io/2017/02/05/2016%E4%BA%92%E8%81%94%E7%BD%91%E8%A1%8C%E4%B8%9A%E6%B4%9E%E5%AF%9F%E5%8F%8A%E8%B6%8B%E5%8A%BF/"/>
     <id>http://atbj505.github.io/2017/02/05/2016互联网行业洞察及趋势/</id>
     <published>2017-02-05T06:46:50.000Z</published>
-    <updated>2017-02-05T09:05:04.000Z</updated>
+    <updated>2017-03-22T09:33:51.000Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;中国依旧是全球最大的互联网用户市场&quot;&gt;&lt;a href=&quot;#中国依旧是全球最大的互联网用户市场&quot; class=&quot;headerlink&quot; title=&quot;中国依旧是全球最大的互联网用户市场&quot;&gt;&lt;/a&gt;中国依旧是全球最大的互联网用户市场&lt;/h2&gt;&lt;ol&gt;
+    <content type="html">&lt;p&gt;2016互联网行业洞察及趋势&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;中国依旧是全球最大的互联网用户市场&quot;&gt;&lt;a href=&quot;#中国依旧是全球最大的互联网用户市场&quot; class=&quot;headerlink&quot; title=&quot;中国依旧是全球最大的互联网用户市场&quot;&gt;&lt;/a&gt;中国依旧是全球最大的互联网用户市场&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;中国6.9亿&lt;/li&gt;
 &lt;li&gt;印度3.41亿&lt;/li&gt;
 &lt;li&gt;美国2.4亿&lt;/li&gt;
@@ -116,8 +134,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;中国依旧是全球最大的互联网用户市场&quot;&gt;&lt;a href=&quot;#中国依旧是全球最大的互联网用户市场&quot; class=&quot;headerlink&quot; title=&quot;中国依旧是全球最大的互联网用户市场&quot;&gt;&lt;/a&gt;中国依旧是全球最大的互联网用户市场&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;中国6.
+      &lt;p&gt;2016互联网行业洞察及趋势&lt;/p&gt;
     
     </summary>
     
@@ -3144,95 +3161,6 @@ Google 为其他公司提供搜索服务
     <summary type="html">
     
       &lt;p&gt;&lt;code&gt;Block&lt;/code&gt;平常编程中经常用，对于Block语法感觉很怪异，有一些细节总是想不起来，今天正好看到了别人写点Block用法很巧妙，特意来总结一下。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="OC" scheme="http://atbj505.github.io/tags/OC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Effective-Objective-c-2-0读书笔记（二）</title>
-    <link href="http://atbj505.github.io/2015/04/25/Effective-Objective-c-2-0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>http://atbj505.github.io/2015/04/25/Effective-Objective-c-2-0读书笔记（二）/</id>
-    <published>2015-04-25T02:43:25.000Z</published>
-    <updated>2015-04-25T15:43:58.000Z</updated>
-    
-    <content type="html">&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;第五条：用枚举表示状态，选项，状态码&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;应该用枚举来表示状态机的状态，传递给方法的选项以及状态码等值，给这些值起个易懂的名字。&lt;/li&gt;
-&lt;li&gt;如果把传递给某个方法的选项表示为枚举类型，而多个选项又可以同时使用，那么就将各选项定义为2的幂，以便通过按位操作将其组合起来。&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;用&lt;code&gt;NS_ENUM&lt;/code&gt;与&lt;code&gt;NS_OPTIONS&lt;/code&gt;宏来定义枚举类型，并指明其底层数据类型。&lt;/p&gt;
-&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;NS_ENUM&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;NSUInteger&lt;/span&gt;, EOCConnectionState) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCConnectionStateDisconnected,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCConnectionStateConnecting,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCConnectionStateConnected&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;NS_OPTIONS&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;NSUInteger&lt;/span&gt;, EOCPermittedDirection) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCPermittedDirectionUP     = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCPermittedDirectionDown   = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCPermittedDirectionLeft   = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCPermittedDirectionRight  = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在处理枚举类型的switch语句中不要实现default分支。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;第六条：理解属性的概念&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;属性自动生成的&lt;code&gt;setter&lt;/code&gt;，&lt;code&gt;getter&lt;/code&gt;方法是由编译器在编译器执行，所以编译器里看不见这些&lt;code&gt;合成方法&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;@synthesize&lt;/code&gt;可以指定&lt;code&gt;合成方法&lt;/code&gt;所对应的实力变量的名称，但不推荐这么做。&lt;/p&gt;
- &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;@synthesize&lt;/span&gt; firstName = _myFirstName;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;@dynamic&lt;/code&gt;不会自动生成&lt;code&gt;合成方法&lt;/code&gt;，如果代码访问了&lt;code&gt;合成方法&lt;/code&gt;也不会报错，（多用于CoreData中，因为某些属性不是实例变量，而是来自数据库中）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在初始化方法中不要使用&lt;strong&gt;setter&lt;/strong&gt;方法，如果遇到字符串类型属性要注意&lt;strong&gt;copy&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;id&lt;/span&gt;)initWithFirstName:(&lt;span class=&quot;built_in&quot;&gt;NSString&lt;/span&gt; *)firstName LastName:(&lt;span class=&quot;built_in&quot;&gt;NSString&lt;/span&gt;*)lastName &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; = [&lt;span class=&quot;keyword&quot;&gt;super&lt;/span&gt; init];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		_firstName = [firstName &lt;span class=&quot;keyword&quot;&gt;copy&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		_lastName = [lastName &lt;span class=&quot;keyword&quot;&gt;copy&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;第七条：在对象内部尽量直接访问实例变量&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;计较推荐的方案是：    &lt;/p&gt;
-&lt;p&gt; &lt;strong&gt;写入实例变量&lt;/strong&gt;通过点语法(&lt;code&gt;setter&lt;/code&gt;)    &lt;/p&gt;
-&lt;p&gt; &lt;strong&gt;读取实例变量&lt;/strong&gt;通过实例变量直接访问&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;但有个例外的情况：    &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;首先大&lt;strong&gt;部分情况下初始化方法和dealloc中&lt;/strong&gt;要使用直接访问&lt;strong&gt;实例变量&lt;/strong&gt;的方法，因为子类可能会覆写&lt;code&gt;setter&lt;/code&gt;方法，导致初始化的时候出现我们不想要的结果。    &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;但某些情况下却必须在&lt;strong&gt;初始化方法中&lt;/strong&gt;使用&lt;code&gt;setter&lt;/code&gt;方法，比如待初始化的实例变量声明在父类中,而我们又无法直接访问此实例变量，那么就需要通过&lt;code&gt;setter&lt;/code&gt;方法了。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;还有当使用&lt;strong&gt;懒加载&lt;/strong&gt;的情况下就必须通过&lt;code&gt;getter&lt;/code&gt;方法了，否则将略过&lt;strong&gt;懒加载&lt;/strong&gt;的过程。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;第八条：理解“对象等同性”&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;检测对象的等同性，需要提供&lt;code&gt;isEqual&lt;/code&gt;,&lt;code&gt;hash&lt;/code&gt;两个方法。&lt;/li&gt;
-&lt;li&gt;相同的对象具有相同的哈希码，当相同的哈希码却不一定是相同的对象。&lt;/li&gt;
-&lt;li&gt;按照具体需求制定检测方法。&lt;/li&gt;
-&lt;li&gt;编写hash时要选择合适的算法。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;第五条：用枚举表示状态，选项，状态码&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;应该用枚举来表示状态机的状态，传递给方法的选项以及状态码等值，给这些值起个易懂的名字。&lt;/li&gt;
-&lt;li&gt;如果把传递给某个方法的选项表示为枚举类型，而多个选项又可以同时使用，那么就将各选项定义为2的幂，以便通过按位操作将其组合起来。&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;用&lt;code&gt;NS_ENUM&lt;/code&gt;与&lt;code&gt;NS_OPTIONS&lt;/code&gt;宏来定义枚举类型，并指明其底层数据类型。&lt;/p&gt;
-&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;NS_ENUM&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;NSUInteger&lt;/span&gt;, EOCConnectionState) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCConnectionStateDisconnected,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCConnectionStateConnecting,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCConnectionStateConnected&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;NS_OPTIONS&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;NSUInteger&lt;/span&gt;, EOCPermittedDirection) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCPermittedDirectionUP     = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCPermittedDirectionDown   = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCPermittedDirectionLeft   = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCPermittedDirectionRight  = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在处理枚举类型的switch语句中不要实现default分支。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
     
     </summary>
     
