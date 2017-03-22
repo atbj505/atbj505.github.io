@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://atbj505.github.io/"/>
-  <updated>2017-03-22T09:32:48.000Z</updated>
+  <updated>2017-03-22T10:02:28.000Z</updated>
   <id>http://atbj505.github.io/</id>
   
   <author>
@@ -20,11 +20,22 @@
     <link href="http://atbj505.github.io/2017/03/22/%E8%BF%87%E5%BA%A6%E8%AE%BE%E8%AE%A1/"/>
     <id>http://atbj505.github.io/2017/03/22/过度设计/</id>
     <published>2017-03-22T09:32:48.000Z</published>
-    <updated>2017-03-22T09:32:48.000Z</updated>
+    <updated>2017-03-22T10:02:28.000Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;过度设计&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;过度设计就是鸭子还没打下来，就在争论怎么吃的问题。&lt;/code&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;需求中的过度设计&quot;&gt;&lt;a href=&quot;#需求中的过度设计&quot; class=&quot;headerlink&quot; title=&quot;需求中的过度设计&quot;&gt;&lt;/a&gt;需求中的过度设计&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://pic3.zhimg.com/2287bed1715662d4da9e85f256db0c4a_b.jpg&quot; alt=&quot;需求过度设计&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;设计中的过度设计&quot;&gt;&lt;a href=&quot;#设计中的过度设计&quot; class=&quot;headerlink&quot; title=&quot;设计中的过度设计&quot;&gt;&lt;/a&gt;设计中的过度设计&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://pic1.zhimg.com/b548f705feec4a528352ab5822845c8c_b.jpg&quot; alt=&quot;设计过度设计1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pic2.zhimg.com/9952d7ca01ca33eb78c7e7ba2579500d_b.jpg&quot; alt=&quot;设计过度设计2&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pic2.zhimg.com/984148d4d718c5bba9c997a7eee48799_b.jpg&quot; alt=&quot;设计过度设计3&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;开发中的过度设计&quot;&gt;&lt;a href=&quot;#开发中的过度设计&quot; class=&quot;headerlink&quot; title=&quot;开发中的过度设计&quot;&gt;&lt;/a&gt;开发中的过度设计&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://zhidao.baidu.com/question/186944929.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开发中的过度设计&lt;/a&gt;&lt;/p&gt;
+</content>
     
     <summary type="html">
+    
+      &lt;p&gt;过度设计&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;过度设计就是鸭子还没打下来，就在争论怎么吃的问题。&lt;/code&gt;&lt;/p&gt;
     
     </summary>
     
