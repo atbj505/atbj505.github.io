@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://atbj505.github.io/"/>
-  <updated>2017-03-22T10:49:57.000Z</updated>
+  <updated>2017-03-22T12:52:08.000Z</updated>
   <id>http://atbj505.github.io/</id>
   
   <author>
@@ -20,11 +20,33 @@
     <link href="http://atbj505.github.io/2017/03/22/%E8%BF%87%E5%BA%A6%E8%AE%BE%E8%AE%A1/"/>
     <id>http://atbj505.github.io/2017/03/22/过度设计/</id>
     <published>2017-03-22T09:32:48.000Z</published>
-    <updated>2017-03-22T10:49:57.000Z</updated>
+    <updated>2017-03-22T12:52:08.000Z</updated>
     
     <content type="html">&lt;p&gt;过度设计&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;过度设计就是鸭子还没打下来，就在争论怎么吃的问题。&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://image.woshipm.com/wp-files/2016/10/a9MbBGRQ4lBg1FLfdlLM.png&quot; alt=&quot;电钻&quot;&gt;&lt;br&gt;&lt;em&gt;用户其实只是想打个洞&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&quot;设计不足与设计过度&quot;&gt;&lt;a href=&quot;#设计不足与设计过度&quot; class=&quot;headerlink&quot; title=&quot;设计不足与设计过度&quot;&gt;&lt;/a&gt;设计不足与设计过度&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;什么是设计不足？设计出来的系统复用性差，扩展性不强，不能灵活的应对变化，简言之，设计没到位。设计不足，多半是因为经验有限，设计能力有限。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;什么是过度设计？设计出来的系统比恰到好处要复杂臃肿的多，简言之，客户需求是要一把杀鸡的刀，你给设计了一把牛刀（杀鸡用牛刀）。过度设计，多半是因为有设计的癖好，喜欢炫耀或玩弄无谓的技巧，或是喜欢把简单的问题搞复杂化。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;客户只是告诉你他“需要一把杀鸡的刀”，至于将来有没有需求变化，有没有可能要这把刀能杀牛，客户也不知道。所以当然这个设计的度就很难把握了。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;有人主张设计必须前瞻与用户需求，不能以需求为导向。因为客户从来不会告诉你他未来的需求，连他也不知道。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;有人认为认为设计必须以需求为导向，软件以人为本，以用为本。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;设计不足，意味着系统复用性扩展性和灵活性差，系统僵化，不能应对将来的需求变化，或者将来修改和维护的代价和成本会很高，这当然是设计错误；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;过度设计，则意味着为了实现这个设计要付出的额外代价，例如成本上升，缺陷可能性加大，提升维护成本，甚至降低系统性能。而可维护性和系统的高性能都是系统的隐性需求，这些需求没实现好，当然也是设计错误。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最简单的才是最好的。大巧若拙，大道至简，有时候越简单的反而越难实现，而且越接近真理。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h1 id=&quot;摩拜与ofo&quot;&gt;&lt;a href=&quot;#摩拜与ofo&quot; class=&quot;headerlink&quot; title=&quot;摩拜与ofo&quot;&gt;&lt;/a&gt;摩拜与ofo&lt;/h1&gt;&lt;p&gt;ofo发布会上，ofo创始人兼CEO戴威褒扬自己的同时，不忘吐槽一下友商，他提到，“现在市面上很多友商的设计（尤其是指摩拜单车），在我看来有过度设计的地方，这样直接导致成本高，车身各方面比较重，用户的感受是很难骑。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://attach-bbs.letv.com/forum/201703/10/190510v67o27hurz07poq4.jpg&quot; alt=&quot;ofo&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://f12.baidu.com/it/u=1351806455,3373352028&amp;amp;fm=170&amp;amp;s=55824BBD50A2F0EA1E1D04FD03008030&amp;amp;w=600&amp;amp;h=416&amp;amp;img.JPEG&amp;amp;access=215967316&quot; alt=&quot;摩拜1&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://f12.baidu.com/it/u=3432691439,3929132040&amp;amp;fm=170&amp;amp;s=0331538544C271FB4E8591C803003032&amp;amp;w=600&amp;amp;h=450&amp;amp;img.JPEG&amp;amp;access=215967316&quot; alt=&quot;摩拜2&quot;&gt;&lt;/p&gt;
@@ -33,6 +55,8 @@
 &lt;p&gt;&lt;img src=&quot;https://pic2.zhimg.com/9952d7ca01ca33eb78c7e7ba2579500d_b.jpg&quot; alt=&quot;设计过度设计2&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://pic2.zhimg.com/984148d4d718c5bba9c997a7eee48799_b.jpg&quot; alt=&quot;设计过度设计3&quot;&gt;&lt;/p&gt;
 &lt;h1 id=&quot;开发中的过度设计&quot;&gt;&lt;a href=&quot;#开发中的过度设计&quot; class=&quot;headerlink&quot; title=&quot;开发中的过度设计&quot;&gt;&lt;/a&gt;开发中的过度设计&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://zhidao.baidu.com/question/186944929.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开发中的过度设计&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/22166831&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;10 个现代的软件过度设计错误&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;敏捷开发&amp;amp;TDD&lt;/code&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -40,6 +64,28 @@
       &lt;p&gt;过度设计&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;过度设计就是鸭子还没打下来，就在争论怎么吃的问题。&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://image.woshipm.com/wp-files/2016/10/a9MbBGRQ4lBg1FLfdlLM.png&quot; alt=&quot;电钻&quot;&gt;&lt;br&gt;&lt;em&gt;用户其实只是想打个洞&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&quot;设计不足与设计过度&quot;&gt;&lt;a href=&quot;#设计不足与设计过度&quot; class=&quot;headerlink&quot; title=&quot;设计不足与设计过度&quot;&gt;&lt;/a&gt;设计不足与设计过度&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;什么是设计不足？设计出来的系统复用性差，扩展性不强，不能灵活的应对变化，简言之，设计没到位。设计不足，多半是因为经验有限，设计能力有限。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;什么是过度设计？设计出来的系统比恰到好处要复杂臃肿的多，简言之，客户需求是要一把杀鸡的刀，你给设计了一把牛刀（杀鸡用牛刀）。过度设计，多半是因为有设计的癖好，喜欢炫耀或玩弄无谓的技巧，或是喜欢把简单的问题搞复杂化。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;客户只是告诉你他“需要一把杀鸡的刀”，至于将来有没有需求变化，有没有可能要这把刀能杀牛，客户也不知道。所以当然这个设计的度就很难把握了。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;有人主张设计必须前瞻与用户需求，不能以需求为导向。因为客户从来不会告诉你他未来的需求，连他也不知道。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;有人认为认为设计必须以需求为导向，软件以人为本，以用为本。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;设计不足，意味着系统复用性扩展性和灵活性差，系统僵化，不能应对将来的需求变化，或者将来修改和维护的代价和成本会很高，这当然是设计错误；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;过度设计，则意味着为了实现这个设计要付出的额外代价，例如成本上升，缺陷可能性加大，提升维护成本，甚至降低系统性能。而可维护性和系统的高性能都是系统的隐性需求，这些需求没实现好，当然也是设计错误。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最简单的才是最好的。大巧若拙，大道至简，有时候越简单的反而越难实现，而且越接近真理。&lt;/p&gt;
     
     </summary>
     
