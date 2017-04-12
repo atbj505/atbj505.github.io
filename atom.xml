@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://atbj505.github.io/"/>
-  <updated>2017-04-12T06:32:26.000Z</updated>
+  <updated>2017-04-12T06:43:52.000Z</updated>
   <id>http://atbj505.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://atbj505.github.io/2017/03/22/%E8%BF%87%E5%BA%A6%E8%AE%BE%E8%AE%A1/"/>
     <id>http://atbj505.github.io/2017/03/22/过度设计/</id>
     <published>2017-03-22T09:32:48.000Z</published>
-    <updated>2017-04-12T06:32:26.000Z</updated>
+    <updated>2017-04-12T06:43:52.000Z</updated>
     
     <content type="html">&lt;p&gt;过度设计&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -68,6 +68,19 @@
 &lt;p&gt;&lt;img src=&quot;https://pic.36krcnd.com/avatar/201704/12025439/ngug8eao9tw97loz.jpg!1200&quot; alt=&quot;恐怖分子&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;进行系统思考的关键，是学会思考「关系」，而非只是关注「人和事物」&quot;&gt;&lt;a href=&quot;#进行系统思考的关键，是学会思考「关系」，而非只是关注「人和事物」&quot; class=&quot;headerlink&quot; title=&quot;进行系统思考的关键，是学会思考「关系」，而非只是关注「人和事物」&quot;&gt;&lt;/a&gt;进行系统思考的关键，是学会思考「关系」，而非只是关注「人和事物」&lt;/h2&gt;&lt;p&gt;现代物理学的一个重要观点是，部分的性质通常来说不是最重要的。最重要的是它们的组织，它们组合起来的模式和形式，也就是各个部分之间的关系。&lt;/p&gt;
 &lt;p&gt;就像是石墨与钻石，都是相同的碳元素构成，只是碳元素的组织方式不同，展现出来的性质就截然不同。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pic.36krcnd.com/avatar/201704/12025556/66xwo688nf0kpyat.jpg!1200&quot; alt=&quot;百度&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pic.36krcnd.com/avatar/201704/12025655/kmq3dagj9vux7ixw.jpg!1200&quot; alt=&quot;天猫&quot;&gt;&lt;/p&gt;
+&lt;p&gt;天猫也承担了中介的职能，但天猫的系统远比百度完善。这其中的关键就是：系统的反馈。&lt;/p&gt;
+&lt;p&gt;在百度的推荐系统中，用户对医院服务没有公开的评价体系。系统本身没有即时、有效的反馈和甄别虚假信息的能力。所以，KPI 设定必然朝着「更高成交量」–&amp;gt;「更高广告费」的循环不断加速。&lt;/p&gt;
+&lt;p&gt;最终，百度推荐系统的反馈是在「知乎」上完成的，但这时悲剧已经酿成。&lt;/p&gt;
+&lt;p&gt;而在天猫的系统中，用户评价起到了很好的反馈作用。&lt;/p&gt;
+&lt;p&gt;除了过往质量评价会影响用户购买信心，从而影响商家的成交量以外，用户的评分还是商家产品搜索排名的关键指标，形成不同的系统关系促使商家更好地服务用户。&lt;/p&gt;
+&lt;h2 id=&quot;美国美铝集团例子&quot;&gt;&lt;a href=&quot;#美国美铝集团例子&quot; class=&quot;headerlink&quot; title=&quot;美国美铝集团例子&quot;&gt;&lt;/a&gt;美国美铝集团例子&lt;/h2&gt;&lt;p&gt;美国美铝集团，曾经面临着成本上升、收入和利润严重下降等一系列问题。&lt;/p&gt;
+&lt;p&gt;如何改善美铝的经营局面？&lt;/p&gt;
+&lt;p&gt;股东和员工都期待着新CEO保罗·奥尼尔在产品竞争力、降低成本、开发新品等方面做出努力。&lt;/p&gt;
+&lt;p&gt;但保罗提出问题解决的突破口是：增加公司在安全生产上的投入。&lt;/p&gt;
+&lt;p&gt;在成本上升，利润下滑时，增加安全投入？很多人觉得难以理解。但结果是，保罗就职不到一年的时间，美铝就扭转了利润下滑的局面。&lt;/p&gt;
+&lt;p&gt;而创造「奇迹」的关键是保罗真正理解了美铝公司的运作系统。&lt;br&gt;&lt;img src=&quot;https://pic.36krcnd.com/avatar/201704/12025736/usxypz0wla0ujwfe.jpg!1200&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;什么原因导致项目上线延期？&lt;br&gt;&lt;a href=&quot;https://docs.google.com/drawings/d/1dIQtA-wJjpNMdRWdPs5IBtG3JnbX6X8Xpsuyi8i-21Y/edit&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;项目上线延迟因果图&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;什么原因导致项目上线产生大量BUG？&lt;br&gt;&lt;a href=&quot;https://docs.google.com/drawings/d/1Uj-SqYswxZxfEpX7bPK9cQF31myov0a_UDAZ2C3fZck/edit&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;项目上线BUG因果图&lt;/a&gt;&lt;/p&gt;
 </content>
