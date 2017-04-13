@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://atbj505.github.io/"/>
-  <updated>2017-04-12T06:43:52.000Z</updated>
+  <updated>2017-04-13T13:16:07.000Z</updated>
   <id>http://atbj505.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://atbj505.github.io/2017/03/22/%E8%BF%87%E5%BA%A6%E8%AE%BE%E8%AE%A1/"/>
     <id>http://atbj505.github.io/2017/03/22/过度设计/</id>
     <published>2017-03-22T09:32:48.000Z</published>
-    <updated>2017-04-12T06:43:52.000Z</updated>
+    <updated>2017-04-13T13:16:07.000Z</updated>
     
     <content type="html">&lt;p&gt;过度设计&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -56,10 +56,7 @@
 &lt;h1 id=&quot;开发中的过度设计&quot;&gt;&lt;a href=&quot;#开发中的过度设计&quot; class=&quot;headerlink&quot; title=&quot;开发中的过度设计&quot;&gt;&lt;/a&gt;开发中的过度设计&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://zhidao.baidu.com/question/186944929.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开发中的过度设计&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/22166831&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;10 个现代的软件过度设计错误&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;开发需要&lt;code&gt;敏捷开发&amp;amp;TDD&lt;/code&gt;&lt;/p&gt;
-&lt;h1 id=&quot;什么才是问题的本质&quot;&gt;&lt;a href=&quot;#什么才是问题的本质&quot; class=&quot;headerlink&quot; title=&quot;什么才是问题的本质&quot;&gt;&lt;/a&gt;什么才是问题的本质&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;其实只是想打个洞&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;其实只是想要辆好骑的自行车&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;其实只是想要随机分配红包&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;在英国统治印度的时期，当时的印度 Delhi 地区毒蛇众多，英国政府为此非常担心，所以发布了悬赏，居民可以杀死毒蛇获得奖励。在开始的时候，这是一个很有效的策略。大量的毒蛇被居民猎杀。但随着时间的推移，很多人开始豢养毒蛇，杀死以换取奖励。当政府了解到这种情况时，猎杀毒蛇的奖赏被取消了。原来豢养的毒蛇被大量放生，当地毒蛇的数量比发布悬赏前反而更多了。&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&quot;什么才是问题的本质&quot;&gt;&lt;a href=&quot;#什么才是问题的本质&quot; class=&quot;headerlink&quot; title=&quot;什么才是问题的本质&quot;&gt;&lt;/a&gt;什么才是问题的本质&lt;/h1&gt;&lt;p&gt;&lt;code&gt;在英国统治印度的时期，当时的印度 Delhi 地区毒蛇众多，英国政府为此非常担心，所以发布了悬赏，居民可以杀死毒蛇获得奖励。在开始的时候，这是一个很有效的策略。大量的毒蛇被居民猎杀。但随着时间的推移，很多人开始豢养毒蛇，杀死以换取奖励。当政府了解到这种情况时，猎杀毒蛇的奖赏被取消了。原来豢养的毒蛇被大量放生，当地毒蛇的数量比发布悬赏前反而更多了。&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;我们常看到一个直接的问题解决方法，却很难达到我们想要的结果。&lt;/p&gt;
 &lt;h2 id=&quot;我们的大脑往往倾向于建立简单的因果关系&quot;&gt;&lt;a href=&quot;#我们的大脑往往倾向于建立简单的因果关系&quot; class=&quot;headerlink&quot; title=&quot;我们的大脑往往倾向于建立简单的因果关系&quot;&gt;&lt;/a&gt;我们的大脑往往倾向于建立简单的因果关系&lt;/h2&gt;&lt;p&gt;美国社会关于「恐怖分子」的主流观念如下：&lt;/p&gt;
 &lt;p&gt;恐怖袭击→对美国人的威胁→军事反应的需要&lt;/p&gt;
@@ -83,6 +80,10 @@
 &lt;p&gt;而创造「奇迹」的关键是保罗真正理解了美铝公司的运作系统。&lt;br&gt;&lt;img src=&quot;https://pic.36krcnd.com/avatar/201704/12025736/usxypz0wla0ujwfe.jpg!1200&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;什么原因导致项目上线延期？&lt;br&gt;&lt;a href=&quot;https://docs.google.com/drawings/d/1dIQtA-wJjpNMdRWdPs5IBtG3JnbX6X8Xpsuyi8i-21Y/edit&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;项目上线延迟因果图&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;什么原因导致项目上线产生大量BUG？&lt;br&gt;&lt;a href=&quot;https://docs.google.com/drawings/d/1Uj-SqYswxZxfEpX7bPK9cQF31myov0a_UDAZ2C3fZck/edit&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;项目上线BUG因果图&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;本质是为了解决问题为用户创造价值&quot;&gt;&lt;a href=&quot;#本质是为了解决问题为用户创造价值&quot; class=&quot;headerlink&quot; title=&quot;本质是为了解决问题为用户创造价值&quot;&gt;&lt;/a&gt;本质是为了解决问题为用户创造价值&lt;/h1&gt;&lt;p&gt;电钻的功能是打洞&lt;/p&gt;
+&lt;p&gt;共享单车只是辆好骑的自行车&lt;/p&gt;
+&lt;p&gt;设计是不要为了炫酷的视觉效果&lt;/p&gt;
+&lt;p&gt;开发不是为了面向对象而开发&lt;/p&gt;
 </content>
     
     <summary type="html">
