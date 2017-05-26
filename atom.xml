@@ -658,7 +658,7 @@
     <link href="http://atbj505.github.io/2016/01/27/vim%E5%A4%87%E5%BF%98/"/>
     <id>http://atbj505.github.io/2016/01/27/vim备忘/</id>
     <published>2016-01-27T02:49:29.000Z</published>
-    <updated>2017-05-24T10:41:36.000Z</updated>
+    <updated>2017-05-26T03:10:53.000Z</updated>
     
     <content type="html">&lt;h1 id=&quot;vim备忘&quot;&gt;&lt;a href=&quot;#vim备忘&quot; class=&quot;headerlink&quot; title=&quot;vim备忘&quot;&gt;&lt;/a&gt;vim备忘&lt;/h1&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;第一讲&quot;&gt;&lt;a href=&quot;#第一讲&quot; class=&quot;headerlink&quot; title=&quot;第一讲&quot;&gt;&lt;/a&gt;第一讲&lt;/h2&gt;&lt;p&gt;&lt;code&gt;hjkl&lt;/code&gt;:移动 &lt;code&gt;h&lt;/code&gt;左 &lt;code&gt;j&lt;/code&gt;下 &lt;code&gt;k&lt;/code&gt;上 &lt;code&gt;l&lt;/code&gt;右&lt;/p&gt;
@@ -686,6 +686,15 @@
 &lt;p&gt;&lt;code&gt;u&lt;/code&gt;:撤销&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;U&lt;/code&gt;:整行操作撤销&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;CTRL-R&lt;/code&gt;:撤销撤销，还原之前的操作&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dap&lt;/code&gt;:删除一个段落&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;di(&lt;/code&gt;:删除括号内的内容，可以是(,[,{&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;da(&lt;/code&gt;:删除括号及内部的内容，可以是(,[,{&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dit&lt;/code&gt;:清除标签内部的内容&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dat&lt;/code&gt;:清除整个标签&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;df字母或符号&lt;/code&gt;:向后清除到字母或者符号的内容&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dF字母或符号&lt;/code&gt;:向前清除到字母或者符号的内容&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dt字母或符号&lt;/code&gt;:向后清除到字母或符号之前的内容&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dT字母或符号&lt;/code&gt;:向前清除到字母或符号之后的内容&lt;/p&gt;
 &lt;h2 id=&quot;第三讲&quot;&gt;&lt;a href=&quot;#第三讲&quot; class=&quot;headerlink&quot; title=&quot;第三讲&quot;&gt;&lt;/a&gt;第三讲&lt;/h2&gt;&lt;p&gt;&lt;code&gt;p&lt;/code&gt;:将删除的内容置入光标之后，如果是行的话置入下一行&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;r&lt;/code&gt;:替换光标当前字符，先输入&lt;code&gt;r&lt;/code&gt;然后输入替换内容&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ce&lt;/code&gt;:修改直到单词末尾并进入编辑状态 例入光标在&lt;code&gt;is&lt;/code&gt;的&lt;code&gt;i&lt;/code&gt;上 &lt;code&gt;it is my life&lt;/code&gt;-&amp;gt;&lt;code&gt;it  my life&lt;/code&gt;,&lt;code&gt;my&lt;/code&gt;前有两个空格&lt;/p&gt;
@@ -727,6 +736,9 @@
 &lt;p&gt;&lt;code&gt;CTRL-u&lt;/code&gt;:向上滚动半页&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;CTRL-f&lt;/code&gt;:向下滚动一页&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;CTRL-b&lt;/code&gt;:向上滚动一页&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SHIFT-h&lt;/code&gt;:光标移动到顶部&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SHIFT-m&lt;/code&gt;:光标移动到中部&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SHIFT-l&lt;/code&gt;:光标移动到底部&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;zz&lt;/code&gt;:当前位置为屏幕中央&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;zt&lt;/code&gt;:当前位置为屏幕顶端&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;zb&lt;/code&gt;:当前位子为屏幕底端&lt;/p&gt;

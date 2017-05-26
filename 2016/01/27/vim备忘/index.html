@@ -98,7 +98,7 @@
 <meta property="og:url" content="http://atbj505.github.io/2016/01/27/vim备忘/index.html">
 <meta property="og:site_name" content="杨">
 <meta property="og:description" content="vim备忘">
-<meta property="og:updated_time" content="2017-05-24T10:41:36.000Z">
+<meta property="og:updated_time" content="2017-05-26T03:10:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vim备忘">
 <meta name="twitter:description" content="vim备忘">
@@ -385,6 +385,15 @@
 <p><code>u</code>:撤销</p>
 <p><code>U</code>:整行操作撤销</p>
 <p><code>CTRL-R</code>:撤销撤销，还原之前的操作</p>
+<p><code>dap</code>:删除一个段落</p>
+<p><code>di(</code>:删除括号内的内容，可以是(,[,{</p>
+<p><code>da(</code>:删除括号及内部的内容，可以是(,[,{</p>
+<p><code>dit</code>:清除标签内部的内容</p>
+<p><code>dat</code>:清除整个标签</p>
+<p><code>df字母或符号</code>:向后清除到字母或者符号的内容</p>
+<p><code>dF字母或符号</code>:向前清除到字母或者符号的内容</p>
+<p><code>dt字母或符号</code>:向后清除到字母或符号之前的内容</p>
+<p><code>dT字母或符号</code>:向前清除到字母或符号之后的内容</p>
 <h2 id="第三讲"><a href="#第三讲" class="headerlink" title="第三讲"></a>第三讲</h2><p><code>p</code>:将删除的内容置入光标之后，如果是行的话置入下一行</p>
 <p><code>r</code>:替换光标当前字符，先输入<code>r</code>然后输入替换内容</p>
 <p><code>ce</code>:修改直到单词末尾并进入编辑状态 例入光标在<code>is</code>的<code>i</code>上 <code>it is my life</code>-&gt;<code>it  my life</code>,<code>my</code>前有两个空格</p>
@@ -426,6 +435,9 @@
 <p><code>CTRL-u</code>:向上滚动半页</p>
 <p><code>CTRL-f</code>:向下滚动一页</p>
 <p><code>CTRL-b</code>:向上滚动一页</p>
+<p><code>SHIFT-h</code>:光标移动到顶部</p>
+<p><code>SHIFT-m</code>:光标移动到中部</p>
+<p><code>SHIFT-l</code>:光标移动到底部</p>
 <p><code>zz</code>:当前位置为屏幕中央</p>
 <p><code>zt</code>:当前位置为屏幕顶端</p>
 <p><code>zb</code>:当前位子为屏幕底端</p>
