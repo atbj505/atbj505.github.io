@@ -10,6 +10,7 @@
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
 
@@ -74,7 +75,7 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="IOS," />
@@ -88,7 +89,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
 
 
 
@@ -113,8 +114,9 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
+    tabs: true,
     motion: true,
     duoshuo: {
       userId: '0',
@@ -286,7 +288,11 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://atbj505.github.io/2015/05/18/IOS常用宏定义-工具方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -355,6 +361,9 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -415,27 +424,15 @@
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">CG_INLINE</span> <span class="built_in">NSString</span>* MD5FromString(<span class="built_in">NSString</span> *sourceString)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span> *original_str = [sourceString UTF8String];</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> result[CC_MD5_DIGEST_LENGTH];</span><br><span class="line">    CC_MD5(original_str, strlen(original_str), result);</span><br><span class="line">    <span class="built_in">NSMutableString</span> *hash = [<span class="built_in">NSMutableString</span> string];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">16</span>; i++)</span><br><span class="line">        [hash appendFormat:<span class="string">@"%02X"</span>, result[i]];</span><br><span class="line">    <span class="keyword">return</span> [hash lowercaseString];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">CG_INLINE</span> <span class="built_in">NSString</span> *MD5ForFile(<span class="built_in">NSString</span> *path)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSFileHandle</span> *handle = [<span class="built_in">NSFileHandle</span> fileHandleForReadingAtPath:path];</span><br><span class="line">    <span class="keyword">if</span>( handle== <span class="literal">nil</span> )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">nil</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    CC_MD5_CTX md5;</span><br><span class="line">    CC_MD5_Init(&amp;md5);</span><br><span class="line">    <span class="built_in">BOOL</span> done = <span class="literal">NO</span>;</span><br><span class="line">    <span class="keyword">while</span>(!done)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">@autoreleasepool</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">NSData</span>* fileData = [handle readDataOfLength:<span class="number">256</span>];</span><br><span class="line">            CC_MD5_Update(&amp;md5, [fileData bytes], [fileData length]);</span><br><span class="line">            <span class="keyword">if</span>( [fileData length] == <span class="number">0</span> ) done = <span class="literal">YES</span>;</span><br><span class="line">            fileData = <span class="literal">nil</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> digest[CC_MD5_DIGEST_LENGTH];</span><br><span class="line">    CC_MD5_Final(digest, &amp;md5);</span><br><span class="line">    <span class="built_in">NSString</span>* s = [<span class="built_in">NSString</span> stringWithFormat: <span class="string">@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x"</span>,</span><br><span class="line">                   digest[<span class="number">0</span>], digest[<span class="number">1</span>],</span><br><span class="line">                   digest[<span class="number">2</span>], digest[<span class="number">3</span>],</span><br><span class="line">                   digest[<span class="number">4</span>], digest[<span class="number">5</span>],</span><br><span class="line">                   digest[<span class="number">6</span>], digest[<span class="number">7</span>],</span><br><span class="line">                   digest[<span class="number">8</span>], digest[<span class="number">9</span>],</span><br><span class="line">                   digest[<span class="number">10</span>], digest[<span class="number">11</span>],</span><br><span class="line">                   digest[<span class="number">12</span>], digest[<span class="number">13</span>],</span><br><span class="line">                   digest[<span class="number">14</span>], digest[<span class="number">15</span>]];</span><br><span class="line">    <span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
 
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -475,6 +472,10 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -572,7 +573,9 @@
                   
                     <i class="fa fa-fw fa-github"></i>
                   
-                  GitHub
+                    
+                      GitHub
+                    
                 </a>
               </span>
             
@@ -693,25 +696,25 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
 
 
 
   
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
 
 
 
