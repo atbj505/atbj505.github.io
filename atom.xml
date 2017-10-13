@@ -698,7 +698,7 @@
     <link href="http://atbj505.github.io/2016/01/27/vim%E5%A4%87%E5%BF%98/"/>
     <id>http://atbj505.github.io/2016/01/27/vim备忘/</id>
     <published>2016-01-27T02:49:29.000Z</published>
-    <updated>2017-09-01T11:24:36.000Z</updated>
+    <updated>2017-10-13T01:44:35.364Z</updated>
     
     <content type="html">&lt;h1 id=&quot;vim备忘&quot;&gt;&lt;a href=&quot;#vim备忘&quot; class=&quot;headerlink&quot; title=&quot;vim备忘&quot;&gt;&lt;/a&gt;vim备忘&lt;/h1&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;第一讲&quot;&gt;&lt;a href=&quot;#第一讲&quot; class=&quot;headerlink&quot; title=&quot;第一讲&quot;&gt;&lt;/a&gt;第一讲&lt;/h2&gt;&lt;p&gt;&lt;code&gt;hjkl&lt;/code&gt;:移动 &lt;code&gt;h&lt;/code&gt;左 &lt;code&gt;j&lt;/code&gt;下 &lt;code&gt;k&lt;/code&gt;上 &lt;code&gt;l&lt;/code&gt;右&lt;/p&gt;
@@ -851,6 +851,10 @@
 &lt;p&gt;&lt;code&gt;s&lt;/code&gt;:vsplit一个新窗口中打开选中文件，并跳到该窗口&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;gs&lt;/code&gt;:vsplit一个新窗口中打开选中文件，但不跳到该窗口&lt;/p&gt;
 &lt;h2 id=&quot;vim-easymotion&quot;&gt;&lt;a href=&quot;#vim-easymotion&quot; class=&quot;headerlink&quot; title=&quot;vim-easymotion&quot;&gt;&lt;/a&gt;vim-easymotion&lt;/h2&gt;&lt;p&gt;&lt;code&gt;,,fa&lt;/code&gt;:查找包含字母a的位置&lt;/p&gt;
+&lt;h2 id=&quot;minibufexpl&quot;&gt;&lt;a href=&quot;#minibufexpl&quot; class=&quot;headerlink&quot; title=&quot;minibufexpl&quot;&gt;&lt;/a&gt;minibufexpl&lt;/h2&gt;&lt;p&gt;&lt;code&gt;,mb&lt;/code&gt;:打开minibufexpl&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;,bn&lt;/code&gt;:切换下一个buffer&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;,bp&lt;/code&gt;:切换前一个buffer&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;,bd&lt;/code&gt;:关闭buffer&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://vim.rtorr.com/lang/zh_cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;cheat sheet&lt;/a&gt;&lt;/p&gt;
 </content>
     
