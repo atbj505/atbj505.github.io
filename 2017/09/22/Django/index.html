@@ -87,7 +87,7 @@
 <meta property="og:url" content="http://atbj505.github.io/2017/09/22/Django/index.html">
 <meta property="og:site_name" content="杨">
 <meta property="og:description" content="Django">
-<meta property="og:updated_time" content="2017-09-26T01:37:02.000Z">
+<meta property="og:updated_time" content="2017-10-21T03:44:29.382Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django">
 <meta name="twitter:description" content="Django">
@@ -362,7 +362,22 @@
 <li>生成数据库表</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
-
+<ul>
+<li>数据库插入</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p1 = Publisher(name=<span class="string">'Apress'</span>, address=<span class="string">'2855 Telegraph Avenue'</span>, city=<span class="string">'Berkeley'</span>, state_province=<span class="string">'CA'</span>, country=<span class="string">'U.S.A.'</span>, website=<span class="string">'http://www.apress.com/'</span>)</span><br><span class="line">p1.save()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>数据库检索</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Publisher.object.all()</span><br><span class="line">Publisher.objects.filter(name=<span class="string">'Apress'</span>)</span><br><span class="line">Publisher.objects.filter(country=<span class="string">"U.S.A."</span>, state_province=<span class="string">"CA"</span>)</span><br><span class="line">Publisher.objects.filter(name__contains=<span class="string">"press"</span>)</span><br><span class="line">Publisher.objects.filter(name__icontains=<span class="string">"press"</span>)</span><br><span class="line">Publisher.objects.filter(name__startswith=<span class="string">"press"</span>)</span><br><span class="line">Publisher.objects.filter(name__endswith=<span class="string">"press"</span>)</span><br><span class="line">Publisher.objects.get(name=<span class="string">"Apress"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   	p = Publisher.objects.get(name=<span class="string">'Apress'</span>)</span><br><span class="line"><span class="keyword">except</span> Publisher.DoesNotExist:</span><br><span class="line">   	print(<span class="string">"Apress isn't in the database yet."</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   	print(<span class="string">"Apress is in the database."</span>)</span><br><span class="line">   	</span><br><span class="line">   Publisher.objects.order_by(<span class="string">"name"</span>)</span><br><span class="line">   Publisher.objects.order_by(<span class="string">'name'</span>)[<span class="number">0</span>]</span><br><span class="line">   Publisher.objects.order_by(<span class="string">'name'</span>)[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">   Publisher.objects.order_by(<span class="string">"-name"</span>) <span class="comment">#倒叙</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>数据库更新</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Publisher.objects.filter(id=<span class="number">52</span>).update(name=<span class="string">'Apress Publishing'</span>)</span><br><span class="line">Publisher.objects.all().update(country=<span class="string">'USA'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>数据库删除</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Publisher.objects.filter(country=<span class="string">'USA'</span>).delete()</span><br><span class="line">Publisher.objects.all().delete()</span><br></pre></td></tr></table></figure>
       
     </div>
     
