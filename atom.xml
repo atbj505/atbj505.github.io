@@ -713,7 +713,7 @@
     <link href="http://atbj505.github.io/2016/01/27/vim%E5%A4%87%E5%BF%98/"/>
     <id>http://atbj505.github.io/2016/01/27/vim备忘/</id>
     <published>2016-01-27T02:49:29.000Z</published>
-    <updated>2017-10-13T01:44:35.364Z</updated>
+    <updated>2017-11-01T08:09:54.955Z</updated>
     
     <content type="html">&lt;h1 id=&quot;vim备忘&quot;&gt;&lt;a href=&quot;#vim备忘&quot; class=&quot;headerlink&quot; title=&quot;vim备忘&quot;&gt;&lt;/a&gt;vim备忘&lt;/h1&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;第一讲&quot;&gt;&lt;a href=&quot;#第一讲&quot; class=&quot;headerlink&quot; title=&quot;第一讲&quot;&gt;&lt;/a&gt;第一讲&lt;/h2&gt;&lt;p&gt;&lt;code&gt;hjkl&lt;/code&gt;:移动 &lt;code&gt;h&lt;/code&gt;左 &lt;code&gt;j&lt;/code&gt;下 &lt;code&gt;k&lt;/code&gt;上 &lt;code&gt;l&lt;/code&gt;右&lt;/p&gt;
@@ -870,6 +870,14 @@
 &lt;p&gt;&lt;code&gt;,bn&lt;/code&gt;:切换下一个buffer&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;,bp&lt;/code&gt;:切换前一个buffer&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;,bd&lt;/code&gt;:关闭buffer&lt;/p&gt;
+&lt;h2 id=&quot;ctrlp&quot;&gt;&lt;a href=&quot;#ctrlp&quot; class=&quot;headerlink&quot; title=&quot;ctrlp&quot;&gt;&lt;/a&gt;ctrlp&lt;/h2&gt;&lt;p&gt;&lt;code&gt;,f&lt;/code&gt;:模糊搜索最近打开的文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;,p&lt;/code&gt;:模糊搜索当前目录及子目录下所有文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ctrl + j/k&lt;/code&gt;:上下选择&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ctrl + x&lt;/code&gt;:在当前文件水平分屏打开文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;crtl + v&lt;/code&gt;:垂直分屏打开文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ctrl + t&lt;/code&gt;:在tab中打开文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;,fu&lt;/code&gt;:搜索当前文件函数&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;,fU&lt;/code&gt;:搜索当前光标下单词对应的函数&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://vim.rtorr.com/lang/zh_cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;cheat sheet&lt;/a&gt;&lt;/p&gt;
 </content>
     
