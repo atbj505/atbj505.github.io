@@ -713,7 +713,7 @@
     <link href="http://atbj505.github.io/2016/01/27/vim%E5%A4%87%E5%BF%98/"/>
     <id>http://atbj505.github.io/2016/01/27/vim备忘/</id>
     <published>2016-01-27T02:49:29.000Z</published>
-    <updated>2017-11-01T10:03:00.385Z</updated>
+    <updated>2017-11-01T12:45:59.129Z</updated>
     
     <content type="html">&lt;h1 id=&quot;vim备忘&quot;&gt;&lt;a href=&quot;#vim备忘&quot; class=&quot;headerlink&quot; title=&quot;vim备忘&quot;&gt;&lt;/a&gt;vim备忘&lt;/h1&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;第一讲&quot;&gt;&lt;a href=&quot;#第一讲&quot; class=&quot;headerlink&quot; title=&quot;第一讲&quot;&gt;&lt;/a&gt;第一讲&lt;/h2&gt;&lt;p&gt;&lt;code&gt;hjkl&lt;/code&gt;:移动 &lt;code&gt;h&lt;/code&gt;左 &lt;code&gt;j&lt;/code&gt;下 &lt;code&gt;k&lt;/code&gt;上 &lt;code&gt;l&lt;/code&gt;右&lt;/p&gt;
@@ -887,6 +887,12 @@
 &lt;p&gt;&lt;code&gt;&amp;#39;.&lt;/code&gt;:最后一次变更位置&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&amp;#39;&amp;#39;&lt;/code&gt;:最近位置跳转&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;m&amp;lt;space&amp;gt;&lt;/code&gt;:去除所有标签&lt;/p&gt;
+&lt;h2 id=&quot;python-mode&quot;&gt;&lt;a href=&quot;#python-mode&quot; class=&quot;headerlink&quot; title=&quot;python-mode&quot;&gt;&lt;/a&gt;python-mode&lt;/h2&gt;&lt;p&gt;&lt;code&gt;[[&lt;/code&gt;:跳转到前面的方法或类&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;]]&lt;/code&gt;:跳转到下一个方法或类&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;aC&lt;/code&gt;:选择一个类&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;iC&lt;/code&gt;:选择一个类的内部&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;aM&lt;/code&gt;:选择一个方法&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;iM&lt;/code&gt;:选择一个方法的内部&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://vim.rtorr.com/lang/zh_cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;cheat sheet&lt;/a&gt;&lt;/p&gt;
 </content>
     
