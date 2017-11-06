@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://atbj505.github.io/"/>
-  <updated>2017-10-21T03:44:29.382Z</updated>
+  <updated>2017-11-06T08:51:49.096Z</updated>
   <id>http://atbj505.github.io/</id>
   
   <author>
@@ -14,6 +14,134 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>css选择器</title>
+    <link href="http://atbj505.github.io/2017/11/06/css%E9%80%89%E6%8B%A9%E5%99%A8/"/>
+    <id>http://atbj505.github.io/2017/11/06/css选择器/</id>
+    <published>2017-11-06T07:58:49.000Z</published>
+    <updated>2017-11-06T08:51:49.096Z</updated>
+    
+    <content type="html">&lt;p&gt;css选择器&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选择器&lt;/th&gt;
+&lt;th&gt;例子&lt;/th&gt;
+&lt;th&gt;例子描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;.class&lt;/td&gt;
+&lt;td&gt;.intro&lt;/td&gt;
+&lt;td&gt;选择class=“intro”的所有元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;#id&lt;/td&gt;
+&lt;td&gt;#firstname&lt;/td&gt;
+&lt;td&gt;选择id=”firstname”的所有元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;*&lt;/td&gt;
+&lt;td&gt;*&lt;/td&gt;
+&lt;td&gt;选择所有元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;element&lt;/td&gt;
+&lt;td&gt;p&lt;/td&gt;
+&lt;td&gt;选择所有&lt;p&gt;元素&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;element,element&lt;/td&gt;
+&lt;td&gt;div,p&lt;/td&gt;
+&lt;td&gt;选择所有&lt;div&gt;和所有&lt;p&gt;元素&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;element element&lt;/td&gt;
+&lt;td&gt;div p&lt;/td&gt;
+&lt;td&gt;选择&lt;div&gt;元素内部的所有&lt;p&gt;元素&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;element&amp;gt;element&lt;/td&gt;
+&lt;td&gt;div&amp;gt;p&lt;/td&gt;
+&lt;td&gt;选择父元素为&lt;div&gt;元素的所有&lt;p&gt;元素&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;element+element&lt;/td&gt;
+&lt;td&gt;div+p&lt;/td&gt;
+&lt;td&gt;选择紧接在&lt;div&gt;元素之后的所有&lt;p&gt;元素&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[attribute]&lt;/td&gt;
+&lt;td&gt;[target]&lt;/td&gt;
+&lt;td&gt;选择带有target属性的所有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[attribute=value]&lt;/td&gt;
+&lt;td&gt;[target=_blank]&lt;/td&gt;
+&lt;td&gt;选择target=”_blank”的所有元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[attribute~=value]&lt;/td&gt;
+&lt;td&gt;[title~=flower]&lt;/td&gt;
+&lt;td&gt;选择title属性包含单词”flower”的所有元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[attribute\&lt;/td&gt;
+&lt;td&gt;=value]&lt;/td&gt;
+&lt;td&gt;[lang\&lt;/td&gt;
+&lt;td&gt;=en]&lt;/td&gt;
+&lt;td&gt;选择lang属性值以”en”开头的所有元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:link&lt;/td&gt;
+&lt;td&gt;a:link&lt;/td&gt;
+&lt;td&gt;选择所有未被访问的链接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:visited&lt;/td&gt;
+&lt;td&gt;a:visited&lt;/td&gt;
+&lt;td&gt;选择所有已被访问的链接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:active&lt;/td&gt;
+&lt;td&gt;a:active&lt;/td&gt;
+&lt;td&gt;选择活动链接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:hover&lt;/td&gt;
+&lt;td&gt;a:hover&lt;/td&gt;
+&lt;td&gt;选择鼠标指针位于其上的链接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:focus&lt;/td&gt;
+&lt;td&gt;input:focus&lt;/td&gt;
+&lt;td&gt;选择获得焦点的input元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:first-letter&lt;/td&gt;
+&lt;td&gt;p:first-letter&lt;/td&gt;
+&lt;td&gt;选择每个&lt;p&gt;元素的首字母&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:first-line&lt;/td&gt;
+&lt;td&gt;p:first-line&lt;/td&gt;
+&lt;td&gt;选择每个&lt;p&gt;元素的首行&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;css选择器&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Django</title>
@@ -3130,126 +3258,6 @@ Google 为其他公司提供搜索服务
     
     
       <category term="IOS" scheme="http://atbj505.github.io/tags/IOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Effective-Objective-c-2-0读书笔记（三）</title>
-    <link href="http://atbj505.github.io/2015/05/02/Effective-Objective-c-2-0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/"/>
-    <id>http://atbj505.github.io/2015/05/02/Effective-Objective-c-2-0读书笔记（三）/</id>
-    <published>2015-05-02T02:50:24.000Z</published>
-    <updated>2015-05-02T14:37:25.000Z</updated>
-    
-    <content type="html">&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;第九条：以类族模式隐藏实现细节&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;  类族可以隐藏抽象基类的实现细节，其中IOS中常用的UIButton就是使用的这种模式。&lt;/p&gt;
-  &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+ (&lt;span class=&quot;built_in&quot;&gt;UIButton&lt;/span&gt; *)buttonWithType:(&lt;span class=&quot;built_in&quot;&gt;UIButtonType&lt;/span&gt;)type;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;  在具体实现中，会根据&lt;code&gt;type&lt;/code&gt;的不同，调用不同子类的初始化方法。&lt;/p&gt;
-&lt;p&gt;  在具体的应用中，也可以使用这种模式，通过一个通用的基类创建不同的子类对象。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;声明枚举类型&lt;/p&gt;
- &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;typdef &lt;span class=&quot;built_in&quot;&gt;NS_ENUM&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;NSUInteger&lt;/span&gt;, EOCEmployeeType) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCEmployeeTypeDeveloper,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCEmployeeTypeDesigner,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCEmployeeTypeFinance&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;声明工厂方法&lt;/p&gt;
- &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+ (EOCEmployee *)employeeWithType:(EOCEmployeeType)type;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;实现工厂方法&lt;/p&gt;
- &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+ (EOCEmployee *)employeeWithType:(EOCEmployeeType)type &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;switch&lt;/span&gt; (type) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; EOCEmployeeTypeDeveloper:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; [EOCEmployeeTypeDeveloper new];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; EOCEmployeeTypeDesigner:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; [EOCEmployeeTypeDesigner new];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; EOCEmployeeTypeFinance:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; [EOCEmployeeTypeFinance new];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;第十条：关联对象&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;  关联对象可以在不改变类的实现或继承类的情况下，实现自己的功能&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;常用的关联方法有：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;给某对象设置关联对象，通过键值的方法&lt;/p&gt;
- &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; objc_setAssociatedObject (&lt;span class=&quot;keyword&quot;&gt;id&lt;/span&gt; object, &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; *key, &lt;span class=&quot;keyword&quot;&gt;id&lt;/span&gt; value, objc_AssociationPolicy policy)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;获取制定key的获取关联对象值&lt;/p&gt;
- &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;id&lt;/span&gt; objc_getAssociatedObject(&lt;span class=&quot;keyword&quot;&gt;id&lt;/span&gt; object, &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; *key)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;移除关联&lt;/p&gt;
- &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; objc_removeAssociatedObjects(&lt;span class=&quot;keyword&quot;&gt;id&lt;/span&gt; object)s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;objc_AssociationPolicy&lt;/code&gt;含义&lt;br&gt; &lt;code&gt;OBJC_ASSOCIATION_ASSIGN&lt;/code&gt;对应&lt;code&gt;assign&lt;/code&gt;&lt;br&gt; &lt;code&gt;OBJC_ASSOCIATION_RETAIN_NONATOMIC&lt;/code&gt;对应&lt;code&gt;nonatomic, retain&lt;/code&gt;&lt;br&gt; &lt;code&gt;OBJC_ASSOCIATION_COPY_NONATOMIC&lt;/code&gt;对应&lt;code&gt;nonatomic, copy&lt;/code&gt;&lt;br&gt; &lt;code&gt;OBJC_ASSOCIATION_RETAIN&lt;/code&gt;对应&lt;code&gt;retain&lt;/code&gt;&lt;br&gt; &lt;code&gt;OBJC_ASSOCIATION_COPY&lt;/code&gt;对应&lt;code&gt;copy&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;应用场景：&lt;/p&gt;
-  &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#import &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;objc/runtime.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; *EOCMyAlertViewKey = &lt;span class=&quot;string&quot;&gt;&quot;EOCMyAlertViewKey&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-  &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)askUserAQuestion &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;UIAlertView&lt;/span&gt; *alert = [[&lt;span class=&quot;built_in&quot;&gt;UIAlertView&lt;/span&gt; alloc]initWithTitle:&lt;span class=&quot;string&quot;&gt;@&quot;Question&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;						message :&lt;span class=&quot;string&quot;&gt;@&quot;What do you want&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;						delegate:&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;						cancelButtonTittle:&lt;span class=&quot;string&quot;&gt;@&quot;Cancel&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;						otherButtonTitle:&lt;span class=&quot;string&quot;&gt;@&quot;continue&quot;&lt;/span&gt;,&lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; (^block)(&lt;span class=&quot;built_in&quot;&gt;NSInteger&lt;/span&gt;) = ^(&lt;span class=&quot;built_in&quot;&gt;NSInteger&lt;/span&gt; buttonIndex) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (buttonIndex) == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			[&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; doCancel];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			[&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; doContinue];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	objc_setAssociatedObject(alert,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				EOCMyAlertViewKey,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				block,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				OBJC_ASSO&lt;span class=&quot;built_in&quot;&gt;CIATION_COPY&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	[alert show];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-  &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// UIAlertViewDelegate&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)alertView:(&lt;span class=&quot;built_in&quot;&gt;UIAlertView&lt;/span&gt; *)alertView clickedButtonAtIndex:(&lt;span class=&quot;built_in&quot;&gt;NSInteger&lt;/span&gt;)buttonIndex &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; (^block)(&lt;span class=&quot;built_in&quot;&gt;NSInteger&lt;/span&gt;) = objc_getAssociatedObject(alertView, EOCMyAlertViewKey);			block(buttonIndex);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;第十一条：理解objc_msgSend的作用&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;  给对象发送消息可以这样写：&lt;/p&gt;
-  &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;id&lt;/span&gt; returnValue = [someObject messageName:parameters];&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;  转化成运行时语句：&lt;/p&gt;
-  &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;id&lt;/span&gt; returnValue = objc_msgSend(someObject, &lt;span class=&quot;keyword&quot;&gt;@selector&lt;/span&gt;(messageName:),parameters);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;此时objc_msgSend会检索方法列表，如果找到就跳转到实现代码，如果找不到就沿着继承关系继续向上查找，等找到合适的方法再跳转，如果一直追溯到最顶层的基类仍没找到方法，就会采用消息转发的方式。&lt;/li&gt;
-&lt;li&gt;当找到了方法的实现代码，就会放到每个类对应的缓存中。下次再调用相同的方法的时候就不用经历上面的过程，直接调用缓存中的方法实现就行了。&lt;/li&gt;
-&lt;li&gt;在特别的情况下会调用另一些方法：&lt;br&gt;  &lt;code&gt;objc_msgSend_stret&lt;/code&gt;：返回结构体&lt;br&gt;  &lt;code&gt;objc_msgSend_fpret&lt;/code&gt;：返回的是浮点数&lt;br&gt;  &lt;code&gt;objc_msgSendSuper&lt;/code&gt;：直接调用父类方法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;第十二条：理解消息转发机制&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;  当对象在运行时接收到无法解读的消息后，会启动&lt;strong&gt;消息转发&lt;/strong&gt;机制，在编写代码是可以通过加入消息转发机制，来处理未知消息。&lt;br&gt;  消息转发可以分为两大阶段：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;动态添加方法&lt;br&gt; 对象在收到无法解读的消息时，首先调用下列方法：&lt;/p&gt;
- &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+ (&lt;span class=&quot;built_in&quot;&gt;BOOL&lt;/span&gt;)resolveInstanceMethod:(SEL)selector;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+ (&lt;span class=&quot;built_in&quot;&gt;BOOL&lt;/span&gt;)resolveClassMethod:(SEL)selector;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt; 例如下面的方法实现会通过选择字的名称生成对应的&lt;code&gt;setter&lt;/code&gt;和&lt;code&gt;getter&lt;/code&gt;。&lt;/p&gt;
- &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+ (&lt;span class=&quot;built_in&quot;&gt;BOOL&lt;/span&gt;)resolveInstanceMethod:(SEL)selector &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;NSString&lt;/span&gt; *selectorString = &lt;span class=&quot;built_in&quot;&gt;NSStringFromSelector&lt;/span&gt;(selector);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([selectorString hasPrefix:&lt;span class=&quot;string&quot;&gt;@&quot;set&quot;&lt;/span&gt;]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		class_addMethod(&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;, selector, (IMP)autoDictionarySetter, &lt;span class=&quot;string&quot;&gt;&quot;v@:@&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		class_addMethod(&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;, selector, (IMP)autoDictionaryGetter, &lt;span class=&quot;string&quot;&gt;&quot;@@:&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt; 这种办法的前提是相关方法的实现代码已经写好，常用在&lt;code&gt;@dynamic属性&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;完整的消息转发机制&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;备援接收者&lt;br&gt;  当通过动态添加方法失败后，运行时系统会尝试转发给其他的接收者来处理&lt;/p&gt;
-  &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;id&lt;/span&gt;)forwardingTargetForSelector:(SEL)selector;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;  该方法返回备选的接收对象，如果找不到就返回&lt;code&gt;nil&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;  通过此方案可以用&lt;strong&gt;组合&lt;/strong&gt;模拟&lt;strong&gt;多继承&lt;/strong&gt;，具体实现是，在一个对象内部可以有多个其他对象，这时可以通过消息转发获取到备援接收者，并向其发送消息。这样在使用时从外界看来就是本体对象处理了这些消息，造成多继承的假象。&lt;/p&gt;
-&lt;p&gt;  但是要注意的一点是，此种方法不能&lt;strong&gt;修改信息内容&lt;/strong&gt;，并且&lt;strong&gt;编译报错&lt;/strong&gt;，要想解决编译错误就要新建一个&lt;code&gt;category&lt;/code&gt;把要转发的消息声明在.h中,但并不需要实现，这样编译就不会报错了。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;完整的消息转发&lt;/p&gt;
-&lt;p&gt;  调用下面方法实现转发&lt;/p&gt;
-  &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt;)forwardInvocation:(&lt;span class=&quot;built_in&quot;&gt;NSInvocation&lt;/span&gt; *)anInvocation &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; ([someOtherObject respondsToSelector:[anInvocation selector]])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [anInvocation invokeWithTarget:someOtherObject];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [&lt;span class=&quot;keyword&quot;&gt;super&lt;/span&gt; forwardInvocation:anInvocation];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;第九条：以类族模式隐藏实现细节&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;  类族可以隐藏抽象基类的实现细节，其中IOS中常用的UIButton就是使用的这种模式。&lt;/p&gt;
-  &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+ (&lt;span class=&quot;built_in&quot;&gt;UIButton&lt;/span&gt; *)buttonWithType:(&lt;span class=&quot;built_in&quot;&gt;UIButtonType&lt;/span&gt;)type;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;  在具体实现中，会根据&lt;code&gt;type&lt;/code&gt;的不同，调用不同子类的初始化方法。&lt;/p&gt;
-&lt;p&gt;  在具体的应用中，也可以使用这种模式，通过一个通用的基类创建不同的子类对象。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;声明枚举类型&lt;/p&gt;
- &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;typdef &lt;span class=&quot;built_in&quot;&gt;NS_ENUM&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;NSUInteger&lt;/span&gt;, EOCEmployeeType) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCEmployeeTypeDeveloper,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCEmployeeTypeDesigner,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	EOCEmployeeTypeFinance&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;声明工厂方法&lt;/p&gt;
- &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+ (EOCEmployee *)employeeWithType:(EOCEmployeeType)type;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;实现工厂方法&lt;/p&gt;
- &lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;+ (EOCEmployee *)employeeWithType:(EOCEmployeeType)type &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;switch&lt;/span&gt; (type) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; EOCEmployeeTypeDeveloper:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; [EOCEmployeeTypeDeveloper new];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; EOCEmployeeTypeDesigner:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; [EOCEmployeeTypeDesigner new];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; EOCEmployeeTypeFinance:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; [EOCEmployeeTypeFinance new];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="OC" scheme="http://atbj505.github.io/tags/OC/"/>
     
   </entry>
   
