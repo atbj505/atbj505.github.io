@@ -841,7 +841,7 @@
     <link href="http://atbj505.github.io/2016/01/27/vim%E5%A4%87%E5%BF%98/"/>
     <id>http://atbj505.github.io/2016/01/27/vim备忘/</id>
     <published>2016-01-27T02:49:29.000Z</published>
-    <updated>2017-11-01T12:45:59.129Z</updated>
+    <updated>2017-11-11T10:03:23.127Z</updated>
     
     <content type="html">&lt;h1 id=&quot;vim备忘&quot;&gt;&lt;a href=&quot;#vim备忘&quot; class=&quot;headerlink&quot; title=&quot;vim备忘&quot;&gt;&lt;/a&gt;vim备忘&lt;/h1&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;第一讲&quot;&gt;&lt;a href=&quot;#第一讲&quot; class=&quot;headerlink&quot; title=&quot;第一讲&quot;&gt;&lt;/a&gt;第一讲&lt;/h2&gt;&lt;p&gt;&lt;code&gt;hjkl&lt;/code&gt;:移动 &lt;code&gt;h&lt;/code&gt;左 &lt;code&gt;j&lt;/code&gt;下 &lt;code&gt;k&lt;/code&gt;上 &lt;code&gt;l&lt;/code&gt;右&lt;/p&gt;
@@ -966,6 +966,8 @@
 &lt;p&gt;&lt;code&gt;CTRL-w gf&lt;/code&gt;:在新标签中打开当前光标所在位置的文件名&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;gt&lt;/code&gt;,&lt;code&gt;:tabn&lt;/code&gt;:下一个标签页&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;gT&lt;/code&gt;,&lt;code&gt;:tabp&lt;/code&gt;:上一个标签页&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;gn&lt;/code&gt;:下一个buffer&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;gp&lt;/code&gt;:上一个buffer&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;:tabr&lt;/code&gt;:到第一个标签页&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;:tabl&lt;/code&gt;:到最后一个标签页&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;:tabc&lt;/code&gt;:关闭当前标签栏&lt;/p&gt;
@@ -996,10 +998,6 @@
 &lt;p&gt;&lt;code&gt;s&lt;/code&gt;:vsplit一个新窗口中打开选中文件，并跳到该窗口&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;gs&lt;/code&gt;:vsplit一个新窗口中打开选中文件，但不跳到该窗口&lt;/p&gt;
 &lt;h2 id=&quot;vim-easymotion&quot;&gt;&lt;a href=&quot;#vim-easymotion&quot; class=&quot;headerlink&quot; title=&quot;vim-easymotion&quot;&gt;&lt;/a&gt;vim-easymotion&lt;/h2&gt;&lt;p&gt;&lt;code&gt;,,fa&lt;/code&gt;:查找包含字母a的位置&lt;/p&gt;
-&lt;h2 id=&quot;minibufexpl&quot;&gt;&lt;a href=&quot;#minibufexpl&quot; class=&quot;headerlink&quot; title=&quot;minibufexpl&quot;&gt;&lt;/a&gt;minibufexpl&lt;/h2&gt;&lt;p&gt;&lt;code&gt;,mb&lt;/code&gt;:打开minibufexpl&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;,bn&lt;/code&gt;:切换下一个buffer&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;,bp&lt;/code&gt;:切换前一个buffer&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;,bd&lt;/code&gt;:关闭buffer&lt;/p&gt;
 &lt;h2 id=&quot;ctrlp&quot;&gt;&lt;a href=&quot;#ctrlp&quot; class=&quot;headerlink&quot; title=&quot;ctrlp&quot;&gt;&lt;/a&gt;ctrlp&lt;/h2&gt;&lt;p&gt;&lt;code&gt;,f&lt;/code&gt;:模糊搜索最近打开的文件&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;,p&lt;/code&gt;:模糊搜索当前目录及子目录下所有文件&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ctrl + j/k&lt;/code&gt;:上下选择&lt;/p&gt;
