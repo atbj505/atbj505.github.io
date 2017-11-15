@@ -81,37 +81,18 @@
 
 
 
-<meta name="description" content="第九条：以类族模式隐藏实现细节
-  类族可以隐藏抽象基类的实现细节，其中IOS中常用的UIButton就是使用的这种模式。
-  1+ (UIButton *)buttonWithType:(UIButtonType)type;
-  在具体实现中，会根据type的不同，调用不同子类的初始化方法。
-  在具体的应用中，也可以使用这种模式，通过一个通用的基类创建不同的子类对象。
-
-声明枚举类型
- 12">
+<meta name="description" content="第九条：以类族模式隐藏实现细节   类族可以隐藏抽象基类的实现细节，其中IOS中常用的UIButton就是使用的这种模式。   1+ (UIButton *)buttonWithType:(UIButtonType)type;   在具体实现中，会根据type的不同，调用不同子类的初始化方法。   在具体的应用中，也可以使用这种模式，通过一个通用的基类创建不同的子类对象。  声明枚举类型  12">
+<meta name="keywords" content="OC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Effective-Objective-c-2-0读书笔记（三）">
 <meta property="og:url" content="http://atbj505.github.io/2015/05/02/Effective-Objective-c-2-0读书笔记（三）/index.html">
 <meta property="og:site_name" content="杨">
-<meta property="og:description" content="第九条：以类族模式隐藏实现细节
-  类族可以隐藏抽象基类的实现细节，其中IOS中常用的UIButton就是使用的这种模式。
-  1+ (UIButton *)buttonWithType:(UIButtonType)type;
-  在具体实现中，会根据type的不同，调用不同子类的初始化方法。
-  在具体的应用中，也可以使用这种模式，通过一个通用的基类创建不同的子类对象。
-
-声明枚举类型
- 12">
+<meta property="og:description" content="第九条：以类族模式隐藏实现细节   类族可以隐藏抽象基类的实现细节，其中IOS中常用的UIButton就是使用的这种模式。   1+ (UIButton *)buttonWithType:(UIButtonType)type;   在具体实现中，会根据type的不同，调用不同子类的初始化方法。   在具体的应用中，也可以使用这种模式，通过一个通用的基类创建不同的子类对象。  声明枚举类型  12">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2015-05-02T14:37:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Effective-Objective-c-2-0读书笔记（三）">
-<meta name="twitter:description" content="第九条：以类族模式隐藏实现细节
-  类族可以隐藏抽象基类的实现细节，其中IOS中常用的UIButton就是使用的这种模式。
-  1+ (UIButton *)buttonWithType:(UIButtonType)type;
-  在具体实现中，会根据type的不同，调用不同子类的初始化方法。
-  在具体的应用中，也可以使用这种模式，通过一个通用的基类创建不同的子类对象。
-
-声明枚举类型
- 12">
+<meta name="twitter:description" content="第九条：以类族模式隐藏实现细节   类族可以隐藏抽象基类的实现细节，其中IOS中常用的UIButton就是使用的这种模式。   1+ (UIButton *)buttonWithType:(UIButtonType)type;   在具体实现中，会根据type的不同，调用不同子类的初始化方法。   在具体的应用中，也可以使用这种模式，通过一个通用的基类创建不同的子类对象。  声明枚举类型  12">
 
 
 
@@ -402,7 +383,7 @@
 </li>
 <li><p>应用场景：</p>
   <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">&lt;objc/runtime.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">void</span> *EOCMyAlertViewKey = <span class="string">"EOCMyAlertViewKey"</span>;</span><br></pre></td></tr></table></figure>
-  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)askUserAQuestion &#123;</span><br><span class="line">	<span class="built_in">UIAlertView</span> *alert = [[<span class="built_in">UIAlertView</span> alloc]initWithTitle:<span class="string">@"Question"</span></span><br><span class="line">						message :<span class="string">@"What do you want"</span></span><br><span class="line">						delegate:<span class="keyword">self</span></span><br><span class="line">						cancelButtonTittle:<span class="string">@"Cancel"</span></span><br><span class="line">						otherButtonTitle:<span class="string">@"continue"</span>,<span class="literal">nil</span>];</span><br><span class="line">	<span class="keyword">void</span> (^block)(<span class="built_in">NSInteger</span>) = ^(<span class="built_in">NSInteger</span> buttonIndex) &#123;</span><br><span class="line">		<span class="keyword">if</span> (buttonIndex) == <span class="number">0</span> &#123;</span><br><span class="line">			[<span class="keyword">self</span> doCancel];</span><br><span class="line">		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">			[<span class="keyword">self</span> doContinue];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">	</span><br><span class="line">	objc_setAssociatedObject(alert,</span><br><span class="line">				EOCMyAlertViewKey,</span><br><span class="line">				block,</span><br><span class="line">				OBJC_ASSO<span class="built_in">CIATION_COPY</span>)</span><br><span class="line">				</span><br><span class="line">	[alert show];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)askUserAQuestion &#123;</span><br><span class="line">	<span class="built_in">UIAlertView</span> *alert = [[<span class="built_in">UIAlertView</span> alloc]initWithTitle:<span class="string">@"Question"</span></span><br><span class="line">						message :<span class="string">@"What do you want"</span></span><br><span class="line">						delegate:<span class="keyword">self</span></span><br><span class="line">						cancelButtonTittle:<span class="string">@"Cancel"</span></span><br><span class="line">						otherButtonTitle:<span class="string">@"continue"</span>,<span class="literal">nil</span>];</span><br><span class="line">	<span class="keyword">void</span> (^block)(<span class="built_in">NSInteger</span>) = ^(<span class="built_in">NSInteger</span> buttonIndex) &#123;</span><br><span class="line">		<span class="keyword">if</span> (buttonIndex) == <span class="number">0</span> &#123;</span><br><span class="line">			[<span class="keyword">self</span> doCancel];</span><br><span class="line">		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">			[<span class="keyword">self</span> doContinue];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">	</span><br><span class="line">	objc_setAssociatedObject(alert,</span><br><span class="line">				EOCMyAlertViewKey,</span><br><span class="line">				block,</span><br><span class="line">				OBJC_ASSOCIATION_COPY)</span><br><span class="line">				</span><br><span class="line">	[alert show];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// UIAlertViewDelegate</span></span><br><span class="line">- (<span class="keyword">void</span>)alertView:(<span class="built_in">UIAlertView</span> *)alertView clickedButtonAtIndex:(<span class="built_in">NSInteger</span>)buttonIndex &#123;</span><br><span class="line">	<span class="keyword">void</span> (^block)(<span class="built_in">NSInteger</span>) = objc_getAssociatedObject(alertView, EOCMyAlertViewKey);			block(buttonIndex);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -802,8 +783,6 @@
 
 
 
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 
 

@@ -82,11 +82,13 @@
 
 
 <meta name="description" content="Git的一个重要的功能就是分支，但真正使用的时候分支的创建和合并一直是我十分头疼的问题。无意中发现了一个Git的插件Git-flow。通过它可以更加方便的管理我们的分支。">
+<meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git-flow使用介绍">
 <meta property="og:url" content="http://atbj505.github.io/2015/04/21/Git-flow使用介绍/index.html">
 <meta property="og:site_name" content="杨">
 <meta property="og:description" content="Git的一个重要的功能就是分支，但真正使用的时候分支的创建和合并一直是我十分头疼的问题。无意中发现了一个Git的插件Git-flow。通过它可以更加方便的管理我们的分支。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.juvenxu.com/wp-content/uploads/2010/11/git-branch-1.png">
 <meta property="og:updated_time" content="2015-04-21T07:02:19.000Z">
 <meta name="twitter:card" content="summary">
@@ -378,29 +380,29 @@
 </table>
 <ol>
 <li><p>安装<strong>Git-flow</strong>：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git-flow</span><br></pre></td></tr></table></figure>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git-flow</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>初始化：</p>
 <p> 在Git仓库下</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git flow init</span><br></pre></td></tr></table></figure>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git flow init</span><br></pre></td></tr></table></figure>
 <p> 然后一路回车就行了</p>
 </li>
 <li><p>生成一个功能分支：<code>f1</code></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git flow feature start f1</span><br></pre></td></tr></table></figure>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git flow feature start f1</span><br></pre></td></tr></table></figure>
 <p> <strong>Git-flow</strong>会从<code>develop</code>分支创建分支<code>feature/f1</code>并自动帮我们切换到功能分支<code>feature/f1</code>下面，然后就可以修改代码并提交了，功能修改完成后</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git flow feature finish f1</span><br></pre></td></tr></table></figure>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git flow feature finish f1</span><br></pre></td></tr></table></figure>
 <p> <code>feature/f1</code>中的代码会合并到<code>develop</code>里面，然后切换到<code>develop</code>分支，删除<code>feature/f1</code>。</p>
 </li>
 <li><p>发布版本：版本号<code>1.0</code></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git flow release start 1.0</span><br></pre></td></tr></table></figure>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git flow release start 1.0</span><br></pre></td></tr></table></figure>
 <p> <strong>Git-flow</strong>会从<code>develop</code>分支创建分支<code>release/0.1</code>并自动帮我们切换到<code>release/0.1</code>下，在修改完成后</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git flow release finish 1.0</span><br></pre></td></tr></table></figure>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git flow release finish 1.0</span><br></pre></td></tr></table></figure>
 <p> <strong>Git-flow</strong>会依次切换到<code>master</code>,<code>develop</code>分支下合并<code>release/0.1</code>中的commit，然后用<code>git tag</code>加上tag 0.1</p>
 </li>
 <li><p>Bug修复：<code>bug1</code></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git flow hotfix start bug1</span><br></pre></td></tr></table></figure>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git flow hotfix start bug1</span><br></pre></td></tr></table></figure>
 <p> <strong>Git-flow</strong>会从<code>master</code>分支创建分支<code>hotfix/bug1</code>并自动帮我们切换到<code>hotfix/bug1</code>下，在修改完成后</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git flow hotfix finish bug1</span><br></pre></td></tr></table></figure>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git flow hotfix finish bug1</span><br></pre></td></tr></table></figure>
 <p> <strong>Git-flow</strong>会依次切换到<code>master</code>,<code>develop</code>分支下合并<code>hotfix/bug1</code>中的commit。</p>
 </li>
 </ol>
@@ -800,8 +802,6 @@
 
 
 
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 
 
