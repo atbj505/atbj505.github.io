@@ -841,7 +841,7 @@
     <link href="http://atbj505.github.io/2016/01/27/vim%E5%A4%87%E5%BF%98/"/>
     <id>http://atbj505.github.io/2016/01/27/vim备忘/</id>
     <published>2016-01-27T02:49:29.000Z</published>
-    <updated>2017-12-13T02:40:55.307Z</updated>
+    <updated>2018-05-05T09:24:43.843Z</updated>
     
     <content type="html">&lt;h1 id=&quot;vim备忘&quot;&gt;&lt;a href=&quot;#vim备忘&quot; class=&quot;headerlink&quot; title=&quot;vim备忘&quot;&gt;&lt;/a&gt;vim备忘&lt;/h1&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;第一讲&quot;&gt;&lt;a href=&quot;#第一讲&quot; class=&quot;headerlink&quot; title=&quot;第一讲&quot;&gt;&lt;/a&gt;第一讲&lt;/h2&gt;&lt;p&gt;&lt;code&gt;hjkl&lt;/code&gt;:移动 &lt;code&gt;h&lt;/code&gt;左 &lt;code&gt;j&lt;/code&gt;下 &lt;code&gt;k&lt;/code&gt;上 &lt;code&gt;l&lt;/code&gt;右&lt;/p&gt;
@@ -1022,6 +1022,8 @@
 &lt;p&gt;&lt;code&gt;iC&lt;/code&gt;:选择一个类的内部&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;aM&lt;/code&gt;:选择一个方法&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;iM&lt;/code&gt;:选择一个方法的内部&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;leader-r&lt;/code&gt;:运行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;leader-b&lt;/code&gt;:插入断点&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;c:继续执行&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;l:查看当前行代码段&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;s:进入函数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;r:执行代码直到从当前函数返回&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;q:退出&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;n:执行下一行&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pp:打印变量名&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h2 id=&quot;tagbar&quot;&gt;&lt;a href=&quot;#tagbar&quot; class=&quot;headerlink&quot; title=&quot;tagbar&quot;&gt;&lt;/a&gt;tagbar&lt;/h2&gt;&lt;p&gt;&lt;code&gt;,tt&lt;/code&gt;:打开tagbar&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ctrl+]&lt;/code&gt;:跳转到定义&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ctrl+t&lt;/code&gt;:跳回上一层&lt;/p&gt;
