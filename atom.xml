@@ -841,7 +841,7 @@
     <link href="http://atbj505.github.io/2016/01/27/vim%E5%A4%87%E5%BF%98/"/>
     <id>http://atbj505.github.io/2016/01/27/vim备忘/</id>
     <published>2016-01-27T02:49:29.000Z</published>
-    <updated>2018-05-21T03:06:57.752Z</updated>
+    <updated>2018-05-23T03:24:09.963Z</updated>
     
     <content type="html">&lt;h1 id=&quot;vim备忘&quot;&gt;&lt;a href=&quot;#vim备忘&quot; class=&quot;headerlink&quot; title=&quot;vim备忘&quot;&gt;&lt;/a&gt;vim备忘&lt;/h1&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;第一讲&quot;&gt;&lt;a href=&quot;#第一讲&quot; class=&quot;headerlink&quot; title=&quot;第一讲&quot;&gt;&lt;/a&gt;第一讲&lt;/h2&gt;&lt;p&gt;&lt;code&gt;hjkl&lt;/code&gt;:移动 &lt;code&gt;h&lt;/code&gt;左 &lt;code&gt;j&lt;/code&gt;下 &lt;code&gt;k&lt;/code&gt;上 &lt;code&gt;l&lt;/code&gt;右&lt;/p&gt;
@@ -1039,6 +1039,8 @@
 &lt;p&gt;&lt;code&gt;[i,]i&lt;/code&gt;:显示光标下在文件或者引用文件中位置的第一行&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[I,]I&lt;/code&gt;:与上个命令类似，不过会显示所有的匹配项&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;C-W&amp;gt;i&lt;/code&gt;:与上个命令类似，不过会进行跳转&lt;/p&gt;
+&lt;h2 id=&quot;jedi-vim&quot;&gt;&lt;a href=&quot;#jedi-vim&quot; class=&quot;headerlink&quot; title=&quot;jedi-vim&quot;&gt;&lt;/a&gt;jedi-vim&lt;/h2&gt;&lt;p&gt;&lt;code&gt;&amp;lt;leader&amp;gt;g&lt;/code&gt;:跳转到方法&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;leader&amp;gt;d&lt;/code&gt;:跳转到定义&lt;/p&gt;
 &lt;h2 id=&quot;vim-in-VS-Code&quot;&gt;&lt;a href=&quot;#vim-in-VS-Code&quot; class=&quot;headerlink&quot; title=&quot;vim in VS Code&quot;&gt;&lt;/a&gt;vim in VS Code&lt;/h2&gt;&lt;p&gt;&lt;code&gt;gcc&lt;/code&gt;:注释一行&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;gc2j&lt;/code&gt;:注释两行&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;gd&lt;/code&gt;:跳转到注释&lt;/p&gt;
