@@ -841,7 +841,7 @@
     <link href="http://atbj505.github.io/2016/01/27/vim%E5%A4%87%E5%BF%98/"/>
     <id>http://atbj505.github.io/2016/01/27/vim备忘/</id>
     <published>2016-01-27T02:49:29.000Z</published>
-    <updated>2018-07-07T09:24:20.726Z</updated>
+    <updated>2018-08-23T00:59:31.959Z</updated>
     
     <content type="html">&lt;h1 id=&quot;vim备忘&quot;&gt;&lt;a href=&quot;#vim备忘&quot; class=&quot;headerlink&quot; title=&quot;vim备忘&quot;&gt;&lt;/a&gt;vim备忘&lt;/h1&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;第一讲&quot;&gt;&lt;a href=&quot;#第一讲&quot; class=&quot;headerlink&quot; title=&quot;第一讲&quot;&gt;&lt;/a&gt;第一讲&lt;/h2&gt;&lt;p&gt;&lt;code&gt;hjkl&lt;/code&gt;:移动 &lt;code&gt;h&lt;/code&gt;左 &lt;code&gt;j&lt;/code&gt;下 &lt;code&gt;k&lt;/code&gt;上 &lt;code&gt;l&lt;/code&gt;右&lt;/p&gt;
@@ -1065,6 +1065,7 @@
 &lt;p&gt;&lt;code&gt;[M&lt;/code&gt;:移动到上个方法的结尾&lt;/p&gt;
 &lt;h2 id=&quot;vim-choosewin&quot;&gt;&lt;a href=&quot;#vim-choosewin&quot; class=&quot;headerlink&quot; title=&quot;vim-choosewin&quot;&gt;&lt;/a&gt;vim-choosewin&lt;/h2&gt;&lt;p&gt;&lt;code&gt;--&lt;/code&gt;:切换到另一个buffer&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;-1&lt;/code&gt;:切换到1号buffer&lt;/p&gt;
+&lt;h2 id=&quot;vim-move&quot;&gt;&lt;a href=&quot;#vim-move&quot; class=&quot;headerlink&quot; title=&quot;vim-move&quot;&gt;&lt;/a&gt;vim-move&lt;/h2&gt;&lt;p&gt;&lt;code&gt;alt hjkl&lt;/code&gt;:移动代码&lt;/p&gt;
 &lt;h2 id=&quot;vim-in-VS-Code&quot;&gt;&lt;a href=&quot;#vim-in-VS-Code&quot; class=&quot;headerlink&quot; title=&quot;vim in VS Code&quot;&gt;&lt;/a&gt;vim in VS Code&lt;/h2&gt;&lt;p&gt;&lt;code&gt;gcc&lt;/code&gt;:注释一行&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;gc2j&lt;/code&gt;:注释两行&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;gd&lt;/code&gt;:跳转到注释&lt;/p&gt;
