@@ -841,7 +841,7 @@
     <link href="http://atbj505.github.io/2016/01/27/vim%E5%A4%87%E5%BF%98/"/>
     <id>http://atbj505.github.io/2016/01/27/vim备忘/</id>
     <published>2016-01-27T02:49:29.000Z</published>
-    <updated>2018-08-24T03:02:59.816Z</updated>
+    <updated>2018-09-04T11:41:42.452Z</updated>
     
     <content type="html">&lt;h1 id=&quot;vim备忘&quot;&gt;&lt;a href=&quot;#vim备忘&quot; class=&quot;headerlink&quot; title=&quot;vim备忘&quot;&gt;&lt;/a&gt;vim备忘&lt;/h1&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;第一讲&quot;&gt;&lt;a href=&quot;#第一讲&quot; class=&quot;headerlink&quot; title=&quot;第一讲&quot;&gt;&lt;/a&gt;第一讲&lt;/h2&gt;&lt;p&gt;&lt;code&gt;hjkl&lt;/code&gt;:移动 &lt;code&gt;h&lt;/code&gt;左 &lt;code&gt;j&lt;/code&gt;下 &lt;code&gt;k&lt;/code&gt;上 &lt;code&gt;l&lt;/code&gt;右&lt;/p&gt;
@@ -1070,6 +1070,12 @@
 &lt;p&gt;&lt;code&gt;&amp;lt;c-w&amp;gt;gj&lt;/code&gt;: soft move down&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;c-w&amp;gt;gk&lt;/code&gt;: soft move up&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;c-w&amp;gt;gl&lt;/code&gt;: soft move right&lt;/p&gt;
+&lt;h2 id=&quot;vimux&quot;&gt;&lt;a href=&quot;#vimux&quot; class=&quot;headerlink&quot; title=&quot;vimux&quot;&gt;&lt;/a&gt;vimux&lt;/h2&gt;&lt;p&gt;&lt;code&gt;&amp;lt;leader&amp;gt;vp&lt;/code&gt;:运行指定语句在tmux pane中&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;leader&amp;gt;vl&lt;/code&gt;:运行上一个命令&lt;/p&gt;
+&lt;h2 id=&quot;vimux-cargo&quot;&gt;&lt;a href=&quot;#vimux-cargo&quot; class=&quot;headerlink&quot; title=&quot;vimux-cargo&quot;&gt;&lt;/a&gt;vimux-cargo&lt;/h2&gt;&lt;p&gt;&lt;code&gt;&amp;lt;leader&amp;gt;rc&lt;/code&gt;:cargo run&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;leader&amp;gt;ra&lt;/code&gt;:cargo test all&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;leader&amp;gt;rb&lt;/code&gt;:cargo test current file&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;leader&amp;gt;rf&lt;/code&gt;:cargo test focus&lt;/p&gt;
 &lt;h2 id=&quot;vim-in-VS-Code&quot;&gt;&lt;a href=&quot;#vim-in-VS-Code&quot; class=&quot;headerlink&quot; title=&quot;vim in VS Code&quot;&gt;&lt;/a&gt;vim in VS Code&lt;/h2&gt;&lt;p&gt;&lt;code&gt;gcc&lt;/code&gt;:注释一行&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;gc2j&lt;/code&gt;:注释两行&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;gd&lt;/code&gt;:跳转到注释&lt;/p&gt;
