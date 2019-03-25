@@ -936,10 +936,10 @@ pre .javascript .function {
   padding: 20px 20px 0 20px;
 }
 .post-body .tabs .tab-content .tab-pane:not(.active) {
-  display: none !important;
+  display: none;
 }
 .post-body .tabs .tab-content .tab-pane.active {
-  display: block !important;
+  display: block;
 }
 .btn {
   display: inline-block;
@@ -1315,9 +1315,6 @@ pre .javascript .function {
 .posts-expand .post-body h6:hover .header-anchor {
   visibility: visible;
 }
-.posts-expand .post-body ul > li {
-  list-style: circle;
-}
 .posts-expand .post-body img {
   box-sizing: border-box;
   margin: 0 auto 25px;
@@ -1661,7 +1658,7 @@ pre .javascript .function {
 }
 @media (max-width: 991px) {
   .sidebar {
-    display: none !important;
+    display: none;
   }
 }
 .sidebar-inner {
@@ -1706,14 +1703,9 @@ pre .javascript .function {
 .sidebar-toggle:hover .sidebar-toggle-line {
   background: #87daff;
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
   .sidebar-toggle {
-    display: none !important;
-  }
-}
-@media (max-width: 767px) {
-  .sidebar-toggle {
-    display: none !important;
+    display: none;
   }
 }
 .sidebar-toggle-line {
@@ -1770,7 +1762,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #cf3398;
+  background: #dffc6f;
 }
 .feed-link,
 .chat {
@@ -1781,7 +1773,7 @@ pre .javascript .function {
   display: inline-block;
   padding: 0 15px;
   color: #fc6423;
-  border: 1px solid #fc6423;
+  border: 1px solid #fc6423 !important;
   border-radius: 4px;
 }
 .feed-link a i,
@@ -2182,14 +2174,14 @@ pre .javascript .function {
 .category-all-page .category-list-child {
   padding-left: 10px;
 }
-#schedule ul#event-list {
+#event-list {
   padding-left: 30px;
 }
-#schedule ul#event-list hr {
+#event-list hr {
   margin: 20px 0 45px 0 !important;
   background: #222;
 }
-#schedule ul#event-list hr:after {
+#event-list hr:after {
   display: inline-block;
   content: 'NOW';
   background: #222;
@@ -2198,17 +2190,17 @@ pre .javascript .function {
   text-align: right;
   padding: 0 5px;
 }
-#schedule ul#event-list li.event {
+#event-list li.event {
   margin: 20px 0px;
   background: #f9f9f9;
   padding-left: 10px;
   min-height: 40px;
 }
-#schedule ul#event-list li.event h2.event-summary {
+#event-list li.event h2.event-summary {
   margin: 0;
   padding-bottom: 3px;
 }
-#schedule ul#event-list li.event h2.event-summary:before {
+#event-list li.event h2.event-summary:before {
   display: inline-block;
   font-family: FontAwesome;
   font-size: 8px;
@@ -2217,14 +2209,14 @@ pre .javascript .function {
   margin-right: 25px;
   color: #bbb;
 }
-#schedule ul#event-list li.event span.event-relative-time {
+#event-list li.event span.event-relative-time {
   display: inline-block;
   font-size: 12px;
   font-weight: 400;
   padding-left: 12px;
   color: #bbb;
 }
-#schedule ul#event-list li.event span.event-details {
+#event-list li.event span.event-details {
   display: block;
   color: #bbb;
   margin-left: 56px;
@@ -2233,7 +2225,7 @@ pre .javascript .function {
   text-indent: -24px;
   line-height: 18px;
 }
-#schedule ul#event-list li.event span.event-details:before {
+#event-list li.event span.event-details:before {
   text-indent: 0;
   display: inline-block;
   width: 14px;
@@ -2242,49 +2234,49 @@ pre .javascript .function {
   margin-right: 9px;
   color: #bbb;
 }
-#schedule ul#event-list li.event span.event-details.event-location:before {
+#event-list li.event span.event-details.event-location:before {
   content: '\f041';
 }
-#schedule ul#event-list li.event span.event-details.event-duration:before {
+#event-list li.event span.event-details.event-duration:before {
   content: '\f017';
 }
-#schedule ul#event-list li.event-past {
+#event-list li.event-past {
   background: #fcfcfc;
   padding: 15px 0 15px 10px;
 }
-#schedule ul#event-list li.event-past > * {
+#event-list li.event-past > * {
   opacity: 0.9;
 }
-#schedule ul#event-list li.event-past h2.event-summary {
+#event-list li.event-past h2.event-summary {
   color: #bbb;
 }
-#schedule ul#event-list li.event-past h2.event-summary:before {
+#event-list li.event-past h2.event-summary:before {
   color: #dfdfdf;
 }
-#schedule ul#event-list li.event-now {
+#event-list li.event-now {
   background: #222;
   color: #fff;
   padding: 15px 0 15px 10px;
 }
-#schedule ul#event-list li.event-now h2.event-summary:before {
+#event-list li.event-now h2.event-summary:before {
   transform: scale(1.2);
   color: #fff;
   animation: dot-flash 1s alternate infinite ease-in-out;
 }
-#schedule ul#event-list li.event-now * {
+#event-list li.event-now * {
   color: #fff !important;
 }
-#schedule ul#event-list li.event-future {
+#event-list li.event-future {
   background: #222;
   color: #fff;
   padding: 15px 0 15px 10px;
 }
-#schedule ul#event-list li.event-future h2.event-summary:before {
+#event-list li.event-future h2.event-summary:before {
   transform: scale(1.2);
   color: #fff;
   animation: dot-flash 1s alternate infinite ease-in-out;
 }
-#schedule ul#event-list li.event-future * {
+#event-list li.event-future * {
   color: #fff !important;
 }
 @-moz-keyframes dot-flash {
