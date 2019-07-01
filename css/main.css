@@ -494,9 +494,7 @@ body {
 }
 pre,
 .highlight {
-  overflow: auto;
   margin: 20px 0;
-  padding: 0;
   font-size: 14px;
   color: #4d4d4c;
   background: #f7f7f7;
@@ -516,6 +514,7 @@ code {
   font-size: 14px;
 }
 pre {
+  overflow: auto;
   padding: 10px;
 }
 pre code {
@@ -545,7 +544,6 @@ pre code {
   font-size: 1em;
   color: #4d4d4c;
   line-height: 1em;
-  margin-bottom: 1em;
   margin: 0em;
   padding: 0.5em;
   background: #eee;
@@ -576,7 +574,6 @@ pre code {
 .highlight .code pre {
   width: 100%;
   padding-left: 10px;
-  padding-right: 10px;
   background-color: #f7f7f7;
 }
 .highlight .line {
@@ -1265,16 +1262,10 @@ pre .javascript .function {
   .posts-expand {
     margin: 0 20px;
   }
-  .post-body pre .gutter pre {
-    padding-right: 10px;
-  }
   .post-body .highlight {
     margin-left: 0px;
     margin-right: 0px;
     padding: 0;
-  }
-  .post-body .highlight .gutter pre {
-    padding-right: 10px;
   }
 }
 @media (min-width: 992px) {
@@ -1750,7 +1741,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9ae8ff;
+  background: #c2d6f7;
 }
 .feed-link,
 .chat {
