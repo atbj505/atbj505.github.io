@@ -1687,6 +1687,7 @@ pre .javascript .function {
   width: 100%;
   background: #fff;
   margin-top: 3px;
+  transition: all 0.4s;
 }
 .sidebar-toggle-line:first-child {
   margin-top: 0;
@@ -1733,7 +1734,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #aa2b05;
+  background: #4790ff;
 }
 .feed-link,
 .chat {
