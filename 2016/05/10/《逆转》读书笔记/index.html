@@ -32,21 +32,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
-
-<link rel="stylesheet" href="/css/main.css?v=7.2.0"/>
-
-
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
 
 
@@ -57,6 +42,21 @@
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0"/>
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
+
 
 
 
@@ -785,6 +785,14 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
 
   
 
@@ -796,23 +804,31 @@
 
   
 
-  
+
+
 
   
 
-  
+
+
 
   
 
-  
 
-  
 
-  
+<script>
+// GET RESPONSIVE HEIGHT PASSED FROM IFRAME
 
-  
+window.addEventListener("message", function(e) {
+  var data = e.data;
+  if ((typeof data === 'string') && (data.indexOf('ciu_embed') > -1)) {
+    var featureID = data.split(':')[1];
+    var height = data.split(':')[2];
+    $(`iframe[data-feature=${featureID}]`).height(parseInt(height) + 30);
+  }
+}, false);
+</script>
 
-  
 
   
 
