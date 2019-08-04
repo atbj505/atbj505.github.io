@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
 
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
@@ -30,6 +30,7 @@
     version: '7.3.0',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
     copycode: {"enable":false,"show_result":false,"style":null},
     fancybox: false,
     mediumzoom: false,
@@ -43,16 +44,13 @@
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
     localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    search: {
-      root: '/',
-      path: ''
-    },
+    path: '',
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
-      copy_button: 'کپی',
-      copy_success: 'کپی شد',
-      copy_failure: 'کپی انجام نشد'
+      copy_button: 'Kopieren',
+      copy_success: 'Kopiert',
+      copy_failure: 'Kopieren fehlgeschlagen'
     }
   };
 </script>
@@ -71,9 +69,14 @@
   <link rel="canonical" href="http://atbj505.github.io/page/3/">
 
 
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
@@ -116,7 +119,7 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <div class="container sidebar-position-left page-home">
+  <div class="container sidebar-position-left">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -135,7 +138,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="تغییر ناوبری">
+    <button aria-label="Navigationsleiste an/ausschalten">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -144,36 +147,36 @@
 </div>
 
 
-
 <nav class="site-nav">
-    <ul id="menu" class="menu">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-home">
+        <li class="menu-item menu-item-home">
       
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>صفحه اصلی</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-archives">
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>بایگانی</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
 
   </li>
-    </ul>
+  </ul>
+
     
 
 </nav>
-
 </div>
     </header>
 
@@ -183,7 +186,7 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          <div id="content" class="content page-home">
             
   <section id="posts" class="posts-expand">
       
@@ -222,14 +225,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">نوشته شده در</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="ایجاد شده: 2016-01-18 16:52:41" itemprop="dateCreated datePublished" datetime="2016-01-18T16:52:41+08:00">2016-01-18</time>
+              <time title="Erstellt: 2016-01-18 16:52:41" itemprop="dateCreated datePublished" datetime="2016-01-18T16:52:41+08:00">2016-01-18</time>
             </span>
           
             
@@ -240,9 +243,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">ویرایش شده در</span>
+                  <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="تغییر یافته: 2016-02-02 10:46:55" itemprop="dateModified" datetime="2016-02-02T10:46:55+08:00">2016-02-02</time>
+                <time title="Geändert am: 2016-02-02 10:46:55" itemprop="dateModified" datetime="2016-02-02T10:46:55+08:00">2016-02-02</time>
               </span>
             
           
@@ -263,7 +266,7 @@
           
             <div class="post-button text-center">
               <a class="btn" href="/2016/01/18/Github-Star/#more" rel="contents">
-                ادامه مطلب &raquo;
+                Weiterlesen &raquo;
               </a>
             </div>
           
@@ -322,14 +325,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">نوشته شده در</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="ایجاد شده: 2016-01-13 17:37:05" itemprop="dateCreated datePublished" datetime="2016-01-13T17:37:05+08:00">2016-01-13</time>
+              <time title="Erstellt: 2016-01-13 17:37:05" itemprop="dateCreated datePublished" datetime="2016-01-13T17:37:05+08:00">2016-01-13</time>
             </span>
           
             
@@ -340,9 +343,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">ویرایش شده در</span>
+                  <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="تغییر یافته: 2016-01-14 17:21:26" itemprop="dateModified" datetime="2016-01-14T17:21:26+08:00">2016-01-14</time>
+                <time title="Geändert am: 2016-01-14 17:21:26" itemprop="dateModified" datetime="2016-01-14T17:21:26+08:00">2016-01-14</time>
               </span>
             
           
@@ -363,7 +366,7 @@
           
             <div class="post-button text-center">
               <a class="btn" href="/2016/01/13/Google的创新逻辑/#more" rel="contents">
-                ادامه مطلب &raquo;
+                Weiterlesen &raquo;
               </a>
             </div>
           
@@ -422,14 +425,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">نوشته شده در</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="ایجاد شده: 2015-10-22 13:42:28 / تغییر یافته: 15:38:30" itemprop="dateCreated datePublished" datetime="2015-10-22T13:42:28+08:00">2015-10-22</time>
+              <time title="Erstellt: 2015-10-22 13:42:28 / Geändert am: 15:38:30" itemprop="dateCreated datePublished" datetime="2015-10-22T13:42:28+08:00">2015-10-22</time>
             </span>
           
             
@@ -453,7 +456,7 @@
           
             <div class="post-button text-center">
               <a class="btn" href="/2015/10/22/关于const-static-extern/#more" rel="contents">
-                ادامه مطلب &raquo;
+                Weiterlesen &raquo;
               </a>
             </div>
           
@@ -512,14 +515,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">نوشته شده در</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="ایجاد شده: 2015-10-21 13:39:01 / تغییر یافته: 14:13:13" itemprop="dateCreated datePublished" datetime="2015-10-21T13:39:01+08:00">2015-10-21</time>
+              <time title="Erstellt: 2015-10-21 13:39:01 / Geändert am: 14:13:13" itemprop="dateCreated datePublished" datetime="2015-10-21T13:39:01+08:00">2015-10-21</time>
             </span>
           
             
@@ -543,7 +546,7 @@
           
             <div class="post-button text-center">
               <a class="btn" href="/2015/10/21/IOS开发Tips/#more" rel="contents">
-                ادامه مطلب &raquo;
+                Weiterlesen &raquo;
               </a>
             </div>
           
@@ -602,14 +605,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">نوشته شده در</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="ایجاد شده: 2015-10-16 16:56:41 / تغییر یافته: 17:42:13" itemprop="dateCreated datePublished" datetime="2015-10-16T16:56:41+08:00">2015-10-16</time>
+              <time title="Erstellt: 2015-10-16 16:56:41 / Geändert am: 17:42:13" itemprop="dateCreated datePublished" datetime="2015-10-16T16:56:41+08:00">2015-10-16</time>
             </span>
           
             
@@ -638,7 +641,7 @@
           
             <div class="post-button text-center">
               <a class="btn" href="/2015/10/16/AutoLayer自动布局流程/#more" rel="contents">
-                ادامه مطلب &raquo;
+                Weiterlesen &raquo;
               </a>
             </div>
           
@@ -697,14 +700,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">نوشته شده در</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="ایجاد شده: 2015-07-21 10:17:35" itemprop="dateCreated datePublished" datetime="2015-07-21T10:17:35+08:00">2015-07-21</time>
+              <time title="Erstellt: 2015-07-21 10:17:35" itemprop="dateCreated datePublished" datetime="2015-07-21T10:17:35+08:00">2015-07-21</time>
             </span>
           
             
@@ -715,9 +718,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">ویرایش شده در</span>
+                  <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="تغییر یافته: 2015-10-22 13:41:56" itemprop="dateModified" datetime="2015-10-22T13:41:56+08:00">2015-10-22</time>
+                <time title="Geändert am: 2015-10-22 13:41:56" itemprop="dateModified" datetime="2015-10-22T13:41:56+08:00">2015-10-22</time>
               </span>
             
           
@@ -740,7 +743,7 @@
           
             <div class="post-button text-center">
               <a class="btn" href="/2015/07/21/Effective-Objective-c-2-0读书笔记（五）/#more" rel="contents">
-                ادامه مطلب &raquo;
+                Weiterlesen &raquo;
               </a>
             </div>
           
@@ -767,7 +770,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="صفحه قبلی"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="صفحه بعدی"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Vorherige Seite"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Nächste Seite"></i></a>
   </nav>
 
 
@@ -801,7 +804,7 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">28</span>
-          <span class="site-state-item-name">پست ها</span>
+          <span class="site-state-item-name">Artikel</span>
         </a>
       </div>
     
@@ -826,7 +829,7 @@
           
         
         <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">برجسب ها</span>
+        <span class="site-state-item-name">schlagwörter</span>
         
       </div>
     
@@ -858,9 +861,9 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Robert Yang</span>
 </div>
-  <div class="powered-by">قدرت گرفته از <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.4.0</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.4.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">پوسته – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.3.0</div>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.3.0</div>
 
         
 
@@ -887,22 +890,18 @@
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
-  <script src="/js/utils.js?v=7.3.0"></script>
+<script src="/js/utils.js?v=7.3.0"></script>
   <script src="/js/motion.js?v=7.3.0"></script>
 
-  
+
   <script src="/js/schemes/muse.js?v=7.3.0"></script>
 
 
-  
+<script src="/js/next-boot.js?v=7.3.0"></script>
 
-  <script src="/js/next-boot.js?v=7.3.0"></script>
 
-  
 
-  
 
-  
 
 
   
@@ -934,11 +933,13 @@
 
 
 
+  
+
+  
+
+  
 
 
-
-
-
-
+  
 </body>
 </html>

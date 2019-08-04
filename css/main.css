@@ -594,9 +594,6 @@ pre .keyword,
 pre .javascript .function {
   color: #8959a8;
 }
-.posts-expand .post-body img.full-image {
-  border: none;
-}
 .blockquote-center,
 .page-home .post-type-quote blockquote,
 .page-post-detail .post-type-quote blockquote {
@@ -1629,7 +1626,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #905437;
+  background: #5c5b65;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
