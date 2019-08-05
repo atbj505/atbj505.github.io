@@ -1,12 +1,3 @@
-border-radius: 50% {
-  border-radius: 50%;
-}
-display: none {
-  display: none;
-}
-display: block {
-  display: block;
-}
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -1531,7 +1522,7 @@ pre .javascript .function {
   visibility: visible;
 }
 .posts-expand .post-title-link .fa {
-  font-size: 1.25em;
+  font-size: 0.875em;
   margin-left: 5px;
 }
 .page-home .post-type-quote .post-header,
@@ -1626,7 +1617,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #16bf3b;
+  background: #9ad2cc;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
