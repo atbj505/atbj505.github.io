@@ -28,6 +28,7 @@
     root: '/',
     scheme: 'Muse',
     version: '7.3.0',
+    exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     save_scroll: false,
@@ -47,9 +48,9 @@
     path: '',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
-      copy_button: 'Copy',
-      copy_success: 'Copied',
-      copy_failure: 'Copy failed'
+      copy_button: 'Kopieren',
+      copy_success: 'Kopiert',
+      copy_failure: 'Kopieren fehlgeschlagen'
     }
   };
 </script>
@@ -142,7 +143,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="Navigationsleiste an/ausschalten">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -162,7 +163,7 @@
       
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
 
   </li>
       
@@ -173,7 +174,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
 
   </li>
   </ul>
@@ -226,13 +227,13 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
               
                 
               
 
-              <time title="Created: 2016-01-13 17:37:05" itemprop="dateCreated datePublished" datetime="2016-01-13T17:37:05+08:00">2016-01-13</time>
+              <time title="Erstellt: 2016-01-13 17:37:05" itemprop="dateCreated datePublished" datetime="2016-01-13T17:37:05+08:00">2016-01-13</time>
             </span>
           
             
@@ -242,8 +243,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2016-01-14 17:21:26" itemprop="dateModified" datetime="2016-01-14T17:21:26+08:00">2016-01-14</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2016-01-14 17:21:26" itemprop="dateModified" datetime="2016-01-14T17:21:26+08:00">2016-01-14</time>
               </span>
             
           
@@ -432,32 +433,44 @@ Google 为其他公司提供搜索服务
     
     
     
-
-    <footer class="post-footer">
-          
         
-        <div class="post-tags">
-            <a href="/tags/随想/" rel="tag"># 随想</a>
+      
+
+      <footer class="post-footer">
           
-        </div>
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-              <a href="/2015/10/22/关于const-static-extern/" rel="next" title="关于const,static,extern">
-                <i class="fa fa-chevron-left"></i> 关于const,static,extern
-              </a>
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/随想/" rel="tag"># 随想</a>
             
           </div>
+        
 
-          <span class="post-nav-divider"></span>
+        
 
-          <div class="post-nav-prev post-nav-item">
-              <a href="/2016/01/18/Github-Star/" rel="prev" title="Github Star">
-                Github Star <i class="fa fa-chevron-right"></i>
-              </a>
-            
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2015/10/22/关于const-static-extern/" rel="next" title="关于const,static,extern">
+                  <i class="fa fa-chevron-left"></i> 关于const,static,extern
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2016/01/18/Github-Star/" rel="prev" title="Github Star">
+                  Github Star <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
           </div>
-        </div>
-    </footer>
+        
+      </footer>
+    
   </div>
   
   
@@ -485,10 +498,10 @@ Google 为其他公司提供搜索服务
     <div class="sidebar-inner">
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -506,7 +519,7 @@ Google 为其他公司提供搜索服务
           <a href="/archives/">
         
           <span class="site-state-item-count">28</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">Artikel</span>
         </a>
       </div>
     
@@ -531,7 +544,7 @@ Google 为其他公司提供搜索服务
           
         
         <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">schlagwörter</span>
         
       </div>
     
@@ -580,9 +593,9 @@ Google 为其他公司提供搜索服务
   </span>
   <span class="author" itemprop="copyrightHolder">Robert Yang</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.4.0</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.4.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.3.0</div>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.3.0</div>
 
         
 
@@ -617,8 +630,6 @@ Google 为其他公司提供搜索服务
 
 
 <script src="/js/next-boot.js?v=7.3.0"></script>
-
-
 
 
 
