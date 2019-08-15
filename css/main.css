@@ -316,13 +316,6 @@ kbd {
   font-size: 0.875em;
   margin-top: -20px;
 }
-.scrollbar-measure {
-  height: 100px;
-  overflow: scroll;
-  position: absolute;
-  top: -9999px;
-  width: 100px;
-}
 .use-motion .motion-element {
   opacity: 0;
 }
@@ -1664,7 +1657,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #bfffff;
+  background: #edfb5c;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
