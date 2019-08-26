@@ -93,7 +93,6 @@
 
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -123,7 +122,7 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
 
     <div>
@@ -180,20 +179,25 @@
 </div>
     </header>
 
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content page-post-detail">
+          <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
-    
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block">
+  <div class="post-block post">
     <link itemprop="mainEntityOfPage" href="http://atbj505.github.io/2016/07/11/你以为你以为的就是你以为的吗/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -349,7 +353,7 @@
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
         
         
@@ -368,18 +372,15 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc">
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#你以为你以为的就是你以为的吗"><span class="nav-number">1.</span> <span class="nav-text">你以为你以为的就是你以为的吗</span></a></li></ol></div>
-          </div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#你以为你以为的就是你以为的吗"><span class="nav-number">1.</span> <span class="nav-text">你以为你以为的就是你以为的吗</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Robert Yang</p>
-  <div class="site-description motion-element" itemprop="description">Stay weird. Stay different.</div>
+  <div class="site-description" itemprop="description">Stay weird. Stay different.</div>
 </div>
   <nav class="site-state motion-element">
       <div class="site-state-item site-state-posts">
@@ -425,7 +426,6 @@
 
 
 
-        </div>
       </div>
 
     </div>
@@ -464,13 +464,6 @@
         
       </div>
     </footer>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
   </div>
 
   
@@ -510,11 +503,6 @@
   
 
   
-
-
-  
-  <script src="/js/post-details.js?v=7.3.0"></script>
-
 
 </body>
 </html>

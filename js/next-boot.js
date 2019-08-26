@@ -30,15 +30,13 @@ NexT.boot.registerEvents = function() {
     var target = $('.' + item.data('target'));
     var currentTarget = target.siblings('.sidebar-panel');
     currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, () => {
-      currentTarget.hide();
+      // Prevent adding TOC to Overview if Overview was selected when close & open sidebar.
+      currentTarget.removeClass(activePanelClassName);
       target
         .stop()
-        .css({ 'opacity': 0, 'display': 'block' })
-        .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, () => {
-          // Prevent adding TOC to Overview if Overview was selected when close & open sidebar.
-          currentTarget.removeClass(activePanelClassName, 'motion-element');
-          target.addClass(activePanelClassName, 'motion-element');
-        });
+        .css({ opacity: 0 })
+        .addClass(activePanelClassName)
+        .animate({ opacity: 1 }, TAB_ANIMATE_DURATION);
     });
 
     item.siblings().removeClass(activeTabClassName);
@@ -71,20 +69,9 @@ NexT.boot.refresh = function() {
   CONFIG.copycode.enable && NexT.utils.registerCopyCode();
   NexT.utils.registerTabsTag();
   NexT.utils.registerActiveMenuItem();
-  NexT.utils.embeddedVideoTransformer();
-
-  var sidebarNav = document.querySelector('.sidebar-nav');
-  if (document.querySelector('.post-toc-wrap').childElementCount > 0) {
-    sidebarNav.style.display = '';
-    sidebarNav.classList.add('motion-element');
-    document.querySelector('.sidebar-nav-toc').click();
-  } else {
-    sidebarNav.style.display = 'none';
-    sidebarNav.classList.remove('motion-element');
-    document.querySelector('.sidebar-nav-overview').click();
-  }
-
-  $('table').not('.gist table').wrap('<div class="table-container"></div>');
+  NexT.utils.registerSidebarTOC();
+  NexT.utils.wrapTableWithBox();
+  NexT.utils.registerVideoIframe();
 };
 
 NexT.boot.motion = function() {

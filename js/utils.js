@@ -1,17 +1,5 @@
 /* global NexT, CONFIG */
 
-HTMLElement.prototype.isVisible = function() {
-  return window.getComputedStyle(this).display !== 'none';
-};
-
-HTMLElement.prototype.width = function() {
-  return parseFloat(window.getComputedStyle(this).width);
-};
-
-HTMLElement.prototype.height = function() {
-  return parseFloat(window.getComputedStyle(this).height);
-};
-
 HTMLElement.prototype.outerHeight = function(flag) {
   var height = this.offsetHeight;
   if (!flag) return height;
@@ -25,6 +13,12 @@ HTMLElement.prototype.css = function(dict) {
     this.style[key] = dict[key];
   }
   return this;
+};
+
+HTMLElement.prototype.wrap = function(wrapper) {
+  this.parentNode.insertBefore(wrapper, this);
+  this.parentNode.removeChild(this);
+  wrapper.appendChild(this);
 };
 
 NexT.utils = {
@@ -80,16 +74,20 @@ NexT.utils = {
    * One-click copy code support.
    */
   registerCopyCode: function() {
-    $('.highlight').not('.gist .highlight').each((i, e) => {
-      function initButton(button) {
+    document.querySelectorAll('figure.highlight').forEach(e => {
+      const initButton = button => {
         if (CONFIG.copycode.style === 'mac') {
-          button.html('<i class="fa fa-clipboard"></i>');
+          button.innerHTML = '<i class="fa fa-clipboard"></i>';
         } else {
-          button.text(CONFIG.translation.copy_button);
+          button.innerText = CONFIG.translation.copy_button;
         }
-      }
-      var $button = $('<div>').addClass('copy-btn');
-      $button.on('click', event => {
+      };
+      const box = document.createElement('div');
+      box.classList.add('highlight-wrap');
+      e.wrap(box);
+      e.parentNode.insertAdjacentHTML('beforeend', '<div class="copy-btn"></div>');
+      var button = e.parentNode.querySelector('.copy-btn');
+      button.addEventListener('click', event => {
         var code = [...event.currentTarget.parentNode.querySelectorAll('.code .line')].map(element => {
           return element.innerText;
         }).join('\n');
@@ -100,7 +98,7 @@ NexT.utils = {
         ta.style.opacity = '0';
         ta.readOnly = true;
         ta.value = code;
-        document.body.appendChild(ta);
+        document.body.append(ta);
         const selection = document.getSelection();
         const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
         ta.select();
@@ -118,13 +116,42 @@ NexT.utils = {
         }
         document.body.removeChild(ta);
       });
-      $button.on('mouseleave', event => {
+      button.addEventListener('mouseleave', event => {
         setTimeout(() => {
-          initButton($(event.currentTarget));
+          initButton(event.target);
         }, 300);
       });
-      initButton($button);
-      $(e).wrap($('<div>').addClass('highlight-wrap')).after($button);
+      initButton(button);
+    });
+  },
+
+  wrapTableWithBox: function() {
+    [...document.querySelectorAll('table')].forEach(table => {
+      const box = document.createElement('div');
+      box.className = 'table-container';
+      table.wrap(box);
+    });
+  },
+
+  registerVideoIframe: function() {
+    document.querySelectorAll('iframe').forEach(element => {
+      const SUPPORTED_PLAYERS = [
+        'www.youtube.com',
+        'player.vimeo.com',
+        'player.youku.com',
+        'player.bilibili.com',
+        'www.tudou.com'
+      ];
+      const pattern = new RegExp(SUPPORTED_PLAYERS.join('|'));
+      if (!element.parentNode.matches('.video-container') && element.src.search(pattern) > 0) {
+        const box = document.createElement('div');
+        box.className = 'video-container';
+        element.wrap(box);
+        let width = Number(element.width); let height = Number(element.height);
+        if (width && height) {
+          element.parentNode.style.paddingTop = (height / width * 100) + '%';
+        }
+      }
     });
   },
 
@@ -136,7 +163,7 @@ NexT.utils = {
     $(window).on('load scroll', () => {
       var scrollPercent;
       if (backToTop || readingProgressBar) {
-        var docHeight = document.querySelector('.container').height();
+        var docHeight = document.querySelector('.container').offsetHeight;
         var winHeight = window.innerHeight;
         var contentVisibilityHeight = docHeight > winHeight ? docHeight - winHeight : document.body.scrollHeight - winHeight;
         var scrollPercentRounded = Math.round(100 * window.scrollY / contentVisibilityHeight);
@@ -189,13 +216,13 @@ NexT.utils = {
   },
 
   registerCanIUseTag: function() {
-    // GET RESPONSIVE HEIGHT PASSED FROM IFRAME
+    // Get responsive height passed from iframe.
     window.addEventListener('message', e => {
       var data = e.data;
       if ((typeof data === 'string') && (data.indexOf('ciu_embed') > -1)) {
         var featureID = data.split(':')[1];
         var height = data.split(':')[2];
-        $(`iframe[data-feature=${featureID}]`).height(parseInt(height, 10) + 30);
+        document.querySelector(`iframe[data-feature=${featureID}]`).style.height = parseInt(height, 10) + 'px';
       }
     }, false);
   },
@@ -213,80 +240,85 @@ NexT.utils = {
     });
   },
 
-  /**
-   * Transform embedded video to support responsive layout.
-   * @see http://toddmotto.com/fluid-and-responsive-youtube-and-vimeo-videos-with-fluidvids-js/
-   */
-  embeddedVideoTransformer: function() {
-    // Supported Players. Extend this if you need more players.
-    var SUPPORTED_PLAYERS = [
-      'www.youtube.com',
-      'player.vimeo.com',
-      'player.youku.com',
-      'music.163.com',
-      'www.tudou.com'
-    ];
-    var pattern = new RegExp(SUPPORTED_PLAYERS.join('|'));
+  registerSidebarTOC: function() {
+    var sidebarNav = document.querySelector('.sidebar-nav');
+    if (document.querySelector('.post-toc')) {
+      sidebarNav.style.display = '';
+      sidebarNav.classList.add('motion-element');
+      document.querySelector('.sidebar-nav-toc').click();
+    } else {
+      sidebarNav.style.display = 'none';
+      sidebarNav.classList.remove('motion-element');
+      document.querySelector('.sidebar-nav-overview').click();
+    }
+    NexT.utils.initSidebarDimension();
 
-    function getDimension(element) {
-      return {
-        width : element.width(),
-        height: element.height()
-      };
+    const navItems = document.querySelectorAll('.post-toc li');
+    const sections = [...navItems].map(element => {
+      var link = element.querySelector('a.nav-link');
+      // TOC item animation navigate.
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        var target = document.getElementById(event.currentTarget.getAttribute('href').replace('#', ''));
+        var offset = $(target).offset().top;
+
+        $(document.documentElement).stop().animate({
+          scrollTop: offset + 10
+        }, 500);
+      });
+      return document.getElementById(link.getAttribute('href').replace('#', ''));
+    });
+
+    var $tocElement = $('.post-toc');
+    function activateNavByIndex(target) {
+      if (target.classList.contains('active-current')) return;
+
+      document.querySelectorAll('.post-toc .active').forEach(element => {
+        element.classList.remove('active', 'active-current');
+      });
+      target.classList.add('active', 'active-current');
+      $(target).parents('li').addClass('active');
+
+      // Scrolling to center active TOC element if TOC content is taller then viewport.
+      $tocElement.scrollTop($(target).offset().top - $tocElement.offset().top + $tocElement.scrollTop() - ($tocElement.height() / 2));
     }
 
-    function getAspectRadio(width, height) {
-      return height / width * 100;
-    }
-
-    document.querySelectorAll('iframe').forEach(iframe => {
-      var oldDimension = getDimension(iframe);
-      var newDimension;
-
-      if (iframe.src.search(pattern) > 0) {
-
-        // Calculate the video ratio based on the iframe's w/h dimensions
-        var videoRatio = getAspectRadio(oldDimension.width, oldDimension.height);
-
-        // Replace the iframe's dimensions and position the iframe absolute
-        // This is the trick to emulate the video ratio
-        iframe.css({
-          width   : '100%',
-          height  : '100%',
-          position: 'absolute',
-          top     : '0',
-          left    : '0'
-        });
-
-        // Wrap the iframe in a new <div> which uses a dynamically fetched padding-top property
-        // based on the video's w/h dimensions
-        var wrap = document.createElement('div');
-        wrap.className = 'fluid-vids';
-        wrap.style.position = 'relative';
-        wrap.style.marginBottom = '20px';
-        wrap.style.width = '100%';
-        wrap.style.paddingTop = videoRatio + '%';
-        // Fix for appear inside tabs tag.
-        (wrap.style.paddingTop === '') && (wrap.style.paddingTop = '50%');
-
-        // Add the iframe inside our newly created <div>
-        var iframeParent = iframe.parentNode;
-        iframeParent.insertBefore(wrap, iframe);
-        wrap.appendChild(iframe);
-
-        // Additional adjustments for 163 Music
-        if (iframe.src.search('music.163.com') > 0) {
-          newDimension = getDimension(iframe);
-          var shouldRecalculateAspect = newDimension.width > oldDimension.width
-                                     || newDimension.height < oldDimension.height;
-
-          // 163 Music Player has a fixed height, so we need to reset the aspect radio
-          if (shouldRecalculateAspect) {
-            wrap.style.paddingTop = getAspectRadio(newDimension.width, oldDimension.height) + '%';
-          }
+    function findIndex(entries) {
+      let index = 0;
+      let entry = entries[index];
+      if (entry.boundingClientRect.top > 0) {
+        index = sections.indexOf(entry.target);
+        return index === 0 ? 0 : index - 1;
+      }
+      for (;index < entries.length; index++) {
+        if (entries[index].boundingClientRect.top <= 0) {
+          entry = entries[index];
+        } else {
+          return sections.indexOf(entry.target);
         }
       }
-    });
+      return sections.indexOf(entry.target);
+    }
+
+    function createIntersectionObserver(marginTop) {
+      marginTop = Math.floor(marginTop + 10000);
+      let intersectionObserver = new IntersectionObserver((entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      }, {
+        rootMargin: marginTop + 'px 0px -100% 0px',
+        threshold : 0
+      });
+      sections.forEach(item => intersectionObserver.observe(item));
+    }
+    createIntersectionObserver(document.documentElement.scrollHeight);
+
   },
 
   hasMobileUA: function() {
@@ -325,16 +357,6 @@ NexT.utils = {
   },
 
   /**
-   * Escape meta symbols in jQuery selectors.
-   *
-   * @param selector
-   * @returns {string|void|XML|*}
-   */
-  escapeSelector: function(selector) {
-    return selector.replace(/[!"$%&'()*+,./:;<=>?@[\\\]^`{|}~]/g, '\\$&');
-  },
-
-  /**
    * Init Sidebar & TOC inner dimensions on all pages and for all schemes.
    * Need for Sidebar/TOC inner scrolling if content taller then viewport.
    */
@@ -343,22 +365,19 @@ NexT.utils = {
     var sidebarPadding = sidebarInner.innerWidth() - sidebarInner.width();
     var sidebarNavHeight = $('.sidebar-nav').css('display') === 'block' ? $('.sidebar-nav').outerHeight(true) : 0;
     var sidebarOffset = CONFIG.sidebar.offset || 12;
-    var sidebarb2tHeight = CONFIG.back2top.enable && CONFIG.back2top.sidebar ? document.querySelector('.back-to-top').height() : sidebarOffset;
+    var sidebarb2tHeight = CONFIG.back2top.enable && CONFIG.back2top.sidebar ? document.querySelector('.back-to-top').offsetHeight : sidebarOffset;
     var sidebarSchemePadding = NexT.utils.isPisces() || NexT.utils.isGemini()
       ? (sidebarPadding * 2) + sidebarNavHeight + sidebarOffset + sidebarb2tHeight
       : (sidebarPadding * 2) + (sidebarNavHeight / 2);
     // Initialize Sidebar & TOC Height.
-    var sidebarWrapperHeight = document.body.clientHeight - sidebarSchemePadding;
+    var sidebarWrapperHeight = document.body.offsetHeight - sidebarSchemePadding;
     $('.site-overview-wrap, .post-toc-wrap').css('max-height', sidebarWrapperHeight);
   },
 
   updateSidebarPosition: function() {
-    if (!this.isDesktop() || this.isPisces() || this.isGemini()) {
-      this.initSidebarDimension();
-      return;
-    }
+    if (!this.isDesktop() || this.isPisces() || this.isGemini()) return;
     // Expand sidebar on post detail page by default, when post has a toc.
-    var $tocContent = $('.post-toc-content');
+    var $tocContent = $('.post-toc');
     var display = CONFIG.page.sidebar;
     if (typeof display !== 'boolean') {
       // There's no definition sidebar in the page front-matter
