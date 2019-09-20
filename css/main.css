@@ -350,6 +350,7 @@ body {
   height: 100%;
 }
 .container {
+  min-height: 100%;
   position: relative;
 }
 .header-inner {
@@ -1673,7 +1674,7 @@ article:last-child .post-eof {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #29ffe5;
+  background: #949122;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1913,7 +1914,7 @@ article:last-child .post-eof {
 .footer.footer-fixed {
   bottom: 0;
   left: 0;
-  position: fixed;
+  position: absolute;
   right: 0;
 }
 .footer img {
