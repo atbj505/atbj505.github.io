@@ -401,12 +401,18 @@ pre code {
 .highlight pre {
   border: 0;
   margin: 0;
-  padding: 10px 0;
+  padding: 0;
 }
 .highlight table {
   border: 0;
   margin: 0;
   width: auto;
+}
+.highlight tr:first-child pre {
+  padding-top: 10px;
+}
+.highlight tr:last-child pre {
+  padding-bottom: 10px;
 }
 .highlight td {
   border: 0;
@@ -1146,7 +1152,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #8ed6ff;
+  background: #6bffff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
