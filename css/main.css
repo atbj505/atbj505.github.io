@@ -568,7 +568,6 @@ pre .javascript .function {
   text-align: center;
 }
 .post-body .group-picture img {
-  border: 0;
   margin: 0 auto;
   padding: 0 3px;
 }
@@ -1164,7 +1163,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #db7eff;
+  background: #12951a;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1388,9 +1387,6 @@ pre .javascript .function {
   left: 0;
   position: absolute;
   right: 0;
-}
-.footer img {
-  border: 0;
 }
 .footer-inner {
   box-sizing: border-box;
@@ -1730,16 +1726,6 @@ pre .javascript .function {
 .post-body h6:hover .header-anchor {
   visibility: visible;
 }
-.post-body img {
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  padding: 3px;
-}
-@media (max-width: 767px) {
-  .post-body img {
-    padding: initial;
-  }
-}
 .post-body iframe,
 .post-body img,
 .post-body video {
@@ -1776,7 +1762,6 @@ pre .javascript .function {
   vertical-align: middle;
 }
 .post-gallery .post-gallery-img img {
-  border: 0;
   max-height: 100%;
   max-width: 100%;
 }
